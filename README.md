@@ -25,7 +25,7 @@
 
 # 1. Modelagem da aplicação em UML:
 
-[UML_DESPESA ENTRE AMIGOS]( https://encurtador.com.br/SX467 )
+[UML-DESPESA ENTRE AMIGOS]( https://encurtador.com.br/SX467 )
 
 
 
