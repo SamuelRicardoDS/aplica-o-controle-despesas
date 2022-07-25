@@ -3,10 +3,18 @@ import java.util.*;
 
 public class User {
 	
-	public String username;
+	private String username;
 	private String password;
+	private String[] groups;
 	
 	
+	
+	public String[] getGroups() {
+		return groups;
+	}
+	public void setGroups(String[] groups) {
+		this.groups = groups;
+	}
 	public String getUsername() {
 		return username;
 	}
