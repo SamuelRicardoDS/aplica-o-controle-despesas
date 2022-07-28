@@ -15,7 +15,7 @@ public class User {
 		return username.equals(username) && password.equals(password);
 	}
 	
-	//ta errado, desculpa guga
+	//se pa ta errado, mas talvez nem esteja
 	
 	public void actioncheck() {
 		
