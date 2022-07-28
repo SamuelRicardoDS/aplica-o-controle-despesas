@@ -27,14 +27,12 @@ import java.awt.Canvas;
 public class ViewPrimeiraTela {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JLabel lblSenha;
-	private JTextField textField_1;
+	private JTextField txtUser;
+	private JLabel lblPassword;
+	private JTextField txtPassword;
 	private JLabel label;
 
-	/**
-	 * Launch the application.
-	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -48,45 +46,41 @@ public class ViewPrimeiraTela {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+
 	public ViewPrimeiraTela() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 540, 540);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("GugaBeLoved");
+		JButton btnNewButton = new JButton("Registrar");
 		btnNewButton.setBounds(185, 320, 150, 25);
 		frame.getContentPane().add(btnNewButton);
 		
-		JLabel lblNewLabel = new JLabel("Nome:");
-		lblNewLabel.setForeground(new Color(0, 0, 0));
-		lblNewLabel.setBounds(190, 190, 103, 15);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblUsername = new JLabel("Nome:");
+		lblUsername.setForeground(new Color(0, 0, 0));
+		lblUsername.setBounds(190, 190, 103, 15);
+		frame.getContentPane().add(lblUsername);
 		
-		lblSenha = new JLabel("Senha:");
-		lblSenha.setForeground(new Color(0, 0, 0));
-		lblSenha.setBounds(190, 260, 70, 15);
-		frame.getContentPane().add(lblSenha);
+		lblPassword = new JLabel("Senha:");
+		lblPassword.setForeground(new Color(0, 0, 0));
+		lblPassword.setBounds(190, 260, 70, 15);
+		frame.getContentPane().add(lblPassword);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(190, 292, 114, 19);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		txtPassword = new JTextField();
+		txtPassword.setBounds(190, 292, 114, 19);
+		frame.getContentPane().add(txtPassword);
+		txtPassword.setColumns(10);
 		
-		textField = new JTextField();
-		textField.setBounds(190, 220, 114, 19);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		txtUser = new JTextField();
+		txtUser.setBounds(190, 220, 114, 19);
+		frame.getContentPane().add(txtUser);
+		txtUser.setColumns(10);
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 102, 255));
@@ -98,6 +92,5 @@ public class ViewPrimeiraTela {
 		label = new JLabel("");
 		label.setBounds(0, -281, 960, 890);
 		frame.getContentPane().add(label);
-		label.setIcon(new ImageIcon("/home/gustavo/Downloads/teste.jpg"));
 	}
 }
