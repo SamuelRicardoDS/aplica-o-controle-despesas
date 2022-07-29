@@ -1,5 +1,5 @@
 package view;
-
+import java.util.*;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBox;
 import java.awt.Point;
@@ -27,10 +28,10 @@ import java.awt.Canvas;
 public class ViewPrimeiraTela {
 
 	private JFrame frame;
-	private JTextField txtUser;
+	private JTextField txtUsername;
 	private JLabel lblPassword;
 	private JTextField txtPassword;
-	private JLabel label;
+	private JLabel lblbackground;
 
 
 	public static void main(String[] args) {
@@ -58,14 +59,20 @@ public class ViewPrimeiraTela {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Registrar");
-		btnNewButton.setBounds(185, 320, 150, 25);
-		frame.getContentPane().add(btnNewButton);
+		JButton btnRegister = new JButton("Registrar");
+		btnRegister.setBounds(185, 320, 150, 25);
+		frame.getContentPane().add(btnRegister);
 		
 		JLabel lblUsername = new JLabel("Nome:");
 		lblUsername.setForeground(new Color(0, 0, 0));
 		lblUsername.setBounds(190, 190, 103, 15);
 		frame.getContentPane().add(lblUsername);
+		
+		txtUsername = new JTextField();
+		txtUsername.setBounds(190, 220, 114, 19);
+		frame.getContentPane().add(txtUsername);
+		txtUsername.setColumns(10);
+		
 		
 		lblPassword = new JLabel("Senha:");
 		lblPassword.setForeground(new Color(0, 0, 0));
@@ -77,11 +84,6 @@ public class ViewPrimeiraTela {
 		frame.getContentPane().add(txtPassword);
 		txtPassword.setColumns(10);
 		
-		txtUser = new JTextField();
-		txtUser.setBounds(190, 220, 114, 19);
-		frame.getContentPane().add(txtUser);
-		txtUser.setColumns(10);
-		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 102, 255));
 		panel.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
@@ -89,8 +91,19 @@ public class ViewPrimeiraTela {
 		panel.setBounds(169, 176, 180, 180);
 		frame.getContentPane().add(panel);
 		
-		label = new JLabel("");
-		label.setBounds(0, -281, 960, 890);
-		frame.getContentPane().add(label);
-	}
-}
+		lblbackground = new JLabel("");
+		lblbackground.setBounds(0, -281, 960, 890);
+		frame.getContentPane().add(lblbackground);
+		
+	
+	//nao sei se isso deveria ficar aqui, mas funcionando é o que importa né?
+		btnRegister.addActionListener(new ActionListener(){
+			
+			public void actionPerformed(ActionEvent ae){
+				String username = txtUsername.getText(); //aqui o botao pega o dado do usuario e armazena na string username
+				JOptionPane.showMessageDialog(null,"USER DATA" + "\n Nome:" + username); //aqui mostra
+		     
+		   }
+		});
+	
+} }

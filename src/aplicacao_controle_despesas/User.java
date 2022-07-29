@@ -19,7 +19,7 @@ public class User {
 	
 	public void actioncheck() {
 		
-	if(checkregister(txtUser.getUsername(), new String(txtPassword.getPassword()))) { //aqui eu forcei barra
+	if(checkregister(txtUsername.getUsername(), new String(txtPassword.getPassword()))) { //aqui eu forcei barra
 		
 		JOptionPane.showMessageDialog(null, "Bem vindo!");
 		
