@@ -101,8 +101,9 @@ public class ViewPrimeiraTela {
 			
 			public void actionPerformed(ActionEvent ae){
 				String username = txtUsername.getText(); //aqui o botao pega o dado do usuario e armazena na string username
-				JOptionPane.showMessageDialog(null,"USER DATA" + "\n Nome:" + username); //aqui mostra
-		     
+				
+				String password = txtPassword.getText();
+				JOptionPane.showMessageDialog(null,"USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
 		   }
 		});
 	
