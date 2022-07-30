@@ -20,6 +20,7 @@ import java.awt.Cursor;
 import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.border.LineBorder;
 import javax.swing.border.BevelBorder;
 import javax.swing.JScrollBar;
@@ -43,6 +44,7 @@ public class ViewPrimeiraTela {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+			
 			}
 		});
 	}
@@ -51,7 +53,7 @@ public class ViewPrimeiraTela {
 	public ViewPrimeiraTela() {
 		initialize();
 	}
-
+	
 
 	private void initialize() {
 		frame = new JFrame();
@@ -79,10 +81,11 @@ public class ViewPrimeiraTela {
 		lblPassword.setBounds(190, 260, 70, 15);
 		frame.getContentPane().add(lblPassword);
 		
-		txtPassword = new JTextField();
+		txtPassword = new JPasswordField();
 		txtPassword.setBounds(190, 292, 114, 19);
 		frame.getContentPane().add(txtPassword);
 		txtPassword.setColumns(10);
+		
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 102, 255));
