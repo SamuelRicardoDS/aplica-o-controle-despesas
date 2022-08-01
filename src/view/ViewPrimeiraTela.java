@@ -1,6 +1,7 @@
 package view;
 import java.util.*;
 import java.awt.EventQueue;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
@@ -97,7 +98,7 @@ public class ViewPrimeiraTela {
 		lblbackground = new JLabel("");
 		lblbackground.setBounds(0, -281, 960, 890);
 		frame.getContentPane().add(lblbackground);
-		
+		ArrayList<String> userNames = new ArrayList<String>();
 	
 	//nao sei se isso deveria ficar aqui, mas funcionando é o que importa né?
 		btnRegister.addActionListener(new ActionListener(){
@@ -106,7 +107,10 @@ public class ViewPrimeiraTela {
 				String username = txtUsername.getText(); //aqui o botao pega o dado do usuario e armazena na string username
 				
 				String password = txtPassword.getText();
+				
+				userNames.add(username);
 				JOptionPane.showMessageDialog(null,"USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
+				System.out.println(userNames);
 		   }
 		});
 	
