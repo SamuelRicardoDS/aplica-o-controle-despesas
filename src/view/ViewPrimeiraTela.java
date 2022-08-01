@@ -98,7 +98,8 @@ public class ViewPrimeiraTela {
 		lblbackground = new JLabel("");
 		lblbackground.setBounds(0, -281, 960, 890);
 		frame.getContentPane().add(lblbackground);
-		ArrayList<String> userNames = new ArrayList<String>();
+		ArrayList<String> usernames = new ArrayList<String>();
+		ArrayList<String> passwords = new ArrayList<String>();
 	
 	//nao sei se isso deveria ficar aqui, mas funcionando é o que importa né?
 		btnRegister.addActionListener(new ActionListener(){
@@ -108,9 +109,11 @@ public class ViewPrimeiraTela {
 				
 				String password = txtPassword.getText();
 				
-				userNames.add(username);
+				usernames.add(username);
+				passwords.add(password);
 				JOptionPane.showMessageDialog(null,"USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
-				System.out.println(userNames);
+				System.out.println(usernames);
+				System.out.println(passwords);
 		   }
 		});
 	
