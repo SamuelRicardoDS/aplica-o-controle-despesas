@@ -9,9 +9,7 @@ public class ViewFirstScreen {
 
 	private JFrame frame;
 
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -26,17 +24,13 @@ public class ViewFirstScreen {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+	
 	public ViewFirstScreen() {
 		initialize();
 
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	
 	private void initialize() {
 		
 		frame = new JFrame();

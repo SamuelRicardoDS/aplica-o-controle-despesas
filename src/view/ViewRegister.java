@@ -29,6 +29,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.BevelBorder;
 import javax.swing.JScrollBar;
 import java.awt.Canvas;
+import java.awt.SystemColor;
 
 public class ViewRegister {
 
@@ -105,14 +106,11 @@ public class ViewRegister {
 		txtConfirmPass.setColumns(10);
 		txtConfirmPass.setBounds(226, 280, 150, 19);
 		frame.getContentPane().add(txtConfirmPass);
-
-		JPanel panel = new JPanel();
-		panel.setBackground(new Color(0, 102, 255));
-		panel.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0),
-				new Color(0, 0, 0)));
-		panel.setForeground(new Color(0, 0, 0));
-		panel.setBounds(144, 125, 315, 260);
-		frame.getContentPane().add(panel);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("/home/gugabalatensa/Downloads/ze.jpeg"));
+		label.setBounds(0, -81, 988, 743);
+		frame.getContentPane().add(label);
 
 		// nao sei se isso deveria ficar aqui, mas funcionando é o que importa né?
 		btnRegister.addActionListener(new ActionListener() {
