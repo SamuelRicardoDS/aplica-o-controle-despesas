@@ -1,6 +1,6 @@
 package aplicacao_controle_despesas;
 
-import view.ViewPrimeiraTela;
+import view.ViewRegister;
 import java.util.*;
 
 import javax.swing.JOptionPane;

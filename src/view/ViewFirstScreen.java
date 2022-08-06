@@ -3,15 +3,11 @@ package view;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
 import javax.swing.JButton;
 
-public class ViewLogin {
+public class ViewFirstScreen {
 
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -20,10 +16,11 @@ public class ViewLogin {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ViewLogin window = new ViewLogin();
+					ViewFirstScreen window = new ViewFirstScreen();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
+					
 				}
 			}
 		});
@@ -32,32 +29,27 @@ public class ViewLogin {
 	/**
 	 * Create the application.
 	 */
-	public ViewLogin() {
+	public ViewFirstScreen() {
 		initialize();
+
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
 		frame = new JFrame();
 		frame.setBounds(150, 150, 600, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(195, 195, 200, 35);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		JButton btnLogin = new JButton("Login");
+		btnLogin.setBounds(195, 185, 210, 45);
+		frame.getContentPane().add(btnLogin);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(195, 230, 200, 35);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
-		
-		JButton btnEntrar = new JButton("ENTRAR");
-		btnEntrar.setBounds(205, 270, 180, 35);
-		frame.getContentPane().add(btnEntrar);
-
+		JButton btnNewButton = new JButton("Register");
+		btnNewButton.setBounds(195, 260, 210, 45);
+		frame.getContentPane().add(btnNewButton);
 	}
 }

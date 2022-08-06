@@ -30,7 +30,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.JScrollBar;
 import java.awt.Canvas;
 
-public class ViewPrimeiraTela {
+public class ViewRegister {
 
 	private JFrame frame;
 	private JTextField txtUsername;
@@ -43,7 +43,7 @@ public class ViewPrimeiraTela {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ViewPrimeiraTela window = new ViewPrimeiraTela();
+					ViewRegister window = new ViewRegister();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -53,7 +53,7 @@ public class ViewPrimeiraTela {
 		});
 	}
 
-	public ViewPrimeiraTela() {
+	public ViewRegister() {
 		initialize();
 	}
 
@@ -112,8 +112,7 @@ public class ViewPrimeiraTela {
 				executavel.setUsernames(username);
 				executavel.setPasswords(password);
 
-				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui
-																													// mostra
+				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
 
 			}
 		});
