@@ -145,5 +145,12 @@ public class ViewRegister {
 				txtConfirmPass.setText("");
 			}
 		});
+
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				System.exit(0);
+			}
+		});
+		
 	}
 }
