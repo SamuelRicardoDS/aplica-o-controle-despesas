@@ -1,17 +1,12 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
-public class ViewLogin extends JFrame {
+public class ViewLogin {
+
 	private JFrame frame;
-
-	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
@@ -20,8 +15,8 @@ public class ViewLogin extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ViewLogin frame = new ViewLogin();
-					frame.setVisible(true);
+					ViewLogin window = new ViewLogin();
+					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -30,22 +25,21 @@ public class ViewLogin extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the application.
 	 */
 	public ViewLogin() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
-
-		
-		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setBounds(10, 227, 414, 23);
-		frame.getContentPanel().add(btnEntrar);
+		initialize();
 	}
 
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 
+	}
 
 }
