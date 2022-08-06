@@ -32,13 +32,15 @@ import java.awt.Canvas;
 
 public class ViewRegister {
 
+	public Executavel executavel =  new Executavel();
 	private JFrame frame;
 	private JTextField txtUsername;
 	private JLabel lblPassword;
 	private JTextField txtPassword;
-	public Executavel executavel =  new Executavel();
 	private JLabel lblConfirmarSenha;
 	private JTextField txtConfirmPass; 
+	private JButton btnClear;
+	private JButton btnExit;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -65,8 +67,16 @@ public class ViewRegister {
 		frame.getContentPane().setLayout(null);
 
 		JButton btnRegister = new JButton("Registrar");
-		btnRegister.setBounds(226, 320, 150, 25);
+		btnRegister.setBounds(150, 320, 150, 25);
 		frame.getContentPane().add(btnRegister);
+		
+		JButton btnClear = new JButton("Limpar");
+		btnClear.setBounds(305, 320, 150, 25);
+		frame.getContentPane().add(btnClear);
+
+		JButton btnExit = new JButton("sair");
+		btnExit.setBounds(220, 350, 150, 25);
+		frame.getContentPane().add(btnExit);
 
 		JLabel lblUsername = new JLabel("Nome:");
 		lblUsername.setForeground(new Color(0, 0, 0));
@@ -102,8 +112,9 @@ public class ViewRegister {
 		panel.setBackground(new Color(0, 102, 255));
 		panel.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		panel.setForeground(new Color(0, 0, 0));
-		panel.setBounds(210, 125, 180, 250);
+		panel.setBounds(144, 125, 315, 260);
 		frame.getContentPane().add(panel);
+		
 
 		
 
