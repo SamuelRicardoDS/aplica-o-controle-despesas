@@ -7,6 +7,7 @@ public class Executavel {
 	ArrayList<String> usernames = new ArrayList<String>();
 	ArrayList<String> passwords = new ArrayList<String>();
 
+
 	public static void main(String[] args) {
 
 		User input_user = new User();

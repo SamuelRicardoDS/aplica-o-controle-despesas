@@ -36,8 +36,9 @@ public class ViewRegister {
 	private JTextField txtUsername;
 	private JLabel lblPassword;
 	private JTextField txtPassword;
-	private JLabel lblbackground;
 	public Executavel executavel =  new Executavel();
+	private JLabel lblConfirmarSenha;
+	private JTextField txtConfirmPass; 
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -59,45 +60,50 @@ public class ViewRegister {
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 540, 540);
+		frame.setBounds(150, 150, 600, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
 		JButton btnRegister = new JButton("Registrar");
-		btnRegister.setBounds(185, 320, 150, 25);
+		btnRegister.setBounds(226, 320, 150, 25);
 		frame.getContentPane().add(btnRegister);
 
 		JLabel lblUsername = new JLabel("Nome:");
 		lblUsername.setForeground(new Color(0, 0, 0));
-		lblUsername.setBounds(190, 190, 103, 15);
+		lblUsername.setBounds(226, 160, 103, 15);
 		frame.getContentPane().add(lblUsername);
 
 		txtUsername = new JTextField();
-		txtUsername.setBounds(190, 220, 114, 19);
+		txtUsername.setBounds(226, 180, 150, 19);
 		frame.getContentPane().add(txtUsername);
 		txtUsername.setColumns(10);
 
 		lblPassword = new JLabel("Senha:");
 		lblPassword.setForeground(new Color(0, 0, 0));
-		lblPassword.setBounds(190, 260, 70, 15);
+		lblPassword.setBounds(226, 210, 70, 15);
 		frame.getContentPane().add(lblPassword);
 
 		txtPassword = new JPasswordField();
-		txtPassword.setBounds(190, 292, 114, 19);
+		txtPassword.setBounds(226, 230, 150, 19);
 		frame.getContentPane().add(txtPassword);
 		txtPassword.setColumns(10);
+		
+		lblConfirmarSenha = new JLabel("Confirmar Senha");
+		lblConfirmarSenha.setForeground(Color.BLACK);
+		lblConfirmarSenha.setBounds(226, 255, 150, 20);
+		frame.getContentPane().add(lblConfirmarSenha);
+		
+		txtConfirmPass = new JPasswordField();
+		txtConfirmPass.setColumns(10);
+		txtConfirmPass.setBounds(226, 280, 150, 19);
+		frame.getContentPane().add(txtConfirmPass);
 
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(0, 102, 255));
-		panel.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0),
-				new Color(0, 0, 0)));
+		panel.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		panel.setForeground(new Color(0, 0, 0));
-		panel.setBounds(169, 176, 180, 180);
+		panel.setBounds(210, 125, 180, 250);
 		frame.getContentPane().add(panel);
-
-		lblbackground = new JLabel("");
-		lblbackground.setBounds(0, -281, 960, 890);
-		frame.getContentPane().add(lblbackground);
 
 		
 
@@ -107,8 +113,14 @@ public class ViewRegister {
 			public void actionPerformed(ActionEvent ae) {
 
 				String username = txtUsername.getText(); // aqui o botao pega o dado do usuario e armazena na string 											// username
-				String password = txtPassword.getText();
-
+				String password = txtPassword.getText(); 
+				String confirm = txtConfirmPass.getText();
+				
+				if (confirm.equals(password))
+					  System.out.println("Senha válida.");
+					else
+						JOptionPane.showMessageDialog(null, "Senha Invalida");
+				
 				executavel.setUsernames(username);
 				executavel.setPasswords(password);
 
