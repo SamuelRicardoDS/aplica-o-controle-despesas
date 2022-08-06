@@ -56,7 +56,7 @@ public class ViewRegister {
 		});
 	}
 
-	
+
 	public ViewRegister() {
 
 		frame = new JFrame();
@@ -135,6 +135,14 @@ public class ViewRegister {
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui
 																													// mostra
 
+			}
+		});
+
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ae) {
+				txtUsername.setText("");
+				txtPassword.setText("");
+				txtConfirmPass.setText("");
 			}
 		});
 	}
