@@ -7,6 +7,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class ViewLogin {
 
@@ -40,6 +41,7 @@ public class ViewLogin {
 		frame.setBounds(150, 150, 600, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
 		
 		JLabel lblNewLabel = new JLabel("USUARIO");
 		lblNewLabel.setBounds(209, 205, 70, 15);
@@ -63,6 +65,11 @@ public class ViewLogin {
 		JButton btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setBounds(205, 270, 180, 35);
 		frame.getContentPane().add(btnEntrar);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("/home/gugabalatensa/Downloads/jm.jpg"));
+		label.setBounds(-72, -117, 979, 696);
+		frame.getContentPane().add(label);
 		
 
 	}

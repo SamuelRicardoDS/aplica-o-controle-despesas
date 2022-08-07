@@ -30,6 +30,7 @@ public class ViewFirstScreen {
 		frame.setBounds(150, 150, 600, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
 		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.setBounds(195, 185, 210, 45);
@@ -40,7 +41,7 @@ public class ViewFirstScreen {
 		frame.getContentPane().add(btnNewButton);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/home/samuelricardo/Documents/OO/aplicacao_controle_despesas/hj.jpg"));
+		label.setIcon(new ImageIcon("/home/gugabalatensa/Documents/OO/aplicacao_controle_despesas/hj.jpg"));
 		label.setBounds(0, -128, 875, 843);
 		frame.getContentPane().add(label);
 	}

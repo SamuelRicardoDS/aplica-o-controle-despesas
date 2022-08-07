@@ -59,6 +59,7 @@ public class ViewRegister {
 		frame.setBounds(150, 150, 600, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
 
 		JButton btnRegister = new JButton("Registrar");
 		btnRegister.setBounds(150, 320, 150, 25);
@@ -103,7 +104,7 @@ public class ViewRegister {
 		frame.getContentPane().add(txtConfirmPass);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/home/samuelricardo/Documents/OO/aplicacao_controle_despesas/ze.jpeg"));
+		label.setIcon(new ImageIcon("/home/gugabalatensa/Documents/OO/aplicacao_controle_despesas/ze.jpeg"));
 		label.setBounds(0, -81, 988, 743);
 		frame.getContentPane().add(label);
 
