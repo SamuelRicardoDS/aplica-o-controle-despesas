@@ -52,7 +52,6 @@ public class ViewRegister {
 					window.frame.setVisible(true);
 	}
 
-
 	public ViewRegister() {
 
 		frame = new JFrame();
@@ -110,7 +109,6 @@ public class ViewRegister {
 
 		// nao sei se isso deveria ficar aqui, mas funcionando é o que importa né?
 		btnRegister.addActionListener(new ActionListener() {
-
 			public void actionPerformed(ActionEvent ae) {
 
 				String username = txtUsername.getText(); // aqui o botao pega o dado do usuario e armazena na string username
@@ -126,8 +124,10 @@ public class ViewRegister {
 				executavel.setPasswords(password);
 
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
+
 			}
 		});
+
 
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
@@ -143,9 +143,13 @@ public class ViewRegister {
 				frame.dispose();
 				
 				ViewFirstScreen origin = new ViewFirstScreen();
-				origin.getFrame().setVisible(true);
+				origin.getOriginFrame().setVisible(true);
 			}
 		});
 		
+	}
+
+	public JFrame getRegisterFrame() {
+		return frame;
 	}
 }

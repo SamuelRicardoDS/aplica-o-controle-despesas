@@ -16,9 +16,7 @@ public class ViewLogin {
 	private JTextField textField_1;
 	private JLabel lblNewLabel_1;
 
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		
 					ViewLogin window = new ViewLogin();
@@ -26,17 +24,7 @@ public class ViewLogin {
 			
 	}
 
-	/**
-	 * Create the application.
-	 */
 	public ViewLogin() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(150, 150, 600, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -65,12 +53,19 @@ public class ViewLogin {
 		JButton btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setBounds(205, 270, 180, 35);
 		frame.getContentPane().add(btnEntrar);
+
+		JButton btnBack = new JButton("VOLTAR");
+		btnBack.setBounds(205, 310, 180, 35);
+		frame.getContentPane().add(btnBack);
 		
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(ViewLogin.class.getResource("/images/jm.jpg")));
 		label.setBounds(-72, -117, 979, 696);
 		frame.getContentPane().add(label);
 		
+	}
 
+	public JFrame getLoginFrame() {
+		return frame;
 	}
 }

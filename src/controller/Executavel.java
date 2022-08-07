@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class Executavel {
-	
+	                              //nao é correto instanciar aqui, isso deve ser mudado para o construtor da classe
 	ArrayList<String> usernames = new ArrayList<String>();
 	ArrayList<String> passwords = new ArrayList<String>();
 	
