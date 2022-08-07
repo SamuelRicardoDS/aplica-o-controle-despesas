@@ -142,7 +142,7 @@ public class ViewRegister {
 				frame.dispose();
 				
 				ViewFirstScreen origin = new ViewFirstScreen();
-				origin.frame.setVisible(true);
+				origin.getFrame().setVisible(true);
 			}
 		});
 		

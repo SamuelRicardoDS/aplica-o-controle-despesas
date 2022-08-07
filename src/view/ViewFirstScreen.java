@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 
 public class ViewFirstScreen {
 
-	public JFrame frame;
+	private JFrame frame;
 
 	
 	public static void main(String[] args) {
@@ -43,5 +43,9 @@ public class ViewFirstScreen {
 		label.setIcon(new ImageIcon("/home/samuelricardo/Documents/OO/aplicacao_controle_despesas/hj.jpg"));
 		label.setBounds(0, -128, 875, 843);
 		frame.getContentPane().add(label);
+	}
+
+	public JFrame getFrame() {
+		return frame;
 	}
 }
