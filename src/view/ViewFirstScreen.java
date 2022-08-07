@@ -59,10 +59,8 @@ public class ViewFirstScreen {
 				window.getRegisterFrame().setVisible(true);
 			}
 		});
-      
 
 	}
- 
 	//leva a tela
 	public JFrame getOriginFrame() {
 		return frame;
