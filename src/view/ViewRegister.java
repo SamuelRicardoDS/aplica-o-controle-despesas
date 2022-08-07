@@ -1,5 +1,6 @@
 package view;
 
+import view.ViewFirstScreen;
 import aplicacao_controle_despesas.Executavel;
 import aplicacao_controle_despesas.User;
 import java.util.*;
@@ -108,7 +109,7 @@ public class ViewRegister {
 		frame.getContentPane().add(txtConfirmPass);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/home/gugabalatensa/Downloads/ze.jpeg"));
+		label.setIcon(new ImageIcon("/home/samuelricardo/Documents/OO/aplicacao_controle_despesas/ze.jpeg"));
 		label.setBounds(0, -81, 988, 743);
 		frame.getContentPane().add(label);
 
@@ -117,8 +118,7 @@ public class ViewRegister {
 
 			public void actionPerformed(ActionEvent ae) {
 
-				String username = txtUsername.getText(); // aqui o botao pega o dado do usuario e armazena na string //
-															// username
+				String username = txtUsername.getText(); // aqui o botao pega o dado do usuario e armazena na string username
 				String password = txtPassword.getText();
 				String confirm = txtConfirmPass.getText();
 
@@ -130,8 +130,9 @@ public class ViewRegister {
 				executavel.setUsernames(username);
 				executavel.setPasswords(password);
 
-				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui
-																													// mostra
+				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
+
+
 
 			}
 		});
@@ -146,7 +147,16 @@ public class ViewRegister {
 
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				System.exit(0);
+				//System.exit(0);
+				
+				
+				frame.dispose();
+
+				ViewFirstScreen origin = new ViewFirstScreen();
+
+				origin.frame.setVisible(true);
+
+			 
 			}
 		});
 		

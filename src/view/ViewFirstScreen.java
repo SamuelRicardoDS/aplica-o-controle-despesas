@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 
 public class ViewFirstScreen {
 
-	private JFrame frame;
+	public JFrame frame;
 
 	
 	public static void main(String[] args) {
