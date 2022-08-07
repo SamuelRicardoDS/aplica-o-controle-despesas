@@ -1,8 +1,7 @@
 package view;
 
 import view.ViewFirstScreen;
-import aplicacao_controle_despesas.Executavel;
-import aplicacao_controle_despesas.User;
+
 import java.util.*;
 import java.awt.EventQueue;
 import java.util.ArrayList;
@@ -27,6 +26,10 @@ import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.border.LineBorder;
+
+import controller.Executavel;
+import model.User;
+
 import javax.swing.border.BevelBorder;
 import javax.swing.JScrollBar;
 import java.awt.Canvas;
@@ -44,18 +47,9 @@ public class ViewRegister {
 	private JButton btnClear;
 	private JButton btnExit;
 
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	public static void main(String[] args) {		
 					ViewRegister window = new ViewRegister();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-			}
-		});
 	}
 
 
@@ -120,7 +114,7 @@ public class ViewRegister {
 
 				String username = txtUsername.getText(); // aqui o botao pega o dado do usuario e armazena na string username
 				String password = txtPassword.getText();
-				String confirm = txtConfirmPass.getText();
+				String confirm  = txtConfirmPass.getText();
 
 				if (confirm.equals(password))
 					System.out.println("Senha válida.");
@@ -131,9 +125,6 @@ public class ViewRegister {
 				executavel.setPasswords(password);
 
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
-
-
-
 			}
 		});
 
@@ -147,16 +138,11 @@ public class ViewRegister {
 
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				//System.exit(0);
-				
 				
 				frame.dispose();
-
+				
 				ViewFirstScreen origin = new ViewFirstScreen();
-
 				origin.frame.setVisible(true);
-
-			 
 			}
 		});
 		

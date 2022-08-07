@@ -1,4 +1,4 @@
-package aplicacao_controle_despesas;
+package model;
 
 import view.ViewRegister;
 import java.util.*;

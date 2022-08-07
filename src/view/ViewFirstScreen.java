@@ -13,17 +13,8 @@ public class ViewFirstScreen {
 
 	
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
 					ViewFirstScreen window = new ViewFirstScreen();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-					
-				}
-			}
-		});
+					window.frame.setVisible(true);	
 	}
 
 	
@@ -49,7 +40,7 @@ public class ViewFirstScreen {
 		frame.getContentPane().add(btnNewButton);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/home/gugabalatensa/Downloads/hj.jpg"));
+		label.setIcon(new ImageIcon("/home/samuelricardo/Documents/OO/aplicacao_controle_despesas/hj.jpg"));
 		label.setBounds(0, -128, 875, 843);
 		frame.getContentPane().add(label);
 	}

@@ -1,4 +1,6 @@
-package aplicacao_controle_despesas;
+package controller;
+
+import model.User;
 
 public class Database {
 	

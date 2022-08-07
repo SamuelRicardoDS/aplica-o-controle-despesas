@@ -1,6 +1,9 @@
-package aplicacao_controle_despesas;
+package controller;
 
 import java.util.ArrayList;
+
+import model.User;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
