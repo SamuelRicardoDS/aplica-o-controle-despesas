@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class ViewFirstScreen {
 
@@ -45,5 +47,10 @@ public class ViewFirstScreen {
 		JButton btnNewButton = new JButton("Register");
 		btnNewButton.setBounds(195, 260, 210, 45);
 		frame.getContentPane().add(btnNewButton);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon("/home/gugabalatensa/Downloads/hj.jpg"));
+		label.setBounds(0, -128, 875, 843);
+		frame.getContentPane().add(label);
 	}
 }

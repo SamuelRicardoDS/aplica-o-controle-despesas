@@ -1,12 +1,16 @@
 package aplicacao_controle_despesas;
 
 import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class Executavel {
 	
 	ArrayList<String> usernames = new ArrayList<String>();
 	ArrayList<String> passwords = new ArrayList<String>();
-
+	
 
 	public static void main(String[] args) {
 
@@ -14,7 +18,13 @@ public class Executavel {
 
 		input_user.setUsername(null);
 		input_user.setPassword(null);
-
+		try {
+			A = Runtime.getRuntime().exec("pwd");
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	// getters and setters
