@@ -41,7 +41,7 @@ public class ViewFirstScreen {
 		frame.getContentPane().add(btnNewButton);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/home/gugabalatensa/Documents/OO/aplicacao_controle_despesas/hj.jpg"));
+		label.setIcon(new ImageIcon(ViewFirstScreen.class.getResource("/images/hj.jpg")));
 		label.setBounds(0, -128, 875, 843);
 		frame.getContentPane().add(label);
 	}

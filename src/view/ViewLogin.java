@@ -67,7 +67,7 @@ public class ViewLogin {
 		frame.getContentPane().add(btnEntrar);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/home/gugabalatensa/Downloads/jm.jpg"));
+		label.setIcon(new ImageIcon(ViewLogin.class.getResource("/images/jm.jpg")));
 		label.setBounds(-72, -117, 979, 696);
 		frame.getContentPane().add(label);
 		

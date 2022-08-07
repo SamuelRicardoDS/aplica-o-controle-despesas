@@ -104,7 +104,7 @@ public class ViewRegister {
 		frame.getContentPane().add(txtConfirmPass);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("/home/gugabalatensa/Documents/OO/aplicacao_controle_despesas/ze.jpeg"));
+		label.setIcon(new ImageIcon(ViewRegister.class.getResource("/images/ze.jpeg")));
 		label.setBounds(0, -81, 988, 743);
 		frame.getContentPane().add(label);
 
