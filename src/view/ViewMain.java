@@ -21,7 +21,7 @@ public class ViewMain {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 
-		
+
 	}
 
 }

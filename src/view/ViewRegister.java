@@ -48,7 +48,7 @@ public class ViewRegister {
 	private JButton btnExit;
 	private JButton btnRegister;
 	private JLabel lblUsername;
-	private JLabel label;
+	private JLabel background;
 
 	public static void main(String[] args) {		
 					ViewRegister window = new ViewRegister();
@@ -105,10 +105,10 @@ public class ViewRegister {
 		txtConfirmPass.setBounds(226, 280, 150, 19);
 		frame.getContentPane().add(txtConfirmPass);
 		
-		label = new JLabel("");
-		label.setIcon(new ImageIcon(ViewRegister.class.getResource("/images/ze.jpeg")));
-		label.setBounds(0, -81, 988, 743);
-		frame.getContentPane().add(label);
+		background = new JLabel("");
+		background.setIcon(new ImageIcon(ViewRegister.class.getResource("/images/ze.jpeg")));
+		background.setBounds(0, -81, 988, 743);
+		frame.getContentPane().add(background);
 
 		// nao sei se isso deveria ficar aqui, mas funcionando é o que importa né?
 		btnRegister.addActionListener(new ActionListener() {
@@ -127,8 +127,7 @@ public class ViewRegister {
 				executavel.setPasswords(password);
 
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
-				
-				System.out.println(executavel.usernames);
+
 			}
 		});
 
