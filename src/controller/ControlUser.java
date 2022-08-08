@@ -38,4 +38,18 @@ public class ControlUser {
     public User ReadOne(String username) {
         return this.database.getUser(username);
     }
+
+    public Boolean ControlLogin(String username, String password) {
+        Boolean isValidUser = false;
+
+        for (User user : this.database.getUsers()) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                isValidUser = true;
+            }
+        }
+
+        return isValidUser;
+    }
+
+    
 }
