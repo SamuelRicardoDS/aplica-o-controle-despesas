@@ -8,15 +8,6 @@ public class Executavel {
 	ArrayList<String> passwords = new ArrayList<String>();
 	
 
-	public static void main(String[] args) {
-
-		User input_user = new User();
-
-		input_user.setUsername(null);
-		input_user.setPassword(null);
-		
-		
-	}
 	// getters and setters
 	public ArrayList<String> getUsernames() {
 		return usernames;

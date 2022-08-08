@@ -75,7 +75,15 @@ public class ViewLogin {
 				window.getOriginFrame().setVisible(true);
 			}
 		});
-
+		
+		btnEntrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				frame.dispose();
+				ViewMain window = new ViewMain();
+				window.getOriginFrame().setVisible(true);
+			}
+		});
 	}
 
 	public JFrame getLoginFrame() {
