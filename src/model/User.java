@@ -7,9 +7,9 @@ import javax.swing.JOptionPane;
 
 public class User {
 
-	private String username = new username();
+	private String username;
 	private String password;
-	private String[] groups;
+	private ArrayList<String> groups;
 
 	// aqui ja nn ta mais
 
