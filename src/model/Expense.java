@@ -5,9 +5,8 @@ import java.util.*;
 public class Expense {
 	
 	private Date date;
-	private float value;
+	private Double value;
 	private String name;
-	
 	
 	public Date getDate() {
 		return date;
@@ -15,10 +14,10 @@ public class Expense {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public float getValue() {
+	public Double getValue() {
 		return value;
 	}
-	public void setValue(float value) {
+	public void setValue(Double value) {
 		this.value = value;
 	}
 	public String getName() {
@@ -27,5 +26,6 @@ public class Expense {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
+	
 }
