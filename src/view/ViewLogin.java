@@ -79,9 +79,6 @@ public class ViewLogin {
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				frame.dispose();
-				ViewMain window = new ViewMain();
-				window.getOriginFrame().setVisible(true);
 			}
 		});
 	}
