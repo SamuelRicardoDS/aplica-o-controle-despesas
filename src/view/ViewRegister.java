@@ -127,7 +127,6 @@ public class ViewRegister {
 				executavel.setPasswords(password);
 
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
-
 			}
 		});
 
