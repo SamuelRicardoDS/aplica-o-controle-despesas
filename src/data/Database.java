@@ -1,4 +1,4 @@
-package controller;
+package data;
 
 import model.User;
 
