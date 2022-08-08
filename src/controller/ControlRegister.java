@@ -14,5 +14,6 @@ public class ControlRegister(username, password, confirmPass) {
             JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso");
         }
     }
+    
 }
 

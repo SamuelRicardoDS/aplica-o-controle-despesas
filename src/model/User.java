@@ -11,25 +11,6 @@ public class User {
 	private String password;
 	private String[] groups;
 
-	public boolean checkregister(String username, String password) {
-		return username.equals(username) && password.equals(password);
-
-	}
-
-	// se pa ta errado, mas talvez nem esteja
-
-	public void actioncheck() {
-
-		if (checkregister(username, new String(password.getPassword()))) { // aqui eu forcei barra
-
-			JOptionPane.showMessageDialog(null, "Bem vindo!");
-
-		} else {
-			JOptionPane.showMessageDialog(null, "login incorreto");
-
-		}
-	}
-
 	// aqui ja nn ta mais
 
 	public String[] getGroups() {
