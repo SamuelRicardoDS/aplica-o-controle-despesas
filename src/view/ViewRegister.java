@@ -46,6 +46,9 @@ public class ViewRegister {
 	private JTextField txtConfirmPass;
 	private JButton btnClear;
 	private JButton btnExit;
+	private JButton btnRegister;
+	private JLabel lblUsername;
+	private JLabel label;
 
 	public static void main(String[] args) {		
 					ViewRegister window = new ViewRegister();
@@ -60,19 +63,19 @@ public class ViewRegister {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 
-		JButton btnRegister = new JButton("Registrar");
+		btnRegister = new JButton("Registrar");
 		btnRegister.setBounds(150, 320, 150, 25);
 		frame.getContentPane().add(btnRegister);
 
-		JButton btnClear = new JButton("Limpar");
+		btnClear = new JButton("Limpar");
 		btnClear.setBounds(305, 320, 150, 25);
 		frame.getContentPane().add(btnClear);
 
-		JButton btnExit = new JButton("sair");
+		btnExit = new JButton("sair");
 		btnExit.setBounds(220, 350, 150, 25);
 		frame.getContentPane().add(btnExit);
 
-		JLabel lblUsername = new JLabel("Nome:");
+		lblUsername = new JLabel("Nome:");
 		lblUsername.setForeground(new Color(0, 0, 0));
 		lblUsername.setBounds(226, 160, 103, 15);
 		frame.getContentPane().add(lblUsername);
@@ -102,7 +105,7 @@ public class ViewRegister {
 		txtConfirmPass.setBounds(226, 280, 150, 19);
 		frame.getContentPane().add(txtConfirmPass);
 		
-		JLabel label = new JLabel("");
+		label = new JLabel("");
 		label.setIcon(new ImageIcon(ViewRegister.class.getResource("/images/ze.jpeg")));
 		label.setBounds(0, -81, 988, 743);
 		frame.getContentPane().add(label);
@@ -124,7 +127,8 @@ public class ViewRegister {
 				executavel.setPasswords(password);
 
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
-
+				
+				System.out.println(executavel.usernames);
 			}
 		});
 

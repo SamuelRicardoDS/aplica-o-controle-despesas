@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 
 public class Executavel {
 	                              //nao é correto instanciar aqui, isso deve ser mudado para o construtor da classe
-	ArrayList<String> usernames = new ArrayList<String>();
+	public ArrayList<String> usernames = new ArrayList<String>();
 	ArrayList<String> passwords = new ArrayList<String>();
 	
 
@@ -21,21 +21,15 @@ public class Executavel {
 
 		input_user.setUsername(null);
 		input_user.setPassword(null);
-		try {
-			A = Runtime.getRuntime().exec("pwd");
-			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		
 	}
-
 	// getters and setters
 	public ArrayList<String> getUsernames() {
 		return usernames;
 	}
 
-	public void setUsernames(String usernames) {
+	public  void setUsernames(String usernames) {
 		this.usernames.add(usernames);
 	}
 
@@ -48,3 +42,4 @@ public class Executavel {
 	}
 
 }
+	

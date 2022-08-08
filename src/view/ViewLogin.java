@@ -15,7 +15,11 @@ public class ViewLogin {
 	private JFrame frame;
 	private JTextField txtLogin;
 	private JTextField textField_1;
+	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
+	private JButton btnEntrar;
+	private JButton btnBack;
+	private JLabel label;
 
 	public static void main(String[] args) {
 
@@ -32,7 +36,7 @@ public class ViewLogin {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 
-		JLabel lblNewLabel = new JLabel("USUARIO");
+		lblNewLabel = new JLabel("USUARIO");
 		lblNewLabel.setBounds(209, 205, 70, 15);
 		frame.getContentPane().add(lblNewLabel);
 
@@ -50,15 +54,15 @@ public class ViewLogin {
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 
-		JButton btnEntrar = new JButton("ENTRAR");
+		btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setBounds(205, 270, 180, 35);
 		frame.getContentPane().add(btnEntrar);
 
-		JButton btnBack = new JButton("VOLTAR");
+		btnBack = new JButton("VOLTAR");
 		btnBack.setBounds(205, 310, 180, 35);
 		frame.getContentPane().add(btnBack);
 
-		JLabel label = new JLabel("");
+		label = new JLabel("");
 		label.setIcon(new ImageIcon(ViewLogin.class.getResource("/images/jm.jpg")));
 		label.setBounds(-72, -117, 979, 696);
 		frame.getContentPane().add(label);
