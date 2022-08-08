@@ -1,13 +1,10 @@
 package controller;
-
 import java.util.ArrayList;
-
 import model.User;
 
-
 public class Executavel {
-	                              //nao é correto instanciar aqui, isso deve ser mudado para o construtor da classe
-	public ArrayList<String> usernames = new ArrayList<String>();
+	                             //nao é correto instanciar aqui, isso deve ser mudado para o construtor da classe
+	ArrayList<String> usernames = new ArrayList<String>();
 	ArrayList<String> passwords = new ArrayList<String>();
 	
 

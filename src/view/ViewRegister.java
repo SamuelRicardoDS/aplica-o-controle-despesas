@@ -117,7 +117,7 @@ public class ViewRegister {
 				String username = txtUsername.getText(); // aqui o botao pega o dado do usuario e armazena na string username
 				String password = txtPassword.getText();
 				String confirm  = txtConfirmPass.getText();
-
+//tentando tirar isso daqui agora mesmo
 				if (confirm.equals(password))
 					System.out.println("Senha válida.");
 				else
