@@ -128,7 +128,6 @@ public class ViewRegister {
 
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
 				
-				System.out.println(executavel.usernames);
 			}
 		});
 
