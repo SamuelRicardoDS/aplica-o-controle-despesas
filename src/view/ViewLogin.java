@@ -24,7 +24,7 @@ public class ViewLogin {
 	private JButton btnEntrar;
 	private JButton btnBack;
 	private JLabel label;
-	ControlUser cu = new ControlUser(new Database());
+	ControlUser cu = new ControlUser(Database.getInstance());
 
 
 	public static void main(String[] args) {

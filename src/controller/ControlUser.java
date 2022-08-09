@@ -27,7 +27,7 @@ public class ControlUser {
     private Database database;
 
     public ControlUser(Database database) {
-        this.database = database;
+        this.database = Database.getInstance();
     }
 
     public void Create(String username, String password) {

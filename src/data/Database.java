@@ -5,11 +5,17 @@ import model.User;
 
 public class Database {
     ArrayList<User> users;
+    private static Database instance;
 
-    public Database() {
-        users = new ArrayList<User>();
-    }
 	
+    public static Database getInstance() {
+        if (instance == null) {
+            instance = new Database();
+            instance.users = new ArrayList<User>();
+        }
+        return instance;
+    }
+
 	public void addUser(User user) {
         users.add(user);
     }

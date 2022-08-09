@@ -25,5 +25,6 @@ public class ViewMain {
 	}
 	public JFrame getMainFrame() {
 		return frame;
+	}
 
 }
