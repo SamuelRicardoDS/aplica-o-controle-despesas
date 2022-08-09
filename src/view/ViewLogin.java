@@ -6,6 +6,10 @@ import java.awt.event.*;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+
+import controller.ControlUser;
+import data.Database;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -14,12 +18,14 @@ public class ViewLogin {
 
 	private JFrame frame;
 	private JTextField txtLogin;
-	private JTextField textField_1;
+	private JTextField txtPassword;
 	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
 	private JButton btnEntrar;
 	private JButton btnBack;
 	private JLabel label;
+	ControlUser cu = new ControlUser(new Database());
+
 
 	public static void main(String[] args) {
 
@@ -49,10 +55,10 @@ public class ViewLogin {
 		frame.getContentPane().add(txtLogin);
 		txtLogin.setColumns(10);
 
-		textField_1 = new JTextField();
-		textField_1.setBounds(195, 230, 200, 35);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		txtPassword = new JTextField();
+		txtPassword.setBounds(195, 230, 200, 35);
+		frame.getContentPane().add(txtPassword);
+		txtPassword.setColumns(10);
 
 		btnEntrar = new JButton("ENTRAR");
 		btnEntrar.setBounds(205, 270, 180, 35);
@@ -78,6 +84,16 @@ public class ViewLogin {
 		
 		btnEntrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String username = txtLogin.getText();
+				String password = txtPassword.getText();
+
+				if(cu.ControlLogin(username, password) == true) {
+					frame.dispose();
+					ViewMain window = new ViewMain();
+					window.getMainFrame().setVisible(true);
+				} else {
+					System.out.println("Usuário ou senha inválidos");
+				}
 				
 			}
 		});

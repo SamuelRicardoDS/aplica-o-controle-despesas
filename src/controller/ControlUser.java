@@ -38,7 +38,7 @@ public class ControlUser {
             database.addUser(user);
             System.out.println("Usuário cadastrado com sucesso");
         }
-        
+       // System.out.println(Database.getUsers());
     }
 
     public User ReadOne(String username) {
@@ -54,6 +54,7 @@ public class ControlUser {
             }
         }
 
+       // System.out.println(Database.getUsers());
         return isValidUser;
     }
 
