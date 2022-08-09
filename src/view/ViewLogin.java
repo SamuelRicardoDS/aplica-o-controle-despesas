@@ -91,6 +91,7 @@ public class ViewLogin {
 					frame.dispose();
 					ViewMain window = new ViewMain();
 					window.getMainFrame().setVisible(true);
+					System.out.println(cu.ReadAll());
 				} else {
 					System.out.println("Usuário ou senha inválidos");
 				}

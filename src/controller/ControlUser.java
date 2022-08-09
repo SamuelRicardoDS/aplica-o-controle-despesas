@@ -19,6 +19,8 @@ public class ControlRegister(username,password,confirmPass)
     
 } */
 
+import java.util.ArrayList;
+
 import data.Database;
 import model.User;
 
@@ -57,6 +59,9 @@ public class ControlUser {
        // System.out.println(Database.getUsers());
         return isValidUser;
     }
-
+    
+    public ArrayList<User> ReadAll() {
+        return this.database.getUsers();
+    }
     
 }
