@@ -28,12 +28,12 @@ import javax.swing.JPasswordField;
 import javax.swing.border.LineBorder;
 
 import controller.Executavel;
+import data.Database;
 import model.User;
+import controller.ControlUser;
 
-import javax.swing.border.BevelBorder;
-import javax.swing.JScrollBar;
-import java.awt.Canvas;
-import java.awt.SystemColor;
+
+
 
 public class ViewRegister {
 
@@ -49,6 +49,7 @@ public class ViewRegister {
 	private JButton btnRegister;
 	private JLabel lblUsername;
 	private JLabel background;
+	public ControlUser cu = new ControlUser(new Database());
 
 	public static void main(String[] args) {		
 					ViewRegister window = new ViewRegister();
@@ -114,18 +115,20 @@ public class ViewRegister {
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 
-				String username = txtUsername.getText(); // aqui o botao pega o dado do usuario e armazena na string username
+				String username = txtUsername.getText(); 
 				String password = txtPassword.getText();
 				String confirm  = txtConfirmPass.getText();
-//tentando tirar isso daqui agora mesmo
+
 				if (confirm.equals(password))
 					System.out.println("Senha válida.");
 				else
 					JOptionPane.showMessageDialog(null, "Senha Invalida");
 
-				executavel.setUsernames(username);
-				executavel.setPasswords(password);
+				User user = new User(username, password);
 
+				user.setUsername(username);
+				user.setPassword(password);
+				cu.Create(username, password);
 				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
 			}
 		});

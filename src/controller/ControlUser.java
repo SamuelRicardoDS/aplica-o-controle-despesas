@@ -31,8 +31,14 @@ public class ControlUser {
     }
 
     public void Create(String username, String password) {
-        User user = new User(username, password);
-        this.database.addUser(user);
+        if(username == null || password == null) {
+            System.out.println("Preencha todos os campos");
+        } else {
+            User user = new User(username, password);
+            database.addUser(user);
+            System.out.println("Usuário cadastrado com sucesso");
+        }
+        
     }
 
     public User ReadOne(String username) {
