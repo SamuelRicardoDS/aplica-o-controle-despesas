@@ -1,23 +1,4 @@
 package controller;
-/* 
-public class ControlRegister(username,password,confirmPass)
-{
-    public Executavel executavel = new Executavel();
-
-    public void register(username, password, confirmPass) {
-        
-        if (username.equals("") || password.equals("") || confirmPass.equals("")) {
-            JOptionPane.showMessageDialog(null, "Preencha todos os campos");
-        } else if (!password.equals(confirmPass)) {
-            JOptionPane.showMessageDialog(null, "As senhas não conferem");
-        } else {
-            User user = new User(username, password);
-            user.addUser();
-            JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso");
-        }
-    }
-    
-} */
 
 import java.util.ArrayList;
 
@@ -32,7 +13,7 @@ public class ControlUser {
         this.database = Database.getInstance();
     }
 
-    public void Create(String username, String password) {
+    public void create(String username, String password) {
         if(username == null || password == null) {
             System.out.println("Preencha todos os campos");
         } else {
@@ -43,11 +24,11 @@ public class ControlUser {
        // System.out.println(Database.getUsers());
     }
 
-    public User ReadOne(String username) {
+    public User readOne(String username) {
         return this.database.getUser(username);
     }
 
-    public Boolean ControlLogin(String username, String password) {
+    public Boolean controlLogin(String username, String password) {
         Boolean isValidUser = false;
 
         for (User user : this.database.getUsers()) {
@@ -55,12 +36,13 @@ public class ControlUser {
                 isValidUser = true;
             }
         }
-
        // System.out.println(Database.getUsers());
         return isValidUser;
     }
+
+    //public String definePassword
     
-    public ArrayList<User> ReadAll() {
+    public ArrayList<User> readAll() {
         return this.database.getUsers();
     }
     

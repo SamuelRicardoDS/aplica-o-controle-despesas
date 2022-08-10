@@ -128,7 +128,7 @@ public class ViewRegister {
 
 				user.setUsername(username);
 				user.setPassword(password);
-				cu.Create(username, password);
+				cu.create(username, password);
 				JOptionPane.showMessageDialog(null, "Usuário Cadastrado"); // aqui mostra
 			}
 		});

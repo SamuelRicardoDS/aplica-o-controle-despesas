@@ -88,11 +88,11 @@ public class ViewLogin {
 				String username = txtLogin.getText();
 				String password = txtPassword.getText();
 
-				if(cu.ControlLogin(username, password) == true) {
+				if(cu.controlLogin(username, password) == true) {
 					frame.dispose();
 					ViewMain window = new ViewMain();
 					window.getMainFrame().setVisible(true);
-					System.out.println(cu.ReadAll());
+					System.out.println(cu.readAll());
 				} else {
 					System.out.println("Usuário ou senha inválidos");
 				}
