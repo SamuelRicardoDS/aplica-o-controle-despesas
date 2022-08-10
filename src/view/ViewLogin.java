@@ -95,8 +95,6 @@ public class ViewLogin {
 				} else {
 					System.out.println("Usuário ou senha inválidos");
 				}
-				ViewMain main = new ViewMain();
-				main.getMainFrame().setVisible(true);
 				
 			}
 		});
