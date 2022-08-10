@@ -22,7 +22,7 @@ public class ViewMain {
 	public ViewMain() {
 		
 		frame = new JFrame();
-		frame.setBounds(150, 150, 600, 550);
+		frame.setBounds(150, 150, 1280, 720);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
