@@ -10,6 +10,9 @@ import javax.swing.ImageIcon;
 public class ViewFirstScreen {
 
 	private JFrame frame;
+	private JButton btnRegister;
+	private JButton btnLogin;
+	private JLabel background;
 
 	
 	public static void main(String[] args) {
@@ -25,18 +28,18 @@ public class ViewFirstScreen {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 		
-		JButton btnLogin = new JButton("Login");
+		btnLogin = new JButton("Login");
 		btnLogin.setBounds(195, 185, 210, 45);
 		frame.getContentPane().add(btnLogin);
 		
-		JButton btnRegister = new JButton("Cadastro");
+		btnRegister = new JButton("Cadastro");
 		btnRegister.setBounds(195, 260, 210, 45);
 		frame.getContentPane().add(btnRegister);
 		
-		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon(ViewFirstScreen.class.getResource("/images/hj.jpg")));
-		label.setBounds(0, -128, 875, 843);
-		frame.getContentPane().add(label);
+		background = new JLabel("");
+		background.setIcon(new ImageIcon(ViewFirstScreen.class.getResource("/images/hj.jpg")));
+		background.setBounds(0, -128, 875, 843);
+		frame.getContentPane().add(background);
 
 
 		btnLogin.addActionListener(new ActionListener() {
