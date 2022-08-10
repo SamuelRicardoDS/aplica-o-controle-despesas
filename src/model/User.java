@@ -1,7 +1,7 @@
 package model;
 
 import java.util.*;
-import model.Group;
+
 
 
 public class User {
