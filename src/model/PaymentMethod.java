@@ -7,5 +7,4 @@ public abstract class PaymentMethod {
 	private String bank;
 	private String payer;
 
-	
 }
