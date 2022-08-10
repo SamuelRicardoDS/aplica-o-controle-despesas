@@ -72,7 +72,7 @@ public class ViewRegister {
 		btnClear.setBounds(305, 320, 150, 25);
 		frame.getContentPane().add(btnClear);
 
-		btnExit = new JButton("sair");
+		btnExit = new JButton("Voltar");
 		btnExit.setBounds(220, 350, 150, 25);
 		frame.getContentPane().add(btnExit);
 
@@ -129,7 +129,7 @@ public class ViewRegister {
 				user.setUsername(username);
 				user.setPassword(password);
 				cu.Create(username, password);
-				JOptionPane.showMessageDialog(null, "USER DATA" + "\n Nome:" + username + "\n Senha:" + password); // aqui mostra
+				JOptionPane.showMessageDialog(null, "Usuário Cadastrado"); // aqui mostra
 			}
 		});
 

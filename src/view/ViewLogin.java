@@ -13,6 +13,7 @@ import data.Database;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JPasswordField;
 
 public class ViewLogin {
 
@@ -55,7 +56,7 @@ public class ViewLogin {
 		frame.getContentPane().add(txtLogin);
 		txtLogin.setColumns(10);
 
-		txtPassword = new JTextField();
+		txtPassword = new JPasswordField();
 		txtPassword.setBounds(195, 230, 200, 35);
 		frame.getContentPane().add(txtPassword);
 		txtPassword.setColumns(10);
