@@ -27,20 +27,20 @@ public class ViewMain {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 		
+				btnBack = new JButton("Voltar");
+				btnBack.setBounds(12, 646, 150, 25);
+				frame.getContentPane().add(btnBack);
+				
+						btnBack.addActionListener(arg0 -> {
+							ViewLogin window = new ViewLogin();
+							window.getLoginFrame().setVisible(true);
+							frame.dispose();
+						});
+		
 		label = new JLabel("");
 		label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpg")));
-		label.setBounds(0, -55, 804, 663);
+		label.setBounds(0, -24, 1280, 707);
 		frame.getContentPane().add(label);
-
-		btnBack = new JButton("Voltar");
-		btnBack.setBounds(150, 320, 150, 25);
-		frame.getContentPane().add(btnBack);
-
-		btnBack.addActionListener(arg0 -> {
-			ViewLogin window = new ViewLogin();
-			window.getLoginFrame().setVisible(true);
-			frame.dispose();
-		});
 
 	}
 	public JFrame getMainFrame() {
