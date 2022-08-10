@@ -27,7 +27,6 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.border.LineBorder;
 
-import controller.Executavel;
 import data.Database;
 import model.User;
 import controller.ControlUser;
@@ -37,7 +36,7 @@ import controller.ControlUser;
 
 public class ViewRegister {
 
-	public Executavel executavel = new Executavel();
+	/* public Executavel executavel = new Executavel(); */
 	private JFrame frame;
 	private JTextField txtUsername;
 	private JLabel lblPassword;
