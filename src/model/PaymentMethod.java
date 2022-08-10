@@ -34,4 +34,5 @@ public abstract class PaymentMethod {
 		this.payer = payer;
 	}
 
+	
 }
