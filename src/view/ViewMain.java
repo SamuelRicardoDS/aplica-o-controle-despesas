@@ -41,6 +41,7 @@ public class ViewMain {
 		label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpg")));
 		label.setBounds(0, -24, 1280, 707);
 		frame.getContentPane().add(label);
+		
 
 	}
 	public JFrame getMainFrame() {
