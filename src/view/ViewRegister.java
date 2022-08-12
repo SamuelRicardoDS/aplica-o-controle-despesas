@@ -31,9 +31,6 @@ import data.Database;
 import model.User;
 import controller.ControlUser;
 
-
-
-
 public class ViewRegister {
 
 	/* public Executavel executavel = new Executavel(); */
@@ -50,9 +47,9 @@ public class ViewRegister {
 	private JLabel background;
 	public ControlUser cu = new ControlUser(Database.getInstance());
 
-	public static void main(String[] args) {		
-					ViewRegister window = new ViewRegister();
-					window.frame.setVisible(true);
+	public static void main(String[] args) {
+		ViewRegister window = new ViewRegister();
+		window.frame.setVisible(true);
 	}
 
 	public ViewRegister() {
@@ -104,7 +101,7 @@ public class ViewRegister {
 		txtConfirmPass.setColumns(10);
 		txtConfirmPass.setBounds(226, 280, 150, 19);
 		frame.getContentPane().add(txtConfirmPass);
-		
+
 		background = new JLabel("");
 		background.setIcon(new ImageIcon(ViewRegister.class.getResource("/images/ze.jpeg")));
 		background.setBounds(0, -81, 988, 743);
@@ -114,24 +111,24 @@ public class ViewRegister {
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 
-				String username = txtUsername.getText(); 
+				String username = txtUsername.getText();
 				String password = txtPassword.getText();
-				String confirm  = txtConfirmPass.getText();
+				String confirm = txtConfirmPass.getText();
 
-				if (confirm.equals(password))
-					System.out.println("Senha válida.");
-				else
+				if (confirm.equals(password)) {
+					password = confirm;
+					User user = new User(username, password);
+					user.setUsername(username);
+					user.setPassword(password);
+					cu.create(username, password);
+					JOptionPane.showMessageDialog(null, "Usuário Cadastrado"); // aqui mostra
+
+				} else {
 					JOptionPane.showMessageDialog(null, "Senha Invalida");
+				}
 
-				User user = new User(username, password);
-
-				user.setUsername(username);
-				user.setPassword(password);
-				cu.create(username, password);
-				JOptionPane.showMessageDialog(null, "Usuário Cadastrado"); // aqui mostra
 			}
 		});
-
 
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
@@ -143,14 +140,14 @@ public class ViewRegister {
 
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				
+
 				frame.dispose();
-				
+
 				ViewFirstScreen origin = new ViewFirstScreen();
 				origin.getOriginFrame().setVisible(true);
 			}
 		});
-		
+
 	}
 
 	public JFrame getRegisterFrame() {
