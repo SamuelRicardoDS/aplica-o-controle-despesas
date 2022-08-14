@@ -33,7 +33,7 @@ public class ViewMain {
             window.getLoginFrame().setVisible(true);
             frame.dispose();
         });
-
+        //fundo ainda ta quebrando o codigo, comentei a linha que da erro
         label = new JLabel("");
         //label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpeg")));
         label.setBounds(0, -24, 1280, 707);
