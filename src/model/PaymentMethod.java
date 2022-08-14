@@ -8,7 +8,7 @@ public abstract class PaymentMethod {
 	private String payer;
 
 	public PaymentMethod(Date payDate, String bank, String payer) {
-
+		super();
 		this.payDate = payDate;
 		this.bank = bank;
 		this.payer = payer;

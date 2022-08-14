@@ -8,7 +8,7 @@ public class User {
 
 	private String username;
 	private String password;
-	private ArrayList<Group> groups;
+	private final ArrayList<Group> groups; //nao precisamos nunca apagar essa lista
 
 	public User(String username, String password) {
 		this.username = username;
