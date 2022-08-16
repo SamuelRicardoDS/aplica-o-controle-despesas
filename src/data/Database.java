@@ -2,18 +2,37 @@ package data;
 
 import java.util.ArrayList;
 import model.User;
+import model.Group;
 
 public class Database {
     ArrayList<User> users;
+    ArrayList<Group> groups;
     private static Database instance;
+
+    private Database() {
+    }
 
 	
     public static Database getInstance() {
         if (instance == null) {
             instance = new Database();
             instance.users = new ArrayList<User>();
+            instance.groups = new ArrayList<Group>();
         }
         return instance;
+    }
+
+    public void addGroup(Group group) {
+        groups.add(group);
+    }
+
+    public Group getGroup(String name) {
+        for (Group group : groups) {
+            if (group.getName().equals(name)) {
+                return group;
+            }
+        }
+        return null;
     }
 
 	public void addUser(User user) {

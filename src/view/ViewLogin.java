@@ -27,14 +27,6 @@ public class ViewLogin {
 	private JLabel label;
 	ControlUser cu = new ControlUser(Database.getInstance());
 
-
-	public static void main(String[] args) {
-
-		ViewLogin window = new ViewLogin();
-		window.frame.setVisible(true);
-
-	}
-
 	public ViewLogin() {
 
 		frame = new JFrame();

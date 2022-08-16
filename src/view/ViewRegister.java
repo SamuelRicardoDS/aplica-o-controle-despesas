@@ -47,11 +47,6 @@ public class ViewRegister {
 	private JLabel background;
 	public ControlUser cu = new ControlUser(Database.getInstance());
 
-	public static void main(String[] args) {
-		ViewRegister window = new ViewRegister();
-		window.frame.setVisible(true);
-	}
-
 	public ViewRegister() {
 
 		frame = new JFrame();

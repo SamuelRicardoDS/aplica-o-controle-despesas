@@ -1,6 +1,5 @@
 package view;
 
-
 import java.awt.event.*;
 import javax.swing.JFrame;
 import javax.swing.JButton;
@@ -15,35 +14,29 @@ public class ViewFirstScreen {
 	private JLabel background;
 
 	
-	public static void main(String[] args) {
-					ViewFirstScreen window = new ViewFirstScreen();
-					window.frame.setVisible(true);	
-	}
-	
 	public ViewFirstScreen() {
-		
+
 		frame = new JFrame();
 		frame.setBounds(150, 150, 600, 550);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
-		
+
 		btnLogin = new JButton("Login");
 		btnLogin.setBounds(195, 185, 210, 45);
 		frame.getContentPane().add(btnLogin);
-		
+
 		btnRegister = new JButton("Cadastro");
 		btnRegister.setBounds(195, 260, 210, 45);
 		frame.getContentPane().add(btnRegister);
-		
+
 		background = new JLabel("");
 		background.setIcon(new ImageIcon(ViewFirstScreen.class.getResource("/images/hj.jpg")));
 		background.setBounds(0, -128, 875, 843);
 		frame.getContentPane().add(background);
 
-
 		btnLogin.addActionListener(new ActionListener() {
-			
+
 			public void actionPerformed(ActionEvent e) {
 
 				frame.dispose();
@@ -63,7 +56,8 @@ public class ViewFirstScreen {
 		});
 
 	}
-	//leva a tela
+
+	// leva a tela
 	public JFrame getOriginFrame() {
 		return frame;
 	}

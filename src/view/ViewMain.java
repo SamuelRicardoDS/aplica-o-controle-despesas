@@ -11,11 +11,6 @@ public class ViewMain {
     private JLabel label;
     private JButton btnBack;
 
-    public static void main(String[] args) {
-        ViewMain window = new ViewMain();
-        window.frame.setVisible(true);
-    }
-
     public ViewMain() {
 
         frame = new JFrame();
