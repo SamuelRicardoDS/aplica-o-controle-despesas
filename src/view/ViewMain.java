@@ -4,12 +4,23 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JPopupMenu;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JTabbedPane;
+import javax.swing.JPanel;
 
 public class ViewMain {
 
     private JFrame frame;
     private JLabel label;
     private JButton btnBack;
+
+  /*   public static void main(String[] args) {
+        ViewMain window = new ViewMain();
+        window.frame.setVisible(true);
+    } */
 
     public ViewMain() {
 
@@ -33,6 +44,16 @@ public class ViewMain {
         label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpeg")));
         label.setBounds(0, -24, 1280, 720); 
         frame.getContentPane().add(label);
+        
+
+       // a parte comentada foi a maior bostejada da vida, nn sei o que to fazendo mas queria pedir uma janela... desculpa guga
+       /*  JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+        tabbedPane.setBounds(150, 250, 1280, 720);
+        frame.getContentPane().add(tabbedPane);
+        
+        JPanel panel = new JPanel();
+        tabbedPane.addTab("perfil de usuario", null, panel, null);
+         */
 
     }
 
