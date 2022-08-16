@@ -1,11 +1,11 @@
 package view;
 
-import java.awt.EventQueue;
+
 import java.awt.event.*;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
+
 
 import controller.ControlUser;
 import data.Database;

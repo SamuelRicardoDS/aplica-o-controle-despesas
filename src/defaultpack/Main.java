@@ -1,6 +1,5 @@
 package defaultpack;
 
-import data.Database;
 import view.*;
 
 public class Main {

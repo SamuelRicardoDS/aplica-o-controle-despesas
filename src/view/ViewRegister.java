@@ -1,31 +1,16 @@
 package view;
 
-import view.ViewFirstScreen;
-
-import java.util.*;
-import java.awt.EventQueue;
-import java.util.ArrayList;
-
 import javax.swing.JFrame;
 import javax.swing.JButton;
-import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
-import javax.swing.JCheckBox;
-import java.awt.Point;
-import java.awt.Insets;
-import java.awt.Component;
-import java.awt.ComponentOrientation;
-import java.awt.Cursor;
 import javax.swing.JTextField;
 import java.awt.Color;
-import javax.swing.JPanel;
 import javax.swing.JPasswordField;
-import javax.swing.border.LineBorder;
+
 
 import data.Database;
 import model.User;

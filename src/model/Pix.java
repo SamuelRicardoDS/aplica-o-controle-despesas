@@ -8,5 +8,13 @@ public class Pix extends PaymentMethod{
 		super(payDate, bank, payer);
 		this.idTransacao = idTransacao;
 	}
+
+	public String getIdTransacao() {
+		return idTransacao;
+	}
+
+	public void setIdTransacao(String idTransacao) {
+		this.idTransacao = idTransacao;
+	}
 	
 }

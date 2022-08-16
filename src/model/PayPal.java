@@ -10,5 +10,22 @@ public class PayPal extends PaymentMethod {
     this.cardFlag = cardFlag;
     this.type = type;
   }
+
+  public String getCardFlag() {
+    return cardFlag;
+  }
+
+  public void setCardFlag(String cardFlag) {
+    this.cardFlag = cardFlag;
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+  
 }
 
