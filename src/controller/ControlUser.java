@@ -24,7 +24,9 @@ public class ControlUser {
        // System.out.println(Database.getUsers());
     }
 
-    public void delete(ArrayList<User> users) {
+    public void delete(User user) {
+        database.getUsers().remove(user);
+    }
         
         
     }
