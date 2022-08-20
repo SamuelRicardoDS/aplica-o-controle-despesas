@@ -24,6 +24,11 @@ public class ControlUser {
        // System.out.println(Database.getUsers());
     }
 
+    public void delete(ArrayList<User> users) {
+        
+        
+    }
+
     public User readOne(String username) {
         return this.database.getUser(username);
     }
