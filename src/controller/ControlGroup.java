@@ -1,7 +1,5 @@
 package controller;
 
-import java.util.ArrayList;
-
 import data.Database;
 import model.Group;
 
@@ -18,13 +16,14 @@ public class ControlGroup {
             System.out.println("Grupo cadastrado com sucesso");
         }
     }
+    
+    public void updateGroup() {
+
+    }
 
     public void deleteGroup(Group group) {
         database.getGroups().remove(group);
     }
 
-    public void editingGroup() {
-
-    }
 
 }
