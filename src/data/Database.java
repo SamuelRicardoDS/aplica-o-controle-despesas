@@ -47,6 +47,7 @@ public class Database {
         }
         return null;
     }
+    
 
     public ArrayList<User> getUsers() {
         return users;
@@ -54,6 +55,11 @@ public class Database {
 
     public void setUsers(ArrayList<User> users) {
         this.users = users;
+    }
+
+
+    public ArrayList<Group> getGroups() {
+        return groups;
     }
 	
 }

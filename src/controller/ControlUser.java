@@ -29,7 +29,6 @@ public class ControlUser {
     }
         
         
-    }
 
     public User readOne(String username) {
         return this.database.getUser(username);
