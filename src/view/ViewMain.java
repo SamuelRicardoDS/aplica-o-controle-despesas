@@ -57,11 +57,6 @@ public class ViewMain {
         		window.getCreateGroupFrame().setVisible(true);
         	}
         });
-        
-        tbMain = new JToolBar();
-        tbMain.setBounds(0, 0, 150, 720);
-        frame.getContentPane().add(tbMain);
-        tbMain.add(btnBack);
 
         label = new JLabel("");
         label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpeg")));
