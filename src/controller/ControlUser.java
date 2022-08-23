@@ -8,8 +8,9 @@ import model.User;
 public class ControlUser {
 
     private Database database;
+    private static String username;
 
-    public ControlUser(Database database) {
+    public ControlUser() {
         this.database = Database.getInstance();
     }
 
@@ -40,15 +41,19 @@ public class ControlUser {
         for (User user : this.database.getUsers()) {
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                 isValidUser = true;
+                ControlUser.username = username;
             }
         }
-       // System.out.println(Database.getUsers());
         return isValidUser;
     }
-
+    
     //public String definePassword
     
-    public ArrayList<User> readAll() {
+    public String getUsername() {
+		return username;
+	}
+
+	public ArrayList<User> readAll() {
         return this.database.getUsers();
     }
     

@@ -30,7 +30,7 @@ public class ViewRegister {
 	private JButton btnRegister;
 	private JLabel lblUsername;
 	private JLabel background;
-	public ControlUser cu = new ControlUser(Database.getInstance());
+	public ControlUser cu = new ControlUser();
 
 	public ViewRegister() {
 

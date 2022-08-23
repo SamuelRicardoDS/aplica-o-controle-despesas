@@ -25,7 +25,7 @@ public class ViewLogin {
 	private JButton btnEntrar;
 	private JButton btnBack;
 	private JLabel label;
-	ControlUser cu = new ControlUser(Database.getInstance());
+	ControlUser cu = new ControlUser();
 
 	public ViewLogin() {
 
@@ -84,7 +84,6 @@ public class ViewLogin {
 					frame.dispose();
 					ViewMain window = new ViewMain();
 					window.getMainFrame().setVisible(true);
-					System.out.println(cu.readAll());
 				} else {
 					System.out.println("Usuário ou senha inválidos");
 				}

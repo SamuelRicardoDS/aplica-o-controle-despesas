@@ -7,6 +7,8 @@ public class ControlGroup {
 
     private Database database;
 
+    public ControlGroup(){
+    	this.database = Database.getInstance();    }
     public void createGroup(String name, String lider) {
         if (name == null || lider == null) {
             System.out.println("Preencha todos os campos");
