@@ -31,7 +31,6 @@ public class ViewMain {
         btnBack.setBounds(12, 646, 150, 25);
         frame.getContentPane().add(btnBack);
 
-        
         btnBack.addActionListener(arg0 -> {
             ViewLogin window = new ViewLogin();
             window.getLoginFrame().setVisible(true);
@@ -47,8 +46,6 @@ public class ViewMain {
         label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpeg")));
         label.setBounds(0, -24, 1280, 720); 
         frame.getContentPane().add(label);
-        
-
     }
 
     public JFrame getMainFrame() {
