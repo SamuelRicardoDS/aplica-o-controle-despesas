@@ -1,7 +1,5 @@
 package controller;
 
-import java.util.ArrayList;
-
 import data.Database;
 import model.Group;
 
@@ -19,8 +17,8 @@ public class ControlGroup {
         }
     }
 
-    public void deleteGroup(Group group) {
-        database.getGroups().remove(group);
+    public Group readGroup(Group group) {
+        return this.database.getGroup(group.getName());
     }
 
     public void updateGroup(Group inputGroup) {
@@ -30,4 +28,9 @@ public class ControlGroup {
             }
         }
     }
+
+    public void deleteGroup(Group group) {
+        database.getGroups().remove(group);
+    }
+
 }
