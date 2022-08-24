@@ -8,7 +8,6 @@ import javax.swing.JTextField;
 
 
 import controller.ControlUser;
-import data.Database;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;

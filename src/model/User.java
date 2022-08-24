@@ -9,13 +9,13 @@ public class User {
 	private String username;
 	private String password;
 	private ArrayList<Group> groups; //nao precisamos nunca apagar essa lista
-	private ArrayList<String> friends;
+	private ArrayList<User> friends;
 
 	public User(String username, String password) {
 		this.username = username;
 		this.password = password;
 		this.groups = new ArrayList<Group>();
-		this.friends = new ArrayList<String>();
+		this.friends = new ArrayList<User>();
 	}
 
 	public String getUsername() {
@@ -42,11 +42,11 @@ public class User {
 		this.groups = groups;
 	}
 
-	public ArrayList<String> getFriends() {
+	public ArrayList<User> getFriends() {
 		return friends;
 	}
 
-	public void setFriends(ArrayList<String> friends) {
+	public void setFriends(ArrayList<User> friends) {
 		this.friends = friends;
 	}
 

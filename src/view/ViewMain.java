@@ -15,6 +15,7 @@ public class ViewMain {
     private JLabel label;
     private JButton btnBack;
     private JButton btnCreateGroup;
+    private JButton addFriend;
     
     
 
@@ -37,12 +38,24 @@ public class ViewMain {
         btnCreateGroup = new JButton("Criar Grupo");
         btnCreateGroup.setBounds(0,30, 130, 30);
         
+        addFriend = new JButton("Adicionar Amigo");
+        addFriend.setBounds(0,0 ,150, 30);
+        
         JPanel panel = new JPanel();
-        panel.setBounds(0, 0, 150, 720);
+        panel.setBounds(0, 0, 164, 720);
         frame.getContentPane().add(panel);
         frame.setLocationRelativeTo(null);
         panel.add(btnBack);
         panel.add(btnCreateGroup);
+        panel.add(addFriend);
+        
+        
+        addFriend.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		ViewAddFriend window = new ViewAddFriend();
+        		window.getAddFriend().setVisible(true);
+        	}
+        });
         
         btnBack.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent ae) {

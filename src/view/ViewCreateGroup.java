@@ -24,11 +24,6 @@ import javax.swing.border.CompoundBorder;
 
 
 public class ViewCreateGroup {
-	
-	public static void main(String[] args) {
-	    ViewCreateGroup window = new ViewCreateGroup();
-	    window.frame.setVisible(true);
-	}
 
 	private JFrame frame;
 	private JLabel background;
@@ -47,8 +42,9 @@ public class ViewCreateGroup {
 		cg = new ControlGroup();
 		
 		frame = new JFrame();
-		frame.setBounds(100, 100, 800, 480);
+		frame.setBounds(0, 0, 800, 480);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
 		
 		scrollPane = new JScrollPane();
 		scrollPane.setBounds(595, 30, 190, 340);
@@ -84,7 +80,7 @@ public class ViewCreateGroup {
 		background.setBounds(0, -28, 925, 542);
 		frame.getContentPane().add(background);
 		background.setIcon(new ImageIcon(ViewCreateGroup.class.getResource("/images/duzao.jpg")));
-		frame.setLocationRelativeTo(null);
+		
 		
 		btnBack.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
@@ -99,6 +95,7 @@ public class ViewCreateGroup {
 			cg.createGroup(name, lider);
 		}
 		});
+		
 	}
 	public JFrame getCreateGroupFrame() {
 		return frame;
