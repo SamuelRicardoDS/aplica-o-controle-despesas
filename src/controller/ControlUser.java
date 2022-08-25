@@ -3,6 +3,7 @@ package controller;
 import java.util.ArrayList;
 
 import data.Database;
+import model.Group;
 import model.User;
 
 public class ControlUser {
@@ -14,11 +15,11 @@ public class ControlUser {
         this.database = Database.getInstance();
     }
 
-    public void create(String username, String password) {
+    public void create(String username, String password, ArrayList<Group> groups, ArrayList<User> friends) {
         if(username == null || password == null) {
             System.out.println("Preencha todos os campos");
         } else {
-            User user = new User(username, password);
+            User user = new User(username, password, groups, friends);
             database.addUser(user);
             System.out.println("Usuário cadastrado com sucesso");
         }

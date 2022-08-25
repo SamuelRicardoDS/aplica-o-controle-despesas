@@ -11,7 +11,7 @@ public class User {
 	private ArrayList<Group> groups; //nao precisamos nunca apagar essa lista
 	private ArrayList<User> friends;
 
-	public User(String username, String password) {
+	public User(String username, String password, ArrayList<Group> groups, ArrayList<User> friends) {
 		this.username = username;
 		this.password = password;
 		this.groups = new ArrayList<Group>();

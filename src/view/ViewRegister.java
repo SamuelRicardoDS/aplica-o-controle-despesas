@@ -97,10 +97,10 @@ public class ViewRegister {
 
 				if (confirm.equals(password)) {
 					password = confirm;
-					User user = new User(username, password);
+					User user = new User(username, password, null, null);
 					user.setUsername(username);
 					user.setPassword(password);
-					cu.create(username, password);
+					cu.create(username, password, null, null);
 					JOptionPane.showMessageDialog(null, "Usuário Cadastrado"); // aqui mostra
 
 				} else {
