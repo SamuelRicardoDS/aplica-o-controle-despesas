@@ -50,7 +50,16 @@ public class ViewCreateGroup {
 		scrollPane.setBounds(595, 30, 190, 340);
 		frame.getContentPane().add(scrollPane);
 		
-		table = new JTable();
+		
+		String [] columns = {"Nome"};
+		Object [][] data = new String[cu.readOne(cu.getUsername()).getFriends().size()][columns.length];
+		
+		for(int i = 0; i < cu.readOne(cu.getUsername()).getFriends().size(); i++) {
+			String [] friends = {cu.readOne(cu.getUsername()).getFriends().get(i).getUsername()};
+			data[i] = friends;
+		}
+		
+		table = new JTable(data, columns);
 		scrollPane.setViewportView(table);
 		table.setBorder(new LineBorder(new Color(0, 0, 0)));
 		
