@@ -11,8 +11,7 @@ public class Database {
 
     private Database() {
     }
-
-	
+//singleton
     public static Database getInstance() {
         if (instance == null) {
             instance = new Database();
@@ -22,8 +21,16 @@ public class Database {
         return instance;
     }
 
+    public void clearDatabase() {
+        instance = null;
+    }
+
     public void addGroup(Group group) {
         groups.add(group);
+    }
+
+    public void addUser(User user) {
+        users.add(user);
     }
 
     public Group getGroup(String name) {
@@ -35,8 +42,8 @@ public class Database {
         return null;
     }
 
-	public void addUser(User user) {
-        users.add(user);
+    public ArrayList<Group> getGroups() {
+        return groups;
     }
 
     public User getUser(String username) {
@@ -47,7 +54,6 @@ public class Database {
         }
         return null;
     }
-    
 
     public ArrayList<User> getUsers() {
         return users;
@@ -56,14 +62,4 @@ public class Database {
     public void setUsers(ArrayList<User> users) {
         this.users = users;
     }
-
-
-    public ArrayList<Group> getGroups() {
-        return groups;
-    }
-	
 }
-
-/* 
- * View -> Usuaŕio clica em um botão de entrar, passando nome e senha -> ControlUser -> Controller acessa a database e faz o que ele quiser com os dados.
- */
