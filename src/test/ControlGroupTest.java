@@ -28,15 +28,10 @@ class ControlGroupTest {
     void createGroupTest() {
         ArrayList<Group> gruposDoUsuario = new ArrayList<Group>();
         ArrayList<User> amigosDoUsuario = new ArrayList<User>();
-        User lider = new User("username", "password", gruposDoUsuario, amigosDoUsuario);
+        User lider = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario);
 
         controlGroup.createGroup("nome de grupo", lider); 
         assertEquals(1, instance.getGroups().size());
     }
-
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
 
 }

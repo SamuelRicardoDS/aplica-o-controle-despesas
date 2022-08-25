@@ -11,8 +11,6 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import javax.swing.JPasswordField;
 
-
-import data.Database;
 import model.User;
 import controller.ControlUser;
 
