@@ -2,6 +2,7 @@ package controller;
 
 import data.Database;
 import model.Group;
+import model.User;
 
 public class ControlGroup {
 
@@ -9,7 +10,7 @@ public class ControlGroup {
 
     public ControlGroup(){
     	this.database = Database.getInstance();    }
-    public void createGroup(String name, String lider) {
+    public void createGroup(String name, User lider) {
         if (name == null || lider == null) {
             System.out.println("Preencha todos os campos");
         } else {

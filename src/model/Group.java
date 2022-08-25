@@ -3,13 +3,13 @@ package model;
 import java.util.ArrayList;
 
 public class Group {
-	private ArrayList<String> members = new ArrayList<String>();
+	private ArrayList<User> members = new ArrayList<User>();
 	private String name;
-	private String lider;
+	private User lider;
 	private Double value;
 	
 	
-	public Group(ArrayList<String> members, String name, String lider, Double value) {
+	public Group(ArrayList<User> members, String name, User lider, Double value) {
 		super();
 		this.members = members;
 		this.name = name;
@@ -17,10 +17,10 @@ public class Group {
 		this.value = value;
 	}
 	
-	public ArrayList<String> getmembers() {
+	public ArrayList<User> getmembers() {
 		return members;
 	}
-	public void setmembers(ArrayList<String> members) {
+	public void setmembers(ArrayList<User> members) {
 		this.members = members;
 	}
 	public String getName() {
@@ -29,10 +29,10 @@ public class Group {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getLider() {
+	public User getLider() {
 		return lider;
 	}
-	public void setLider(String lider) {
+	public void setLider(User lider) {
 		this.lider = lider;
 	}
 	public Double getValue() {

@@ -7,18 +7,18 @@ import javax.swing.JTextField;
 
 import controller.ControlGroup;
 import controller.ControlUser;
+import model.User;
 
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 import java.awt.Color;
-import javax.swing.JComboBox;
+
 import javax.swing.JScrollPane;
-import javax.swing.JCheckBox;
+
 import javax.swing.JTable;
-import javax.swing.border.BevelBorder;
+
 import javax.swing.border.LineBorder;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.CompoundBorder;
+
 
 
 
@@ -90,7 +90,7 @@ public class ViewCreateGroup {
 		btnNewGroup.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			String name = nameGroup.getText();
-			String lider = cu.getUsername();
+			User lider = cu.readOne(cu.getUsername());
 			System.out.println(name + lider);
 			cg.createGroup(name, lider);
 		}

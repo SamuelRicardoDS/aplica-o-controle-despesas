@@ -28,8 +28,6 @@ public class ControlUser {
     public void delete(User user) {
         database.getUsers().remove(user);
     }
-        
-        
 
     public User readOne(String username) {
         return this.database.getUser(username);
