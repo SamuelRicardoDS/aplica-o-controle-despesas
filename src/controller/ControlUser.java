@@ -47,6 +47,20 @@ public class ControlUser {
         return isValidUser;
     }
     
+    public Boolean verifyFriend(String username) {
+    	Boolean isValidFriend = false;
+    	for(User user : this.database.getUsers()) {
+    		if(user.getUsername().equals(username)) {
+    			isValidFriend = true;
+    		}
+    	}
+    	return isValidFriend;
+    }
+    
+    public void addFriend(String friend) {
+        User loggedUser = this.readOne(ControlUser.username);
+        loggedUser.getFriends().add(this.readOne(friend));
+    }
     //public String definePassword
     
     public String getUsername() {
