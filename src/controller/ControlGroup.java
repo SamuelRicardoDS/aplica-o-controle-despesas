@@ -7,6 +7,7 @@ import model.User;
 public class ControlGroup {
 
     private Database database;
+    public ControlUser cu = new ControlUser();
 
     public ControlGroup() {
         this.database = Database.getInstance();
@@ -23,7 +24,7 @@ public class ControlGroup {
     }
 
     public Group readGroup(Group group) {
-        return this.database.getGroup(group.getName());
+        return database.getGroup(group.getName());
     }
 
     public void updateGroup(Group inputGroup) {
@@ -36,6 +37,18 @@ public class ControlGroup {
 
     public void deleteGroup(Group group) {
         database.getGroups().remove(group);
+    }
+
+    public void addMember(User friendUser, Group group) {
+        if (cu.verifyFriend(friendUser.getUsername()) == true) {
+            for (int i = 0; i < database.getGroups().size(); i++) {
+                if (database.getGroups().get(i).getName().equals(group.getName())) {
+                    database.getGroups().get(i).getMembers().add(friendUser);
+                } else {
+                    System.out.println("Usuário não encontrado");
+                }
+            }
+        }
     }
 
 }

@@ -17,7 +17,7 @@ public class Group {
 		this.value = value;
 	}
 	
-	public ArrayList<User> getmembers() {
+	public ArrayList<User> getMembers() {
 		return members;
 	}
 	public void setmembers(ArrayList<User> members) {

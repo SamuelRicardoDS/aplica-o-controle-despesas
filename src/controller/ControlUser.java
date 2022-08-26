@@ -23,7 +23,7 @@ public class ControlUser {
             database.addUser(user);
             System.out.println("Usuário cadastrado com sucesso");
         }
-       // System.out.println(Database.getUsers());
+       System.out.println(database.getUsers());
     }
 
     public void delete(User user) {
