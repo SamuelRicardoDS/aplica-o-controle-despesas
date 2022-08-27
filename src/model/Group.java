@@ -6,10 +6,10 @@ public class Group {
 	private ArrayList<User> members = new ArrayList<User>();
 	private String name;
 	private User lider;
-	private Double value;
+	private Expense value;
 	
 	
-	public Group(ArrayList<User> members, String name, User lider, Double value) {
+	public Group(ArrayList<User> members, String name, User lider, Expense value) {
 		super();
 		this.members = members;
 		this.name = name;
@@ -35,10 +35,10 @@ public class Group {
 	public void setLider(User lider) {
 		this.lider = lider;
 	}
-	public Double getValue() {
+	public Expense getValue() {
 		return value;
 	}
-	public void setValue(Double value) {
+	public void setValue(Expense value) {
 		this.value = value;
 	}
 	
