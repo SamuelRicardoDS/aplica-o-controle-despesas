@@ -51,7 +51,7 @@ public class ViewCreateGroup {
 		frame.getContentPane().add(scrollPane);
 		
 		
-		String [] columns = {"Nome"};
+		String [] columns = {"Lista de Amigos"};
 		Object [][] data = new String[cu.readOne(cu.getUsername()).getFriends().size()][columns.length];
 		
 		for(int i = 0; i < cu.readOne(cu.getUsername()).getFriends().size(); i++) {
