@@ -8,6 +8,7 @@ import javax.swing.GroupLayout.Group;
 
 import controller.ControlGroup;
 import controller.ControlUser;
+import data.Database;
 import model.User;
 
 import javax.swing.JButton;
@@ -100,13 +101,17 @@ public class ViewCreateGroup {
 
 		btnAddMember.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				// qual linha é selecionada
 				int selectedrow = table.getSelectedRow();
 
 				// pega o valor da linha selecionada e armazena na variavel
 				User friendUser = (User) table.getValueAt(selectedrow, 0);
+				
+				//entende qual grupo vai ser adicionado o amigo
+				Group group = cg.readGroup( cu.readOne(cu.getUsername()).getGroups().get(cu.readOne(cu.getUsername()).getGroups().size()-1).getName());
 
-				Group group = cg.readGroup(Group cg.getName());
+				// adiciona o membro no grupo
 				cg.addMember(friendUser, group);
 			}
 		});
