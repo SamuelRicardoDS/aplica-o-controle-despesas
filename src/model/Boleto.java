@@ -4,20 +4,20 @@ import java.util.Date;
 
 public class Boleto extends PaymentMethod {
 
-	private int code;
+	private String code;
 	private Date expirationDate;
 
-	public Boleto(Date payDate, String bank, String payer, int code, Date expirationDate) {
+	public Boleto(Date payDate, String bank, String payer, String code, Date expirationDate) {
 		super(payDate, bank, payer);
 		this.code = code;
 		this.expirationDate = expirationDate;
 	}
 
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
 
-	public void setCode(int code) {
+	public void setCode(String code) {
 		this.code = code;
 	}
 
