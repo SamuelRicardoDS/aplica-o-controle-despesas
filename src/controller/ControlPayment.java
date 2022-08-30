@@ -18,16 +18,15 @@ public class ControlPayment {
     }
 
     public void createPayment(User user) {
-        PaymentMethod paymentMethod = new PaymentMethod();
         Pix pix = new Pix(null, null, null, null);
         PayPal PayPal = new PayPal(null, null, null, null, null);
         Boleto boleto = new Boleto(null, null, null, null, null);
 
-        if(PaymentMethod paymentMethod = pix) {
+        if(paymentMethod = pix) {
             user.getPaymentMethods().add(paymentMethod);
-        } else if(PaymentMethod paymentMethod = PayPal) {
+        } else if(paymentMethod = PayPal) {
             user.getPaymentMethods().add(paymentMethod);
-        } else if(PaymentMethod paymentMethod = boleto) {
+        } else if(paymentMethod = boleto) {
             user.getPaymentMethods().add(paymentMethod);
         }
     }

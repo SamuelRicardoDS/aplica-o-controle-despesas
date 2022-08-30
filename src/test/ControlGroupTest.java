@@ -34,7 +34,7 @@ class ControlGroupTest {
         assertEquals(1, instance.getGroups().size());
     }
 
-    @Test
+  /*  @Test
     void readGroupTest() {
         ArrayList<Group> gruposDoUsuario = new ArrayList<Group>();
         ArrayList<User> amigosDoUsuario = new ArrayList<User>();
@@ -44,7 +44,21 @@ class ControlGroupTest {
 
         Group grupo = new Group(null, "nome de grupo", lider, null);
         assertEquals(grupo, controlGroup.readGroup(grupo));
+    } */
 
+    @Test
+    void addMemberTest() {
+        ArrayList<Group> gruposDoUsuario = new ArrayList<Group>();
+        ArrayList<User> amigosDoUsuario = new ArrayList<User>();
+        User lider = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario);
+
+        controlGroup.createGroup("nome de grupo", lider);
+
+        Group grupo = new Group(null, "nome de grupo", lider, null);
+        User membro = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario);
+        
+        controlGroup.addMember(membro, grupo);
+        assertEquals(1, grupo.getMembers().size());
     }
 
 }

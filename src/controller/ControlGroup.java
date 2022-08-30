@@ -24,7 +24,7 @@ public class ControlGroup {
     }
 
     public Group readGroup(Group group) {
-        return database.getGroup(group.getName());
+        return database.getGroup(group);
     }
 
     public void updateGroup(Group inputGroup) {
@@ -40,15 +40,14 @@ public class ControlGroup {
     }
 
     public void addMember(User friendUser, Group group) {
-        if (cu.verifyFriend(friendUser.getUsername()) == true) {
-            for (int i = 0; i < database.getGroups().size(); i++) {
-                if (database.getGroups().get(i).getName().equals(group.getName())) {
-                    database.getGroups().get(i).getMembers().add(friendUser);
-                } else {
-                    System.out.println("Usuário não encontrado");
-                }
+        for (int i = 0; i < database.getGroups().size(); i++) {
+            if (database.getGroups().get(i).getName().equals(group.getName())) {
+                database.getGroups().get(i).getMembers().add(friendUser);
+            } else {
+                System.out.println("Grupo não encontrado, portando, nenhum membro adicionado");
             }
         }
+         
     }
 
 }
