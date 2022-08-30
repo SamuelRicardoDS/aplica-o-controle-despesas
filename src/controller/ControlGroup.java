@@ -39,15 +39,10 @@ public class ControlGroup {
         database.getGroups().remove(group);
     }
 
-    public void addMember(User friendUser, Group group) {
-        for (int i = 0; i < database.getGroups().size(); i++) {
-            if (database.getGroups().get(i).getName().equals(group.getName())) {
-                database.getGroups().get(i).getMembers().add(friendUser);
-            } else {
-                System.out.println("Grupo não encontrado, portando, nenhum membro adicionado");
-            }
-        }
-         
+    public void addMember(User SelectedFriend, Group group) {
+        	int lastIdx = database.getGroups().size() - 1;
+        	Group lastGroup = database.getGroups().get(lastIdx);
+        	lastGroup.getMembers().add(SelectedFriend);                  
     }
 
 }
