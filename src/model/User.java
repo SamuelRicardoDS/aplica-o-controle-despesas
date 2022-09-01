@@ -10,12 +10,14 @@ public class User {
 	private String password;
 	private ArrayList<Group> groups; //nao precisamos nunca apagar essa lista
 	private ArrayList<User> friends;
+	private PaymentMethod paymentMethod;
 
-	public User(String username, String password, ArrayList<Group> groups, ArrayList<User> friends) {
+	public User(String username, String password, ArrayList<Group> groups, ArrayList<User> friends, PaymentMethod paymentMethod) {
 		this.username = username;
 		this.password = password;
 		this.groups = new ArrayList<Group>();
 		this.friends = new ArrayList<User>();
+		this.paymentMethod = paymentMethod;
 	}
 
 	public String getUsername() {
@@ -48,6 +50,14 @@ public class User {
 
 	public void setFriends(ArrayList<User> friends) {
 		this.friends = friends;
+	}
+
+	public PaymentMethod getPaymentMethod() {
+		return paymentMethod;
+	}
+
+	public void setPaymentMethod(PaymentMethod paymentMethod) {
+		this.paymentMethod = paymentMethod;
 	}
 
 }

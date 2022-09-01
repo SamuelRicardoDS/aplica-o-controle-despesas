@@ -17,17 +17,17 @@ public class ControlPayment {
         this.user = user;
     }
 
-    public void createPayment(User user) {
+    public void createPayment(PaymentMethod paymantMethod, User user) {
         Pix pix = new Pix(null, null, null, null);
         PayPal PayPal = new PayPal(null, null, null, null, null);
         Boleto boleto = new Boleto(null, null, null, null, null);
 
         if(paymentMethod = pix) {
-            user.getPaymentMethods().add(paymentMethod);
+            user.getPaymentMethod().add(paymentMethod);
         } else if(paymentMethod = PayPal) {
-            user.getPaymentMethods().add(paymentMethod);
+            user.getPaymentMethod().add(paymentMethod);
         } else if(paymentMethod = boleto) {
-            user.getPaymentMethods().add(paymentMethod);
+            user.getPaymentMethod().add(paymentMethod);
         }
     }
 }
