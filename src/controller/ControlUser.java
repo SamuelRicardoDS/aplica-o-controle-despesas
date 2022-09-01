@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import data.Database;
 import model.Group;
+import model.PaymentMethod;
 import model.User;
 
 public class ControlUser {
@@ -15,11 +16,11 @@ public class ControlUser {
         this.database = Database.getInstance();
     }
 
-    public void create(String username, String password, ArrayList<Group> groups, ArrayList<User> friends) {
+    public void create(String username, String password, ArrayList<Group> groups, ArrayList<User> friends, PaymentMethod paymentMethod) {
         if(username == null || password == null) {
             System.out.println("Preencha todos os campos");
         } else {
-            User user = new User(username, password, groups, friends);
+            User user = new User(username, password, groups, friends, paymentMethod);
             database.addUser(user);
             System.out.println("Usuário cadastrado com sucesso");
         }

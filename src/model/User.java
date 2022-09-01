@@ -8,11 +8,12 @@ public class User {
 
 	private String username;
 	private String password;
-	private ArrayList<Group> groups; //nao precisamos nunca apagar essa lista
+	private ArrayList<Group> groups; 
 	private ArrayList<User> friends;
 	private PaymentMethod paymentMethod;
 
 	public User(String username, String password, ArrayList<Group> groups, ArrayList<User> friends, PaymentMethod paymentMethod) {
+		super();
 		this.username = username;
 		this.password = password;
 		this.groups = new ArrayList<Group>();

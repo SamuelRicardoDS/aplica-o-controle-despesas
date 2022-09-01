@@ -5,8 +5,15 @@ import java.util.*;
 public class Expense {
 
     private Date date;
-    private float value;
+    private Double value;
     private String name;
+
+    public Expense(Date date, Double value, String name) {
+        super();
+        this.date = date;
+        this.value = value;
+        this.name = name;
+    }
 
     public Date getDate() {
         return date;
@@ -16,11 +23,11 @@ public class Expense {
         this.date = date;
     }
 
-    public float getValue() {
+    public Double getValue() {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -34,7 +41,7 @@ public class Expense {
 
     public void addItem() {
 
-        Expense expense = new Expense();
+        Expense expense = new Expense(date, value, name);
         expense.setDate(date);
         expense.setValue(value);
         expense.setName(name);
