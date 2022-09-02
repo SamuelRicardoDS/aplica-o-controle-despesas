@@ -67,7 +67,7 @@ public class ViewCreateGroup {
     nameGroup = new JTextField();
     nameGroup.setBounds(320, 193, 151, 25);
     frame.getContentPane().add(nameGroup);
-    nameGroup.setColumns(10);
+    nameGroup.setColumns(10); 	
 
     btnNewGroup = new JButton("Criar Grupo");
     btnNewGroup.setBounds(341, 248, 117, 25);
