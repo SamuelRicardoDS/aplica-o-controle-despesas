@@ -45,4 +45,8 @@ public class ControlGroup {
         	lastGroup.getMembers().add(SelectedFriend);                  
     }
 
+    public String getGroupName(Group group) {
+        return group.getName();
+    }
+
 }

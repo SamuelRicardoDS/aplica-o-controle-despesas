@@ -56,10 +56,10 @@ public class ViewMain {
     frame.getContentPane().add(scrollPane);
 
     String columns[] = { "Grupos" };
-    Object[][] data = new String[cg.readGroup(cg.getGroupName()).getUserGroups().size()][columns.length];
+    Object[][] data = new String[cu.readOne(cu.getUsername()).getGroups().size()][columns.length];
 
-    for (int i = 0; i < cg.readGroup(cg.getGroupName()).getUserGroups().size(); i++) {
-      String[] groups = { cg.readGroup(cg.getGroupName()).getUserGroups().get(i).getName() };
+    for (int i = 0; i < cu.readOne(cu.getUsername()).getGroups().size(); i++) {
+      String[] groups = { cu.readOne(cu.getUsername()).getGroups().get(i).getName() };
       data[i] = groups;
     }
     tbGroups = new JTable(data, columns);
