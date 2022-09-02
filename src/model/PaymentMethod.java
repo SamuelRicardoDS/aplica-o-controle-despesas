@@ -2,6 +2,7 @@ package model;
 
 import java.util.Date;
 
+
 public abstract class PaymentMethod {
 	private Date payDate;
 	private String bank;
@@ -12,7 +13,13 @@ public abstract class PaymentMethod {
 		this.payDate = payDate;
 		this.bank = bank;
 		this.payer = payer;
-		
+	}
+
+	public Double CalculateExpense(Group group) {
+		Double expenseValue = group.totalValue(group.getExpenses());
+		int integers = group.getMembers().size();
+		Double calculateExpense = expenseValue / integers;
+		return calculateExpense;
 	}
 
 	public Date getPayDate() {
@@ -33,6 +40,5 @@ public abstract class PaymentMethod {
 	public void setPayer(String payer) {
 		this.payer = payer;
 	}
-
 	
 }

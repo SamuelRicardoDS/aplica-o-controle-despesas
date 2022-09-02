@@ -1,6 +1,6 @@
 package controller;
 
-import model.Boleto;
+/* import model.Boleto;
 import model.PayPal;
 import model.PaymentMethod;
 import model.Pix;
@@ -22,12 +22,6 @@ public class ControlPayment {
         PayPal PayPal = new PayPal(null, null, null, null, null);
         Boleto boleto = new Boleto(null, null, null, null, null);
 
-        if(paymentMethod = pix) {
-            user.getPaymentMethod().add(paymentMethod);
-        } else if(paymentMethod = PayPal) {
-            user.getPaymentMethod().add(paymentMethod);
-        } else if(paymentMethod = boleto) {
-            user.getPaymentMethod().add(paymentMethod);
-        }
+    
     }
-}
+} */

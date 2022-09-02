@@ -5,9 +5,7 @@ import controller.ControlUser;
 import data.Database;
 import java.awt.Color;
 import java.awt.event.*;
-import java.util.ArrayList;
 
-import javax.swing.GroupLayout.Group;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -32,7 +30,6 @@ public class ViewCreateGroup {
   private JTable table;
   private JScrollPane scrollPane;
   private ControlGroup cg;
-  private Database db;
 
   public ViewCreateGroup() {
     cu = new ControlUser();

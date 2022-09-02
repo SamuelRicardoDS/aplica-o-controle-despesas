@@ -39,12 +39,4 @@ public class Expense {
         this.name = name;
     }
 
-    public void addItem() {
-
-        Expense expense = new Expense(date, value, name);
-        expense.setDate(date);
-        expense.setValue(value);
-        expense.setName(name);
-
-    }
 }

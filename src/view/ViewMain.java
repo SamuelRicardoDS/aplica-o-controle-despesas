@@ -16,8 +16,6 @@ public class ViewMain {
     private JButton btnBack;
     private JButton btnCreateGroup;
     private JButton addFriend;
-    
-    
 
     public static void main(String[] args) {
         ViewMain window = new ViewMain();
