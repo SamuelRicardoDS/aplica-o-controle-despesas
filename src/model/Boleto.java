@@ -7,8 +7,8 @@ public class Boleto extends PaymentMethod {
 	private String code;
 	private Date expirationDate;
 
-	public Boleto(Date payDate, String bank, String payer, String code, Date expirationDate) {
-		super(payDate, bank, payer);
+	public Boleto(Date payDate, String bank, String payer, String code, Date expirationDate, Double amount) {
+		super(payDate, bank, payer, amount);
 		this.code = code;
 		this.expirationDate = expirationDate;
 	}

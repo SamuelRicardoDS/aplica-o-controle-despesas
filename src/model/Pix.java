@@ -4,8 +4,8 @@ import java.util.Date;
 public class Pix extends PaymentMethod{
 	private String idTransacao;
 	
-	public Pix(Date payDate, String bank, String payer, String idTransacao) {
-		super(payDate, bank, payer);
+	public Pix(Date payDate, String bank, String payer, String idTransacao, Double amount) {
+		super(payDate, bank, payer, amount);
 		this.idTransacao = idTransacao;
 	}
 

@@ -5,8 +5,8 @@ public class PayPal extends PaymentMethod {
   private String cardFlag;
   private String type;
   
-  public PayPal(Date payDate, String bank, String payer, String cardFlag, String type) {
-    super(payDate, bank, payer);
+  public PayPal(Date payDate, String bank, String payer, String cardFlag, String type, Double amount) {
+    super(payDate, bank, payer, amount);
     this.cardFlag = cardFlag;
     this.type = type;
   }
