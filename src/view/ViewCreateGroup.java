@@ -5,7 +5,9 @@ import controller.ControlUser;
 import data.Database;
 import java.awt.Color;
 import java.awt.event.*;
+import java.util.ArrayList;
 
+import javax.swing.GroupLayout.Group;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,6 +32,7 @@ public class ViewCreateGroup {
   private JTable table;
   private JScrollPane scrollPane;
   private ControlGroup cg;
+  private Database db;
 
   public ViewCreateGroup() {
     cu = new ControlUser();
@@ -64,7 +67,7 @@ public class ViewCreateGroup {
     nameGroup = new JTextField();
     nameGroup.setBounds(320, 193, 151, 25);
     frame.getContentPane().add(nameGroup);
-    nameGroup.setColumns(10);
+    nameGroup.setColumns(10); 	
 
     btnNewGroup = new JButton("Criar Grupo");
     btnNewGroup.setBounds(341, 248, 117, 25);
