@@ -5,7 +5,6 @@ import model.Group;
 import model.User;
 
 public class ControlGroup {
-
     private Database database;
     public ControlUser cu = new ControlUser();
 
@@ -43,6 +42,10 @@ public class ControlGroup {
         	int lastIdx = database.getGroups().size() - 1;
         	Group lastGroup = database.getGroups().get(lastIdx);
         	lastGroup.getMembers().add(SelectedFriend);                  
+    }
+
+    public String getGroupName(Group group) {
+        return group.getName();
     }
 
 }
