@@ -2,6 +2,10 @@ package controller;
 
 import model.Expense;
 import model.Group;
+
+import java.util.ArrayList;
+import java.util.Date;
+
 import data.Database;
 
 public class ControlExpense {
@@ -11,24 +15,26 @@ public class ControlExpense {
 		this.group = group;
 	}
 
-	public void createExpense(Group group) {
-		this.group.getValue().addItem();
+	public void createExpense(Group group, Date data, Double value, String name) {
+		Expense expense = new Expense(data, value, name);
+		group.addExpense(expense);
+	}
+		
+	public void deleteExpense(Group group, Expense expense) {
+		group.getExpenses().remove(expense);
 	}
 
-	public Expense readExpense(Group group) {
-		return group.getValue();
+	public ArrayList<Expense> readExpense(Group group) {
+		return group.getExpenses();
 	}
 
 	public void updateExpense(Group inputgroup) {
 		for (Group group : Database.getInstance().getGroups()) {
 			if (group.getName().equals(inputgroup.getName())) {
-				group.setValue(inputgroup.getValue());
+				group.setExpenses(inputgroup.getExpenses());
 			}
 		}
 	}
 
-	public void deleteExpense(Group group) {
-		group.setValue(null);
-	}
-
+	
 }

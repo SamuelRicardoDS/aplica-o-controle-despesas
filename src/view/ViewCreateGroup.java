@@ -48,7 +48,7 @@ public class ViewCreateGroup {
     frame.getContentPane().add(scrollPane);
 
     String[] columns = { "Lista de Amigos" };
-    Object[][] data = new String[cu.readOne(cu.getUsername()).getGroups().size()][columns.length];
+    Object[][] data = new String[cu.readOne(cu.getUsername()).getFriends().size()][columns.length];
 
     for (int i = 0; i < cu.readOne(cu.getUsername()).getFriends().size(); i++) {
       String[] friends = { cu.readOne(cu.getUsername()).getFriends().get(i).getUsername() };
@@ -67,7 +67,7 @@ public class ViewCreateGroup {
     nameGroup = new JTextField();
     nameGroup.setBounds(320, 193, 151, 25);
     frame.getContentPane().add(nameGroup);
-    nameGroup.setColumns(10);
+    nameGroup.setColumns(10); 	
 
     btnNewGroup = new JButton("Criar Grupo");
     btnNewGroup.setBounds(341, 248, 117, 25);

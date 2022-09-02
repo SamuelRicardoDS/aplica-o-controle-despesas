@@ -5,7 +5,6 @@ import model.Group;
 import model.User;
 
 public class ControlGroup {
-
     private Database database;
     public ControlUser cu = new ControlUser();
 

@@ -6,15 +6,14 @@ public class Group {
 	private ArrayList<User> members = new ArrayList<User>();
 	private String name;
 	private User lider;
-	private Expense value;
+	private ArrayList<Expense> expenses;
 	
-	
-	public Group(ArrayList<User> members, String name, User lider, Expense value) {
+	public Group(ArrayList<User> members, String name, User lider, ArrayList<Expense> expenses) {
 		super();
 		this.members = members;
 		this.name = name;
 		this.lider = lider;
-		this.value = value;
+		this.expenses = expenses;
 	}
 	
 	public ArrayList<User> getMembers() {
@@ -35,12 +34,17 @@ public class Group {
 	public void setLider(User lider) {
 		this.lider = lider;
 	}
-	public Expense getValue() {
-		return value;
+
+	public ArrayList<Expense> getExpenses() {
+		return expenses;
 	}
-	public void setValue(Expense value) {
-		this.value = value;
+
+	public void setExpenses(ArrayList<Expense> expenses) {
+		this.expenses = expenses;
 	}
 	
+	public void addExpense(Expense expense) {
+		this.expenses.add(expense);
+	}
 
 }

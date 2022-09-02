@@ -1,28 +1,11 @@
 package view;
 
-import controller.ControlGroup;
 import controller.ControlUser;
-import data.Database;
-
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ResourceBundle.Control;
-
 import javax.swing.*;
-import model.User;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.border.LineBorder;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 public class ViewMain {
   private JFrame frame;
@@ -31,10 +14,7 @@ public class ViewMain {
   private JButton btnCreateGroup;
   private JButton addFriend;
   private JLabel lblNewLabel;
-  private JTable tbGroups;
-  private JScrollPane scrollPane;
   public ControlUser cu = new ControlUser();
-  public ControlGroup cg = new ControlGroup();
 
   public static void main(String[] args) {
     ViewMain window = new ViewMain();
@@ -42,30 +22,13 @@ public class ViewMain {
   }
 
   public ViewMain() {
-
-    
     frame = new JFrame();
     frame.setBounds(150, 150, 1280, 720);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.getContentPane().setLayout(null);
     frame.setLocationRelativeTo(null);
     frame.getContentPane().getLayout();
-    
-    scrollPane = new JScrollPane();
-    scrollPane.setBounds(1000, 50, 190, 340);
-    frame.getContentPane().add(scrollPane);
 
-    String columns[] = { "Grupos" };
-    Object[][] data = new String[cu.readOne(cu.getUsername()).getGroups().size()][columns.length];
-
-    for (int i = 0; i < cu.readOne(cu.getUsername()).getGroups().size(); i++) {
-      String[] groups = { cu.readOne(cu.getUsername()).getGroups().get(i).getName() };
-      data[i] = groups;
-    }
-    tbGroups = new JTable(data, columns);
-    scrollPane.setViewportView(tbGroups);
-    tbGroups.setBorder(new LineBorder(new Color(0, 0, 0)));
-    
     addFriend = new JButton("Adicionar Amigo");
     addFriend.setBounds(550, 270, 180, 30);
     frame.getContentPane().add(addFriend);

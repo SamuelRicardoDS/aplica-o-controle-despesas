@@ -6,13 +6,24 @@ public abstract class PaymentMethod {
 	private Date payDate;
 	private String bank;
 	private String payer;
+	protected Double amount;
 
-	public PaymentMethod(Date payDate, String bank, String payer) {
+	public PaymentMethod(Date payDate, String bank, String payer, Double amount) {
 		super();
 		this.payDate = payDate;
 		this.bank = bank;
 		this.payer = payer;
-		
+		this.amount = amount;
+	}
+
+	public Double calcSingleValue(Group group) {
+		amount = 0.0;
+		int integers = group.getMembers().size();
+		for (int i = 0; i < integers; i++) {
+			amount += group.getExpenses().get(i).getValue();
+		}
+		Double singleValue = amount / integers;
+		return singleValue;
 	}
 
 	public Date getPayDate() {
@@ -34,5 +45,4 @@ public abstract class PaymentMethod {
 		this.payer = payer;
 	}
 
-	
 }
