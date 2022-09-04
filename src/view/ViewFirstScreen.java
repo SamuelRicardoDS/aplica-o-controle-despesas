@@ -1,64 +1,62 @@
 package view;
 
 import java.awt.event.*;
-import javax.swing.JFrame;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class ViewFirstScreen {
+    private JFrame frame;
+    private JButton btnRegister;
+    private JButton btnLogin;
+    private JLabel background;
 
-	private JFrame frame;
-	private JButton btnRegister;
-	private JButton btnLogin;
-	private JLabel background;
+    public ViewFirstScreen() {
+        frame = new JFrame();
+        frame.setBounds(150, 150, 600, 550);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setLayout(null);
+        frame.setLocationRelativeTo(null);
 
-	
-	public ViewFirstScreen() {
+        btnLogin = new JButton("Login");
+        btnLogin.setBounds(195, 185, 210, 45);
+        frame.getContentPane().add(btnLogin);
 
-		frame = new JFrame();
-		frame.setBounds(150, 150, 600, 550);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		frame.setLocationRelativeTo(null);
+        btnRegister = new JButton("Cadastro");
+        btnRegister.setBounds(195, 260, 210, 45);
+        frame.getContentPane().add(btnRegister);
 
-		btnLogin = new JButton("Login");
-		btnLogin.setBounds(195, 185, 210, 45);
-		frame.getContentPane().add(btnLogin);
+        background = new JLabel("");
+        background.setIcon(new ImageIcon(ViewFirstScreen.class.getResource("/images/hj.jpg")));
+        background.setBounds(0, -128, 875, 843);
+        frame.getContentPane().add(background);
 
-		btnRegister = new JButton("Cadastro");
-		btnRegister.setBounds(195, 260, 210, 45);
-		frame.getContentPane().add(btnRegister);
+        btnLogin.addActionListener(
+            new ActionListener() {
 
-		background = new JLabel("");
-		background.setIcon(new ImageIcon(ViewFirstScreen.class.getResource("/images/hj.jpg")));
-		background.setBounds(0, -128, 875, 843);
-		frame.getContentPane().add(background);
+                public void actionPerformed(ActionEvent e) {
+                    frame.dispose();
+                    ViewLogin window = new ViewLogin();
+                    window.getLoginFrame().setVisible(true);
+                }
+            }
+        );
 
-		btnLogin.addActionListener(new ActionListener() {
+        btnRegister.addActionListener(
+            new ActionListener() {
 
-			public void actionPerformed(ActionEvent e) {
+                public void actionPerformed(ActionEvent ae) {
+                    frame.dispose();
+                    ViewRegister window = new ViewRegister();
+                    window.getRegisterFrame().setVisible(true);
+                }
+            }
+        );
+    }
 
-				frame.dispose();
-				ViewLogin window = new ViewLogin();
-				window.getLoginFrame().setVisible(true);
-			}
-		});
-
-		btnRegister.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent ae) {
-
-				frame.dispose();
-				ViewRegister window = new ViewRegister();
-				window.getRegisterFrame().setVisible(true);
-			}
-		});
-
-	}
-
-	// leva a tela
-	public JFrame getOriginFrame() {
-		return frame;
-	}
+    // leva a tela
+    public JFrame getOriginFrame() {
+        return frame;
+    }
 }
