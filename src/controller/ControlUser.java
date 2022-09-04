@@ -27,13 +27,16 @@ public class ControlUser {
        System.out.println(database.getUsers());
     }
 
+    public User readOne(String username) {
+        return this.database.getUser(username);
+    }
+
+    
+
     public void delete(User user) {
         database.getUsers().remove(user);
     }
 
-    public User readOne(String username) {
-        return this.database.getUser(username);
-    }
 
     public Boolean controlLogin(String username, String password) {
         Boolean isValidUser = false;

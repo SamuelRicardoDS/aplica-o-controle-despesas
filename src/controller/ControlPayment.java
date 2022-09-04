@@ -21,7 +21,7 @@ public class ControlPayment {
         Pix pix = new Pix(null, null, null, null, null);
         PayPal PayPal = new PayPal(null, null, null, null, null, null);
         Boleto boleto = new Boleto(null, null, null, null, null, null);
-        
+
         if (paymantMethod == null || user == null) {
             System.out.println("Preencha todos os campos");
         } else {
@@ -37,10 +37,21 @@ public class ControlPayment {
             }
         }
 
-        
+    }
+
+    public PaymentMethod readPayment(PaymentMethod paymantMethod, User user) {
+        return user.getPaymentMethod();
+    }
+
+    public void updatePayment(PaymentMethod paymantMethod, User user) {
+        if (paymantMethod == null || user == null) {
+            System.out.println("Preencha todos os campos");
+        } else {
+            user.setPaymentMethod(paymantMethod);
+        }
+    }
+
+    public void deletePayment(PaymentMethod paymantMethod, User user) {
+        user.setPaymentMethod(null);
     }
 }
-
-    
-
-
