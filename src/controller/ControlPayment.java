@@ -1,13 +1,13 @@
 package controller;
 
-/* import model.Boleto;
+import model.Boleto;
 import model.PayPal;
 import model.PaymentMethod;
 import model.Pix;
-import model.User; */
+import model.User;
 
 public class ControlPayment {
-   /*  private User user;
+    private User user;
     private Pix pix;
     private PaymentMethod paymentMethod;
     private PayPal PayPal;
@@ -21,12 +21,26 @@ public class ControlPayment {
         Pix pix = new Pix(null, null, null, null, null);
         PayPal PayPal = new PayPal(null, null, null, null, null, null);
         Boleto boleto = new Boleto(null, null, null, null, null, null);
+        
+        if (paymantMethod == null || user == null) {
+            System.out.println("Preencha todos os campos");
+        } else {
+            if (paymantMethod == pix) {
+                pix = new Pix(null, null, null, null, null);
+                user.setPaymentMethod(pix);
+            } else if (paymantMethod == PayPal) {
+                PayPal = new PayPal(null, null, null, null, null, null);
+                user.setPaymentMethod(PayPal);
+            } else if (paymantMethod == boleto) {
+                boleto = new Boleto(null, null, null, null, null, null);
+                user.setPaymentMethod(boleto);
+            }
+        }
+
+        
+    }
+}
 
     
-<<<<<<< HEAD
-    }
-} */
-=======
-    } */
-}
->>>>>>> 10e03a563167476f6d4931b8f921de605feccd54
+
+
