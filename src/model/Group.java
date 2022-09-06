@@ -3,17 +3,17 @@ package model;
 import java.util.ArrayList;
 
 public class Group {
-  private ArrayList<User> members = new ArrayList<User>();
+  private ArrayList<User> members;
   private String name;
   private User lider;
   private ArrayList<Expense> expenses;
 
   public Group(ArrayList<User> members, String name, User lider, ArrayList<Expense> expenses) {
     super();
-    this.members = members;
+    this.members =  new ArrayList<User>();
     this.name = name;
     this.lider = lider;
-    this.expenses = expenses;
+    this.expenses =  new ArrayList<>();
   }
 
   public Double totalValue(ArrayList<Expense> expenses) {

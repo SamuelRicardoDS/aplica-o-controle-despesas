@@ -33,9 +33,9 @@ public class Database {
         users.add(user);
     }
 
-    public Group getGroup(Group groupInput) {
+    public Group getGroup(String name) {
         for (Group group : groups) {
-            if (group.getName().equals(groupInput.getName())) {
+            if (group.getName().equals(name)) {
                 return group;
             }
         }

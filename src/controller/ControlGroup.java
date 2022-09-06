@@ -17,13 +17,13 @@ public class ControlGroup {
             System.out.println("Preencha todos os campos");
         } else {
             Group group = new Group(null, name, lider, null);
-            database.addGroup(group);
+            lider.getGroups().add(group);
             System.out.println("Grupo cadastrado com sucesso");
         }
     }
 
-    public Group readGroup(Group group) {
-        return database.getGroup(group);
+    public Group readGroup(String name, User lider) {
+        return this.database.getGroup(name);
     }
 
     public void updateGroup(Group inputGroup) {
@@ -38,10 +38,12 @@ public class ControlGroup {
         database.getGroups().remove(group);
     }
 
-    public void addMember(User SelectedFriend, Group group) {
-        	int lastIdx = database.getGroups().size() - 1;
-        	Group lastGroup = database.getGroups().get(lastIdx);
-        	lastGroup.getMembers().add(SelectedFriend);                  
+    public Group lastGroup(User lider) {
+        	int lastIdx = lider.getGroups().size() - 1;
+        	Group lastGroup = lider.getGroups().get(lastIdx);
+            System.out.println(lastGroup.getName());
+            return lastGroup;
+            //lastGroup.getMembers().add(selectedFriend);                  
     }
 
     public String getGroupName(Group group) {

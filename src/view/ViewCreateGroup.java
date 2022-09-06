@@ -9,6 +9,8 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+
+import model.Group;
 import model.User;
 
 public class ViewCreateGroup {
@@ -95,22 +97,29 @@ public class ViewCreateGroup {
                 }
             }
         );
-        table
-            .getSelectionModel()
-            .addListSelectionListener(
-                new ListSelectionListener() {
+        
 
-                    public void valueChanged(ListSelectionEvent e) {
-                        if (table.getSelectedRow() > -1) {
-                            User selectedFriend = cu.readOne(cu.getUsername()).getFriends().get(table.getSelectedRow());
-                        }
-                    }
-                }
-            );
         btnAddMember.addActionListener(
             new ActionListener() {
 
-                public void actionPerformed(ActionEvent e) {}
+                public void actionPerformed(ActionEvent e) {
+                    if (table.getSelectedRow() > -1) {
+                        User selectedFriend = cu.readOne(cu.getUsername()).getFriends().get(table.getSelectedRow());
+                        User lider = cu.readOne(cu.getUsername());
+                        System.out.println(selectedFriend);
+                        System.out.println(lider);
+                        
+                        
+                        cg.lastGroup(lider).getMembers().add(selectedFriend);
+                        System.out.println(cg.lastGroup(lider).getMembers());
+                        
+                        
+                        //cg.addMember(selectedFriend, lider);
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Selecione um amigo para criar um");
+                    }
+             
+                }
             }
         );
     }

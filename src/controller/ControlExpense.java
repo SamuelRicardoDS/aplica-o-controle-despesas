@@ -18,19 +18,20 @@ public class ControlExpense {
     group.addExpense(expense);
   }
 
-  public void deleteExpense(Group group, Expense expense) {
-    group.getExpenses().remove(expense);
-  }
-
+  
   public ArrayList<Expense> readExpense(Group group) {
     return group.getExpenses();
   }
-
+  
   public void updateExpense(Group inputgroup) {
     for (Group group : Database.getInstance().getGroups()) {
       if (group.getName().equals(inputgroup.getName())) {
         group.setExpenses(inputgroup.getExpenses());
       }
     }
+  }
+  
+  public void deleteExpense(Group group, Expense expense) {
+    group.getExpenses().remove(expense);
   }
 }
