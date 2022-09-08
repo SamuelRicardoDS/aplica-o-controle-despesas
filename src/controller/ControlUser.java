@@ -31,7 +31,13 @@ public class ControlUser {
         return this.database.getUser(username);
     }
 
-    
+    public void updateGroup(User inputUser) {
+        for (int i = 0; i < database.getUsers().size(); i++) {
+            if (database.getUsers().get(i).getUsername().equals(inputUser.getUsername())) {
+                database.getUsers().set(i, inputUser);
+            }
+        }
+    }
 
     public void delete(User user) {
         database.getUsers().remove(user);
