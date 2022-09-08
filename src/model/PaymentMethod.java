@@ -2,11 +2,18 @@ package model;
 
 import java.util.Date;
 
+/**
+ * classe abstrada para criação da classe pai PaymentMethod, onde serão contidos, valores e métodos para a mesma..
+ * @author Samuel Ricardo
+ * @since release 1 
+ * */
+
 public abstract class PaymentMethod {
   private Date payDate;
   private String bank;
   private String payer;
   protected Double amount;
+
 
   public PaymentMethod(Date payDate, String bank, String payer, Double amount) {
     super();

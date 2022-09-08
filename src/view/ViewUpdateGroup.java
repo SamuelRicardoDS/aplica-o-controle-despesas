@@ -37,6 +37,7 @@ public class ViewUpdateGroup {
             String[] groups = { cu.readOne(cu.getUsername()).getGroups().get(i).getName() };
             data[i] = groups;
         }
+        
         table = new JTable(data, columns);
         scrollPane.setViewportView(table);
         table.setBorder(new LineBorder(new Color(0, 0, 0)));
