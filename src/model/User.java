@@ -4,7 +4,8 @@ import java.util.*;
 
 /** 
  * classe para objetos do tipo usuário, onde serão contidos, valores e métodos para o mesmo.
- * @author Samuel Ricardo & Gustavo Henrique
+ * @author Samuel Ricardo
+ * @author Gustavo Henrique
  * @since release 1 */ 
 
 

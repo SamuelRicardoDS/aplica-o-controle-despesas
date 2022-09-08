@@ -6,10 +6,11 @@ import model.User;
 
 public class ControlGroup {
     private Database database;
-    public ControlUser cu = new ControlUser();
+    public ControlUser cu;
 
     public ControlGroup() {
         this.database = Database.getInstance();
+        this.cu = new ControlUser();
     }
 
     public void createGroup(String name, User lider) {
@@ -26,9 +27,9 @@ public class ControlGroup {
         return this.database.getGroup(name);
     }
 
-    public void updateGroup(Group inputGroup) {
+    public void updateGroup(Group group, Group inputGroup) {
         for (int i = 0; i < database.getGroups().size(); i++) {
-            if (database.getGroups().get(i).getName().equals(inputGroup.getName())) {
+            if (database.getGroups().get(i).getName().equals(group.getName())) {
                 database.getGroups().set(i, inputGroup);
             }
         }
@@ -38,12 +39,15 @@ public class ControlGroup {
         database.getGroups().remove(group);
     }
 
-    public Group lastGroup(User lider) {
-        	int lastIdx = lider.getGroups().size() - 1;
-        	Group lastGroup = lider.getGroups().get(lastIdx);
-            System.out.println(lastGroup.getName());
-            return lastGroup;
-            //lastGroup.getMembers().add(selectedFriend);                  
+    public void addMember( User selectedFriend, User lider) {
+        int lastIdx = lider.getGroups().size() - 1;
+        Group lastGroup = lider.getGroups().get(lastIdx);
+        lastGroup.getMembers().add(selectedFriend);
+
+    }
+
+    public void removeMember(Group group, User user) {
+        group.getMembers().remove(user);
     }
 
     public String getGroupName(Group group) {

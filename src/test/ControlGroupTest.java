@@ -55,8 +55,23 @@ class ControlGroupTest {
         controlGroup.createGroup("nome de grupo", lider);
 
         Group grupo = new Group(null, "nome de grupo", lider, null);
-        controlGroup.updateGroup(grupo);
-        assertEquals("novo nome de grupo", grupo.getName());
+        Group grupoAtualizado = new Group(null, "nome de grupo atualizado", lider, null);
+        controlGroup.updateGroup(grupo, grupoAtualizado);
+        assertEquals("nome de grupo atualizado", instance.getGroups().get(0).getName());
     }
+
+    @Test
+    void deleteGroupTest() {
+        ArrayList<Group> gruposDoUsuario = new ArrayList<Group>();
+        ArrayList<User> amigosDoUsuario = new ArrayList<User>();
+        User lider = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario, null);
+        controlGroup.createGroup("nome de grupo", lider);
+
+        Group grupo = new Group(null, "nome de grupo", lider, null);
+        controlGroup.deleteGroup(grupo);
+        assertEquals(0, instance.getGroups().size());
+    }
+
+
 
 }

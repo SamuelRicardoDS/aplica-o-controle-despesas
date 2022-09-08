@@ -2,13 +2,11 @@ package view;
 
 import controller.ControlGroup;
 import controller.ControlUser;
-import data.Database;
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+
 
 import model.Group;
 import model.User;
@@ -107,14 +105,11 @@ public class ViewCreateGroup {
                         User selectedFriend = cu.readOne(cu.getUsername()).getFriends().get(table.getSelectedRow());
                         User lider = cu.readOne(cu.getUsername());
                         System.out.println(selectedFriend);
-                        System.out.println(lider);
+                        System.out.println(lider);  
+                        cg.addMember(selectedFriend, lider);
+                        //get(0) pq só tem um grupo
+                        System.out.println(lider.getGroups().get(0).getMembers());
                         
-                        
-                        cg.lastGroup(lider).getMembers().add(selectedFriend);
-                        System.out.println(cg.lastGroup(lider).getMembers());
-                        
-                        
-                        //cg.addMember(selectedFriend, lider);
                     } else {
                         JOptionPane.showMessageDialog(null, "Selecione um amigo para criar um");
                     }
