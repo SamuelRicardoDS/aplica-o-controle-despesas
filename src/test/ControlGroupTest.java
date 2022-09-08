@@ -35,31 +35,28 @@ class ControlGroupTest {
         assertEquals(1, instance.getGroups().size());
     }
 
-  /*  @Test
+   @Test
     void readGroupTest() {
         ArrayList<Group> gruposDoUsuario = new ArrayList<Group>();
         ArrayList<User> amigosDoUsuario = new ArrayList<User>();
         
-        User lider = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario);
+        User lider = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario, null);
         controlGroup.createGroup("nome de grupo", lider);
 
         Group grupo = new Group(null, "nome de grupo", lider, null);
-        assertEquals(grupo, controlGroup.readGroup(grupo));
-    } */
+        assertEquals(grupo, controlGroup.readGroup(grupo.getName()));
+    }
 
     @Test
-    void addMemberTest() {
+    void updateGroupTest() {
         ArrayList<Group> gruposDoUsuario = new ArrayList<Group>();
         ArrayList<User> amigosDoUsuario = new ArrayList<User>();
         User lider = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario, null);
-
         controlGroup.createGroup("nome de grupo", lider);
 
         Group grupo = new Group(null, "nome de grupo", lider, null);
-        User membro = new User("nome de usuario", "senha de usuario", gruposDoUsuario, amigosDoUsuario, null);
-        
-        controlGroup.addMember(membro, grupo);
-        assertEquals(1, grupo.getMembers().size());
+        controlGroup.updateGroup(grupo);
+        assertEquals("novo nome de grupo", grupo.getName());
     }
 
 }

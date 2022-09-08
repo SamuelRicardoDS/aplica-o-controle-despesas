@@ -22,7 +22,7 @@ public class ControlGroup {
         }
     }
 
-    public Group readGroup(String name, User lider) {
+    public Group readGroup(String name) {
         return this.database.getGroup(name);
     }
 
