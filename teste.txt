@@ -1,0 +1,294 @@
+s# flag-icons
+
+## Description
+
+A collection of all country flags in SVG — plus the CSS for easier integration.
+
+For using the flags inline with text add the classes `.flag-icon` and
+`.flag-icon-xxx` (where `xxx` is the
+[ISO 3166-1-alpha-3 code](https://www.iso.org/obp/ui/#search/code/)
+of a country) to an empty `<span>`. If you want to have a squared version flag
+then add the class `flag-icon-squared` as well. Example:
+
+```html
+<span class="flag-icon flag-icon-sun"></span>
+<span class="flag-icon flag-icon-sun flag-icon-squared"></span>
+```
+
+You could also apply this to any element but in that case you'll have to use the
+`flag-icon-background` instead of `flag-icon` and you're set. This will add the
+correct background with the following CSS properties:
+
+```css
+background-size: contain;
+background-position: 50%;
+background-repeat: no-repeat;
+```
+
+Which means that the flag is just going to appear in the middle of an element so
+you will have to set manually the correct size of 4 by 3 ratio or if it's squared
+add also the `flag-icon-squared` class.
+
+Many thanks to [lipis](https://github.com/lipis) for his repository from which almost all the content was taken. Some flags have been added or changed. 
+The alpha-2 code for alpha-3 has been replaced and for some regions have been added alpha-3 like codes.
+The project is compiled using SASS.
+
+## List of flags
+
+<span class = "flag-icon flag-cion-abw"></span>
+<span class = "flag-icon flag-cion-afg"></span>
+<span class = "flag-icon flag-cion-ago"></span>
+<span class = "flag-icon flag-cion-aia"></span>
+<span class = "flag-icon flag-cion-ala"></span>
+<span class = "flag-icon flag-cion-alb"></span> 
+<span class = "flag-icon flag-icon-and"></span>
+<span class = "flag-icon flag-icon-are"></span>
+<span class = "flag-icon flag-icon-arg"></span>
+<span class = "flag-icon flag-icon-arm"></span>
+<span class = "flag-icon flag-icon-asm"></span>
+<span class = "flag-icon flag-icon-ata"></span>
+<span class = "flag-icon flag-icon-atf"></span>
+<span class = "flag-icon flag-icon-atg"></span>
+<span class = "flag-icon flag-icon-aus"></span>
+<span class = "flag-icon flag-icon-aut"></span>
+<span class = "flag-icon flag-icon-aze"></span>
+<span class = "flag-icon flag-icon-bdi"></span>
+<span class = "flag-icon flag-icon-bel"></span>
+<span class = "flag-icon flag-icon-ben"></span>
+<span class = "flag-icon flag-icon-bes"></span>
+<span class = "flag-icon flag-icon-bfa"></span>
+<span class = "flag-icon flag-icon-bgd"></span>
+<span class = "flag-icon flag-icon-bgr"></span>
+<span class = "flag-icon flag-icon-bhr"></span>
+<span class = "flag-icon flag-icon-bhs"></span>
+<span class = "flag-icon flag-icon-bih"></span>
+<span class = "flag-icon flag-icon-blm"></span>
+<span class = "flag-icon flag-icon-blr"></span>
+<span class = "flag-icon flag-icon-blz"></span>
+<span class = "flag-icon flag-icon-bmu"></span>
+<span class = "flag-icon flag-icon-bol"></span>
+<span class = "flag-icon flag-icon-bra"></span>
+<span class = "flag-icon flag-icon-brb"></span>
+<span class = "flag-icon flag-icon-brn"></span>
+<span class = "flag-icon flag-icon-btn"></span>
+<span class = "flag-icon flag-icon-bvt"></span>
+<span class = "flag-icon flag-icon-bwa"></span>
+<span class = "flag-icon flag-icon-caf"></span>
+<span class = "flag-icon flag-icon-can"></span>
+<span class = "flag-icon flag-icon-cat"></span>
+<span class = "flag-icon flag-icon-cck"></span>
+<span class = "flag-icon flag-icon-che"></span>
+<span class = "flag-icon flag-icon-chl"></span>
+<span class = "flag-icon flag-icon-chn"></span>
+<span class = "flag-icon flag-icon-civ"></span>
+<span class = "flag-icon flag-icon-cmr"></span>
+<span class = "flag-icon flag-icon-cod"></span>
+<span class = "flag-icon flag-icon-cog"></span>
+<span class = "flag-icon flag-icon-cok"></span>
+<span class = "flag-icon flag-icon-col"></span>
+<span class = "flag-icon flag-icon-com"></span>
+<span class = "flag-icon flag-icon-cpv"></span>
+<span class = "flag-icon flag-icon-cri"></span>
+<span class = "flag-icon flag-icon-cub"></span>
+<span class = "flag-icon flag-icon-cuw"></span>
+<span class = "flag-icon flag-icon-cxr"></span>
+<span class = "flag-icon flag-icon-cym"></span>
+<span class = "flag-icon flag-icon-cyp"></span>
+<span class = "flag-icon flag-icon-cze"></span>
+<span class = "flag-icon flag-icon-deu"></span>
+<span class = "flag-icon flag-icon-dji"></span>
+<span class = "flag-icon flag-icon-dma"></span>
+<span class = "flag-icon flag-icon-dnk"></span>
+<span class = "flag-icon flag-icon-dom"></span>
+<span class = "flag-icon flag-icon-dza"></span>
+<span class = "flag-icon flag-icon-ecu"></span>
+<span class = "flag-icon flag-icon-egy"></span>
+<span class = "flag-icon flag-icon-eng"></span>
+<span class = "flag-icon flag-icon-eri"></span>
+<span class = "flag-icon flag-icon-esh"></span>
+<span class = "flag-icon flag-icon-esp"></span>
+<span class = "flag-icon flag-icon-est"></span>
+<span class = "flag-icon flag-icon-eth"></span>
+<span class = "flag-icon flag-icon-eun"></span>
+<span class = "flag-icon flag-icon-fin"></span>
+<span class = "flag-icon flag-icon-fji"></span>
+<span class = "flag-icon flag-icon-flk"></span>
+<span class = "flag-icon flag-icon-fra"></span>
+<span class = "flag-icon flag-icon-fro"></span>
+<span class = "flag-icon flag-icon-fsm"></span>
+<span class = "flag-icon flag-icon-gab"></span>
+<span class = "flag-icon flag-icon-gbr"></span>
+<span class = "flag-icon flag-icon-geo"></span>
+<span class = "flag-icon flag-icon-ggy"></span>
+<span class = "flag-icon flag-icon-gha"></span>
+<span class = "flag-icon flag-icon-gib"></span>
+<span class = "flag-icon flag-icon-gin"></span>
+<span class = "flag-icon flag-icon-glp"></span>
+<span class = "flag-icon flag-icon-gmb"></span>
+<span class = "flag-icon flag-icon-gnb"></span>
+<span class = "flag-icon flag-icon-gnq"></span>
+<span class = "flag-icon flag-icon-grc"></span>
+<span class = "flag-icon flag-icon-grd"></span>
+<span class = "flag-icon flag-icon-grl"></span>
+<span class = "flag-icon flag-icon-gtm"></span>
+<span class = "flag-icon flag-icon-guf"></span>
+<span class = "flag-icon flag-icon-gum"></span>
+<span class = "flag-icon flag-icon-guy"></span>
+<span class = "flag-icon flag-icon-hkg"></span>
+<span class = "flag-icon flag-icon-hmd"></span>
+<span class = "flag-icon flag-icon-hnd"></span>
+<span class = "flag-icon flag-icon-hrv"></span>
+<span class = "flag-icon flag-icon-hti"></span>
+<span class = "flag-icon flag-icon-hun"></span>
+<span class = "flag-icon flag-icon-idn"></span>
+<span class = "flag-icon flag-icon-imn"></span>
+<span class = "flag-icon flag-icon-ind"></span>
+<span class = "flag-icon flag-icon-iot"></span>
+<span class = "flag-icon flag-icon-irl"></span>
+<span class = "flag-icon flag-icon-irn"></span>
+<span class = "flag-icon flag-icon-irq"></span>
+<span class = "flag-icon flag-icon-isl"></span>
+<span class = "flag-icon flag-icon-isr"></span>
+<span class = "flag-icon flag-icon-ita"></span>
+<span class = "flag-icon flag-icon-jam"></span>
+<span class = "flag-icon flag-icon-jey"></span>
+<span class = "flag-icon flag-icon-jor"></span>
+<span class = "flag-icon flag-icon-jpn"></span>
+<span class = "flag-icon flag-icon-kaz"></span>
+<span class = "flag-icon flag-icon-ken"></span>
+<span class = "flag-icon flag-icon-kgz"></span>
+<span class = "flag-icon flag-icon-khm"></span>
+<span class = "flag-icon flag-icon-kir"></span>
+<span class = "flag-icon flag-icon-kna"></span>
+<span class = "flag-icon flag-icon-kor"></span>
+<span class = "flag-icon flag-icon-kos"></span>
+<span class = "flag-icon flag-icon-kwt"></span>
+<span class = "flag-icon flag-icon-lao"></span>
+<span class = "flag-icon flag-icon-lbn"></span>
+<span class = "flag-icon flag-icon-lbr"></span>
+<span class = "flag-icon flag-icon-lby"></span>
+<span class = "flag-icon flag-icon-lca"></span>
+<span class = "flag-icon flag-icon-lie"></span>
+<span class = "flag-icon flag-icon-lka"></span>
+<span class = "flag-icon flag-icon-lso"></span>
+<span class = "flag-icon flag-icon-ltu"></span>
+<span class = "flag-icon flag-icon-lux"></span>
+<span class = "flag-icon flag-icon-lva"></span>
+<span class = "flag-icon flag-icon-mac"></span>
+<span class = "flag-icon flag-icon-maf"></span>
+<span class = "flag-icon flag-icon-mar"></span>
+<span class = "flag-icon flag-icon-mco"></span>
+<span class = "flag-icon flag-icon-mda"></span>
+<span class = "flag-icon flag-icon-mdg"></span>
+<span class = "flag-icon flag-icon-mdv"></span>
+<span class = "flag-icon flag-icon-mex"></span>
+<span class = "flag-icon flag-icon-mhl"></span>
+<span class = "flag-icon flag-icon-mkd"></span>
+<span class = "flag-icon flag-icon-mli"></span>
+<span class = "flag-icon flag-icon-mlt"></span>
+<span class = "flag-icon flag-icon-mmr"></span>
+<span class = "flag-icon flag-icon-mne"></span>
+<span class = "flag-icon flag-icon-mng"></span>
+<span class = "flag-icon flag-icon-mnp"></span>
+<span class = "flag-icon flag-icon-moz"></span>
+<span class = "flag-icon flag-icon-mrt"></span>
+<span class = "flag-icon flag-icon-msr"></span>
+<span class = "flag-icon flag-icon-mtq"></span>
+<span class = "flag-icon flag-icon-mus"></span>
+<span class = "flag-icon flag-icon-mwi"></span>
+<span class = "flag-icon flag-icon-mys"></span>
+<span class = "flag-icon flag-icon-myt"></span>
+<span class = "flag-icon flag-icon-nam"></span>
+<span class = "flag-icon flag-icon-ncl"></span>
+<span class = "flag-icon flag-icon-ner"></span>
+<span class = "flag-icon flag-icon-nfk"></span>
+<span class = "flag-icon flag-icon-nga"></span>
+<span class = "flag-icon flag-icon-nic"></span>
+<span class = "flag-icon flag-icon-nir"></span>
+<span class = "flag-icon flag-icon-niu"></span>
+<span class = "flag-icon flag-icon-nld"></span>
+<span class = "flag-icon flag-icon-nor"></span>
+<span class = "flag-icon flag-icon-npl"></span>
+<span class = "flag-icon flag-icon-nru"></span>
+<span class = "flag-icon flag-icon-nzl"></span>
+<span class = "flag-icon flag-icon-omn"></span>
+<span class = "flag-icon flag-icon-pak"></span>
+<span class = "flag-icon flag-icon-pan"></span>
+<span class = "flag-icon flag-icon-pcn"></span>
+<span class = "flag-icon flag-icon-per"></span>
+<span class = "flag-icon flag-icon-phl"></span>
+<span class = "flag-icon flag-icon-plw"></span>
+<span class = "flag-icon flag-icon-png"></span>
+<span class = "flag-icon flag-icon-pol"></span>
+<span class = "flag-icon flag-icon-pri"></span>
+<span class = "flag-icon flag-icon-prk"></span>
+<span class = "flag-icon flag-icon-prt"></span>
+<span class = "flag-icon flag-icon-pry"></span>
+<span class = "flag-icon flag-icon-pse"></span>
+<span class = "flag-icon flag-icon-pyf"></span>
+<span class = "flag-icon flag-icon-qat"></span>
+<span class = "flag-icon flag-icon-reu"></span>
+<span class = "flag-icon flag-icon-rou"></span>
+<span class = "flag-icon flag-icon-rus"></span>
+<span class = "flag-icon flag-icon-rwa"></span>
+<span class = "flag-icon flag-icon-sau"></span>
+<span class = "flag-icon flag-icon-sco"></span>
+<span class = "flag-icon flag-icon-sdn"></span>
+<span class = "flag-icon flag-icon-sen"></span>
+<span class = "flag-icon flag-icon-sgp"></span>
+<span class = "flag-icon flag-icon-sgs"></span>
+<span class = "flag-icon flag-icon-shn"></span>
+<span class = "flag-icon flag-icon-sjm"></span>
+<span class = "flag-icon flag-icon-slb"></span>
+<span class = "flag-icon flag-icon-sle"></span>
+<span class = "flag-icon flag-icon-slv"></span>
+<span class = "flag-icon flag-icon-smr"></span>
+<span class = "flag-icon flag-icon-som"></span>
+<span class = "flag-icon flag-icon-spm"></span>
+<span class = "flag-icon flag-icon-srb"></span>
+<span class = "flag-icon flag-icon-ssd"></span>
+<span class = "flag-icon flag-icon-stp"></span>
+<span class = "flag-icon flag-icon-sun"></span>
+<span class = "flag-icon flag-icon-sur"></span>
+<span class = "flag-icon flag-icon-svk"></span>
+<span class = "flag-icon flag-icon-svn"></span>
+<span class = "flag-icon flag-icon-swe"></span>
+<span class = "flag-icon flag-icon-swz"></span>
+<span class = "flag-icon flag-icon-sxm"></span>
+<span class = "flag-icon flag-icon-syc"></span>
+<span class = "flag-icon flag-icon-syr"></span>
+<span class = "flag-icon flag-icon-tca"></span>
+<span class = "flag-icon flag-icon-tcd"></span>
+<span class = "flag-icon flag-icon-tgo"></span>
+<span class = "flag-icon flag-icon-tha"></span>
+<span class = "flag-icon flag-icon-tjk"></span>
+<span class = "flag-icon flag-icon-tkl"></span>
+<span class = "flag-icon flag-icon-tkm"></span>
+<span class = "flag-icon flag-icon-tls"></span>
+<span class = "flag-icon flag-icon-ton"></span>
+<span class = "flag-icon flag-icon-tto"></span>
+<span class = "flag-icon flag-icon-tun"></span>
+<span class = "flag-icon flag-icon-tur"></span>
+<span class = "flag-icon flag-icon-tuv"></span>
+<span class = "flag-icon flag-icon-twn"></span>
+<span class = "flag-icon flag-icon-tza"></span>
+<span class = "flag-icon flag-icon-uga"></span>
+<span class = "flag-icon flag-icon-ukr"></span>
+<span class = "flag-icon flag-icon-umi"></span>
+<span class = "flag-icon flag-icon-ury"></span>
+<span class = "flag-icon flag-icon-usa"></span>
+<span class = "flag-icon flag-icon-uzb"></span>
+<span class = "flag-icon flag-icon-vat"></span>
+<span class = "flag-icon flag-icon-vct"></span>
+<span class = "flag-icon flag-icon-ven"></span>
+<span class = "flag-icon flag-icon-vgb"></span>
+<span class = "flag-icon flag-icon-vir"></span>
+<span class = "flag-icon flag-icon-vnm"></span>
+<span class = "flag-icon flag-icon-vut"></span>
+<span class = "flag-icon flag-icon-wal"></span>
+<span class = "flag-icon flag-icon-wlf"></span>
+<span class = "flag-icon flag-icon-wsm"></span>
+<span class = "flag-icon flag-icon-yem"></span>
+<span class = "flag-icon flag-icon-zaf"></span>
+<span class = "flag-icon flag-icon-zmb"></span>
+<span class = "flag-icon flag-icon-zwe"></span>
