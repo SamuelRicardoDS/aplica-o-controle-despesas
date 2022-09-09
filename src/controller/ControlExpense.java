@@ -6,6 +6,12 @@ import java.util.Date;
 import model.Expense;
 import model.Group;
 
+
+/**
+ * Classe de controle para a classe Expense
+ * @author Samuel Ricardo
+ * @since release 1
+ */
 public class ControlExpense {
   private Group group;
 
@@ -33,5 +39,9 @@ public class ControlExpense {
   
   public void deleteExpense(Group group, Expense expense) {
     group.getExpenses().remove(expense);
+  }
+
+  public void payExpense(Group group, Expense expense) {
+    expense.setPaid(true);
   }
 }

@@ -6,6 +6,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
+/**
+ * Classe responsável pela interface gráfica da tela principal da aplicação
+ * @author Gustavo Henrique
+ * @since release 1
+ */
+
 public class ViewMain {
     private JFrame frame;
     private JLabel label;

@@ -14,6 +14,12 @@ import javax.swing.JPasswordField;
 import model.User;
 import controller.ControlUser;
 
+/**
+ * Classe responsável pela interface da tela de registro
+ * @author Gustavo Henrique
+ * @since release 1
+ */
+
 public class ViewRegister {
 
 	/* public Executavel executavel = new Executavel(); */

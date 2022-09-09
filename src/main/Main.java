@@ -31,6 +31,10 @@ public class Main {
         for (int i = 0; i <= 2; i++) {
             cg.createGroup("group" + i, cu.readOne("user" + i));
         }
+
+        for(int i = 3; i <= 6; i++) {
+            cu.addFriend(cu.readOne("user" + i).getUsername());
+        }
         //adiciona 4 no grupo do user0
         for (int i = 3; i <= 6; i++) {
             cg.addMember(cu.readOne("user" + i), cu.readOne("user0"));
