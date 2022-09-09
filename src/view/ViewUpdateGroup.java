@@ -2,6 +2,7 @@ package view;
 
 import controller.*;
 import java.awt.Color;
+import java.awt.event.*;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,7 +11,14 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
-import model.User;
+import model.Group;
+
+/**
+ * Classe responsável pela tela de atualização de grupos.
+ * @author Samuel Ricardo
+ * @author Gustavo Henrique
+ * @since release 1
+ */
 
 public class ViewUpdateGroup {
     private JFrame frame;
@@ -82,6 +90,17 @@ public class ViewUpdateGroup {
         buttonChangeName = new JButton("Alterar Nome");
         buttonChangeName.setBounds(352, 84, 136, 25);
         frame.getContentPane().add(buttonChangeName);
+
+        buttonChangeName.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    Group selectedGroup = cu.readOne(cu.getUsername()).getGroups().get(table.getSelectedRow());
+                    cg.changeGroupName(selectedGroup, textField.getText());
+                    System.out.println(selectedGroup.getName());
+                }
+            }
+        );
 
         background = new JLabel("");
         background.setBounds(0, 0, 800, 480);
