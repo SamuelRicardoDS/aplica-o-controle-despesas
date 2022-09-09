@@ -10,6 +10,12 @@ import java.awt.event.*;
 
 import controller.ControlUser;
 
+/**
+ * Essa classe é responsável por criar a interface gráfica para adicionar um amigo.
+ * 
+ * @author Gustavo Henrique
+ *
+ */
 public class ViewAddFriend {
 
 	private JFrame frame;
@@ -43,7 +49,10 @@ public class ViewAddFriend {
 		background.setIcon(new ImageIcon(ViewAddFriend.class.getResource("/images/mamonas.jpg")));
 		background.setBounds(0, 0, 800, 480);
 		frame.getContentPane().add(background);
-		
+
+		/**
+		 * botão que chama o método addFriend da classe ControlUser
+		 */
 		btnAddFriend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
 				String username = nameFriend.getText();

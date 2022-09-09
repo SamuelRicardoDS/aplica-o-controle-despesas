@@ -47,6 +47,10 @@ public class Main {
             cg.addMember(cu.readOne("user" + i), cu.readOne("user2"));
         }
 
+        for(int i=0; i < 2; i++) {
+            
+        }
+
      
 
     }

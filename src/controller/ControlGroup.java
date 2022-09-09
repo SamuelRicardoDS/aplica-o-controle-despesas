@@ -90,4 +90,8 @@ public class ControlGroup {
     public String getGroupName(Group group) {
         return group.getName();
     }
+
+    public void changeGroupName(Group group, String name) {
+        group.setName(name);
+    }
 }
