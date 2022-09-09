@@ -12,7 +12,6 @@ public class ViewAddExpense {
     private JFrame frame;
     private JLabel background;
     private JTable table;
-    private JButton btnAddExpense;
     private JButton btnCreateExpense;
     private JTextField txtName;
     private JTextField txtValue;
@@ -46,12 +45,8 @@ public class ViewAddExpense {
         table = new JTable(data, columns);
         scrollPane.setViewportView(table);
 
-        btnAddExpense = new JButton("Adicionar despesa");
-        btnAddExpense.setBounds(34, 406, 190, 25);
-        frame.getContentPane().add(btnAddExpense);
-
-        btnCreateExpense = new JButton("Criar despesa");
-        btnCreateExpense.setBounds(549, 231, 139, 36);
+        btnCreateExpense = new JButton("Adicionar despesa");
+        btnCreateExpense.setBounds(535, 231, 165, 36);
         frame.getContentPane().add(btnCreateExpense);
 
         txtDate = new JTextField();
