@@ -37,7 +37,10 @@ public class ViewRegister {
     private JLabel background;
     public ControlUser cu = new ControlUser();
 
+    private Database database;
+
     public ViewRegister() {
+        this.database = Database.getInstance();
         cu = new ControlUser();
 
         frame = new JFrame();
@@ -101,7 +104,7 @@ public class ViewRegister {
                     String username = txtUsername.getText();
                     String password = txtPassword.getText();
                     String confirm = txtConfirmPass.getText();
-                    List<String> users = new ArrayList<String>();
+                    String listString = String.join(", ", database.getUsers().toString());
 
                     if (
                         username == null ||
@@ -111,10 +114,11 @@ public class ViewRegister {
                         confirm == null ||
                         confirm.equals("") ||
                         username.length() > 20 ||
-                        password.length() > 20 ||
-                        users.contains(username)
+                        password.length() > 20
                     ) {
                         JOptionPane.showMessageDialog(null, "Nome de usuário inválido");
+                    } else if (listString.contains(username)) {
+                        JOptionPane.showMessageDialog(null, "Nome de usuário já existe");
                     } else {
                         if (confirm.equals(password)) {
                             password = confirm;
