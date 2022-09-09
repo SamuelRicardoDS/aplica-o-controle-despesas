@@ -49,7 +49,7 @@ public class ControlGroup {
      * Método para atualizar um grupo
      * @param group grupo a ser atualizado
      * @param inputGroup grupo atualizado
-     * 
+     *
      */
     public void updateGroup(Group group, Group inputGroup) {
         for (int i = 0; i < database.getGroups().size(); i++) {
@@ -72,11 +72,10 @@ public class ControlGroup {
      * @param lider usuario que adiciona os membros
      * @param selectedFriend usuário a ser adicionado ao grupo
      */
-    public void addMember( User selectedFriend, User lider) {
+    public void addMember(User selectedFriend, User lider) {
         int lastIdx = lider.getGroups().size() - 1;
         Group lastGroup = lider.getGroups().get(lastIdx);
         lastGroup.getMembers().add(selectedFriend);
-
     }
 
     /**
@@ -91,5 +90,4 @@ public class ControlGroup {
     public String getGroupName(Group group) {
         return group.getName();
     }
-
 }
