@@ -2,6 +2,8 @@ package view;
 
 import controller.ControlGroup;
 import controller.ControlUser;
+import data.Database;
+
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
@@ -41,6 +43,7 @@ public class ViewCreateGroup {
         String[] columns = { "Lista de Amigos" };
         Object[][] data = new String[cu.readOne(cu.getUsername()).getFriends().size()][columns.length];
 
+        System.out.println(cu.readOne(cu.getUsername()).getFriends().size());
         for (int i = 0; i < cu.readOne(cu.getUsername()).getFriends().size(); i++) {
             String[] friends = { cu.readOne(cu.getUsername()).getFriends().get(i).getUsername() };
             data[i] = friends;
