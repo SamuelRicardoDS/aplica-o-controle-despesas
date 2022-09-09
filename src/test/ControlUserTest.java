@@ -10,6 +10,11 @@ import controller.ControlGroup;
 import controller.ControlUser;
 import data.Database;
 
+/**
+ * Classe de testes para a classe ControlUser
+ * @author Samuel Ricardo
+ * @since release 1
+ */
 class ControlUserTest {
 
 	Database instance;

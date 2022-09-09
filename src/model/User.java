@@ -16,6 +16,14 @@ public class User {
 	private ArrayList<User> friends;
 	private PaymentMethod paymentMethod;
 
+	/**
+	 * Construtor da classe User
+	 * @param username nome de usuário
+	 * @param password senha
+	 * @param groups lista de grupos
+	 * @param friends lista de amigos
+	 * @param paymentMethod método de pagamento
+	 */
 	public User(String username, String password, ArrayList<Group> groups, ArrayList<User> friends, PaymentMethod paymentMethod) {
 		super();
 		this.username = username;

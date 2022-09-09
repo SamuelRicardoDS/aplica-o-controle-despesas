@@ -6,6 +6,12 @@ import model.PaymentMethod;
 import model.Pix;
 import model.User;
 
+
+/**
+ * Classe de controle para o pagamento
+ * @author Samuel Ricardo
+ * @since release 1
+ */
 public class ControlPayment {
     private User user;
     private Pix pix;

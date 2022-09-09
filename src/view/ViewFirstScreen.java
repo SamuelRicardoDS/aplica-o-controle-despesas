@@ -6,6 +6,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * Classe responsável pela interface gráfica da tela inicial
+ * @author Gustavo Henrique
+ * @since release 1
+ */
+
 public class ViewFirstScreen {
     private JFrame frame;
     private JButton btnRegister;

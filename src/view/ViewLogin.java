@@ -14,6 +14,12 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JPasswordField;
 
+/**
+ * Classe responsável pela interface de login
+ * @author Gustavo Henrique
+ * @since release 1
+ */
+
 public class ViewLogin {
 
 	private JFrame frame;

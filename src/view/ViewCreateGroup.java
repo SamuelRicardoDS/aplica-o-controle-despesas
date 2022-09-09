@@ -10,7 +10,11 @@ import javax.swing.border.LineBorder;
 
 import model.Group;
 import model.User;
-
+/**
+ * Classe responsável pela interface de criação de grupos
+ * @author SGustavo Henrique
+ * @since release 1
+ */
 public class ViewCreateGroup {
     private JFrame frame;
     private JLabel background;
