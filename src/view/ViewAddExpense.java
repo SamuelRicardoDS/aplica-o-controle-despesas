@@ -84,27 +84,6 @@ public class ViewAddExpense {
             }
         );
 
-        /*
-         * btnAddExpense.addActionListener(
-         * new ActionListener() {
-         * public void actionPerformed(java.awt.event.ActionEvent evt) {
-         * if (table.getSelectedRow() > -1) {
-         * Group selectedGroup =
-         * cu.readOne(cu.getUsername()).getFriends().get(table.getSelectedRow());
-         * User lider = cu.readOne(cu.getUsername());
-         *
-         * cg.addMember(selectedFriend, lider);
-         * //get(0) pq só tem um grupo
-         *
-         * } else {
-         * JOptionPane.showMessageDialog(null, "Selecione um amigo para criar um");
-         *
-         * }
-         * }
-         * }
-         * );
-         */
-
         lblDate = new JLabel("data:");
         lblDate.setBounds(546, 180, 70, 15);
         frame.getContentPane().add(lblDate);
