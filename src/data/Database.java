@@ -1,17 +1,17 @@
 package data;
 
 import java.util.ArrayList;
-import model.User;
 import model.Group;
+import model.User;
 
 public class Database {
     ArrayList<User> users;
     ArrayList<Group> groups;
     private static Database instance;
 
-    private Database() {
-    }
-//singleton
+    private Database() {}
+
+    //singleton
     public static Database getInstance() {
         if (instance == null) {
             instance = new Database();

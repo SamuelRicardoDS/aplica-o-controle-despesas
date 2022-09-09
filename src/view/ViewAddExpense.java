@@ -1,21 +1,11 @@
 package view;
 
-import controller.ControlExpense;
-import controller.ControlUser;
-import model.Group;
-
-import java.awt.EventQueue;
+import controller.*;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
+import javax.swing.*;
+import model.Group;
 
 public class ViewAddExpense {
     private ControlUser cu;
@@ -80,25 +70,24 @@ public class ViewAddExpense {
         txtName.setColumns(10);
 
         btnCreateExpense.addActionListener(
-                new ActionListener() {
-                    public void actionPerformed(java.awt.event.ActionEvent e) {
-                        String name = txtName.getText();
-                        
-                        Double value = Double.parseDouble(txtValue.getText());
-                        String date = txtDate.getText();
-                        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy"); 
-                        try{
-                            Date formatDate = formato.parse(date);
-                            Group group = cu.readOne(cu.getUsername()).getGroups().get(table.getSelectedRow());
-                            ce.createExpense(group, formatDate, value, name);
-                        } catch(java.text.ParseException err) {
-                            return;
-                        }
+            new ActionListener() {
 
+                public void actionPerformed(java.awt.event.ActionEvent e) {
+                    String name = txtName.getText();
 
-
+                    Double value = Double.parseDouble(txtValue.getText());
+                    String date = txtDate.getText();
+                    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+                    try {
+                        Date formatDate = formato.parse(date);
+                        Group group = cu.readOne(cu.getUsername()).getGroups().get(table.getSelectedRow());
+                        ce.createExpense(group, formatDate, value, name);
+                    } catch (java.text.ParseException err) {
+                        return;
                     }
-                });
+                }
+            }
+        );
 
         /*
          * btnAddExpense.addActionListener(
@@ -108,13 +97,13 @@ public class ViewAddExpense {
          * Group selectedGroup =
          * cu.readOne(cu.getUsername()).getFriends().get(table.getSelectedRow());
          * User lider = cu.readOne(cu.getUsername());
-         * 
+         *
          * cg.addMember(selectedFriend, lider);
          * //get(0) pq só tem um grupo
-         * 
+         *
          * } else {
          * JOptionPane.showMessageDialog(null, "Selecione um amigo para criar um");
-         * 
+         *
          * }
          * }
          * }
@@ -137,7 +126,6 @@ public class ViewAddExpense {
         background.setBounds(0, -15, 800, 480);
         background.setIcon(new ImageIcon(ViewAddExpense.class.getResource("/images/exalta.jpg")));
         frame.getContentPane().add(background);
-
     }
 
     public JFrame getAddExpense() {

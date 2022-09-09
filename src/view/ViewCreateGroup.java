@@ -3,13 +3,13 @@ package view;
 import controller.ControlGroup;
 import controller.ControlUser;
 import data.Database;
-
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import model.Group;
 import model.User;
+
 /**
  * Classe responsável pela interface de criação de grupos
  * @author SGustavo Henrique
@@ -26,6 +26,7 @@ public class ViewCreateGroup {
     private JTable table;
     private JScrollPane scrollPane;
     private ControlGroup cg;
+    private JLabel name;
 
     public ViewCreateGroup() {
         cu = new ControlUser();
@@ -53,10 +54,10 @@ public class ViewCreateGroup {
         scrollPane.setViewportView(table);
         table.setBorder(new LineBorder(new Color(0, 0, 0)));
 
-        JLabel lblNewLabel = new JLabel("Nome");
-        lblNewLabel.setForeground(Color.BLACK);
-        lblNewLabel.setBounds(341, 198, 70, 15);
-        frame.getContentPane().add(lblNewLabel);
+        name = new JLabel("Nome");
+        name.setForeground(Color.BLACK);
+        name.setBounds(341, 198, 70, 15);
+        frame.getContentPane().add(name);
 
         nameGroup = new JTextField();
         nameGroup.setBounds(320, 193, 151, 25);
