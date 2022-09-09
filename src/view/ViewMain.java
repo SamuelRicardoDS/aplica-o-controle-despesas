@@ -97,6 +97,20 @@ public class ViewMain {
             }
         );
 
+        JButton btnAdicionarDespesa = new JButton("Adicionar Despesa");
+        btnAdicionarDespesa.setBounds(550, 350, 180, 30);
+        frame.getContentPane().add(btnAdicionarDespesa);
+
+        btnAdicionarDespesa.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent ae) {
+                    ViewAddExpense window = new ViewAddExpense();
+                    window.getAddExpense().setVisible(true);
+                }
+            }
+        );
+
         label = new JLabel("");
         label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpeg")));
         label.setBounds(0, 0, 1280, 720);
