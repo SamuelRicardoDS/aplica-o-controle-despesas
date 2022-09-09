@@ -14,6 +14,12 @@ import model.Group;
 
 import model.User;
 
+/**
+ * Classe de testes para a classe ControlUser
+ * @author Samuel Ricardo
+ * @since release 1
+ */
+
 class ControlGroupTest {
     Database instance;
     ControlGroup controlGroup;
