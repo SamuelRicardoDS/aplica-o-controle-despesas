@@ -11,6 +11,7 @@ public class Expense {
   private Date date;
   private Double value;
   private String name;
+  private Boolean paid;
 
   /**
    * Construtor da classe Expense
@@ -18,12 +19,14 @@ public class Expense {
    * @param date  Data da despesa
    * @param value  Valor da despesa
    * @param name  Nome da despesa
+   * @param paid  Despesa paga ou não
    */
   public Expense(Date date, Double value, String name) {
     super();
     this.date = date;
     this.value = value;
     this.name = name;
+    this.paid = false;
   }
 
   public Date getDate() {
@@ -49,4 +52,14 @@ public class Expense {
   public void setName(String name) {
     this.name = name;
   }
+
+  public Boolean getPaid() {
+    return paid;
+  }
+
+  public void setPaid(Boolean paid) {
+    this.paid = paid;
+  }
+
+
 }

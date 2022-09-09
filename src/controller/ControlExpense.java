@@ -34,4 +34,8 @@ public class ControlExpense {
   public void deleteExpense(Group group, Expense expense) {
     group.getExpenses().remove(expense);
   }
+
+  public void payExpense(Group group, Expense expense) {
+    expense.setPaid(true);
+  }
 }
