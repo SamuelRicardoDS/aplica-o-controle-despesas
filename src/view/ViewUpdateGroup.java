@@ -3,14 +3,19 @@ package view;
 import controller.*;
 import java.awt.Color;
 import java.awt.event.*;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import model.Group;
 
 /**
@@ -32,8 +37,7 @@ public class ViewUpdateGroup {
     private JButton addNewMembers;
     private JButton btnRemoveMembers;
     private JScrollPane tabela;
-    private JScrollPane tabela_1;
-    private JScrollPane tabela_2;
+    private JButton btnBack;
 
     public ViewUpdateGroup() {
         cu = new ControlUser();
@@ -61,26 +65,41 @@ public class ViewUpdateGroup {
         tabela.setViewportView(table);
         table.setBorder(new LineBorder(new Color(0, 0, 0)));
 
+        table
+            .getSelectionModel()
+            .addListSelectionListener(
+                new ListSelectionListener() {
+
+                    public void valueChanged(ListSelectionEvent event) {}
+                }
+            );
+
         textField = new JTextField();
         textField.setBounds(330, 50, 170, 26);
         frame.getContentPane().add(textField);
         textField.setColumns(10);
 
-        tabela_1 = new JScrollPane();
-        tabela_1.setBounds(548, 34, 208, 142);
-        frame.getContentPane().add(tabela_1);
-
-        tabela_2 = new JScrollPane();
-        tabela_2.setBounds(548, 228, 208, 142);
-        frame.getContentPane().add(tabela_2);
-
         btnRemoveMembers = new JButton("Remover Membros");
         btnRemoveMembers.setBounds(558, 190, 198, 26);
         frame.getContentPane().add(btnRemoveMembers);
 
+        btnRemoveMembers.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {}
+            }
+        );
+
         addNewMembers = new JButton("Adicionar membros");
         addNewMembers.setBounds(558, 382, 198, 26);
         frame.getContentPane().add(addNewMembers);
+
+        addNewMembers.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {}
+            }
+        );
 
         ChangeName = new JLabel("Alterar Nome");
         ChangeName.setForeground(Color.WHITE);
@@ -101,6 +120,26 @@ public class ViewUpdateGroup {
                 }
             }
         );
+
+        btnBack = new JButton("Voltar");
+        btnBack.setBounds(30, 402, 208, 25);
+        frame.getContentPane().add(btnBack);
+
+        btnBack.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    frame.dispose();
+                }
+            }
+        );
+
+        Object[][] amigos = new String[cu.readOne(cu.getUsername()).getFriends().size()][columns.length];
+
+        for (int i = 0; i < cu.readOne(cu.getUsername()).getFriends().size(); i++) {
+            String[] friends = { cu.readOne(cu.getUsername()).getFriends().get(i).getUsername() };
+            amigos[i] = friends;
+        }
 
         background = new JLabel("");
         background.setBounds(0, 0, 800, 480);

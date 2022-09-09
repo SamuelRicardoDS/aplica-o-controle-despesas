@@ -45,7 +45,7 @@ public class ViewMain {
         btnCreateGroup = new JButton("Criar Grupo");
         btnCreateGroup.setBounds(580, 230, 120, 30);
         frame.getContentPane().add(btnCreateGroup);
-        btnCreateGroup.setHorizontalAlignment(SwingConstants.LEFT);
+
         btnCreateGroup.addActionListener(
             new ActionListener() {
 
