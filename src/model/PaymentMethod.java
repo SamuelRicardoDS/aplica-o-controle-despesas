@@ -7,14 +7,20 @@ import java.util.Date;
  * @author Samuel Ricardo
  * @since release 1 
  * */
-
 public abstract class PaymentMethod {
   private Date payDate;
   private String bank;
   private String payer;
   protected Double amount;
 
-
+  /**
+   * Construtor da classe pai PaymentMethod
+   * 
+   * @param payDate  Data de pagamento
+   * @param bank  Banco
+   * @param payer  Pagador
+   * @param amount  Valor
+   */
   public PaymentMethod(Date payDate, String bank, String payer, Double amount) {
     super();
     this.payDate = payDate;
@@ -23,6 +29,11 @@ public abstract class PaymentMethod {
     this.amount = amount;
   }
 
+  /**
+   * Método que calcula o valor que cada usuário deve pagar
+   * @param group  Grupo de usuários
+   * @return Double  Valor que cada usuário deve pagar
+   */
   public Double calcSingleValue(Group group) {
     amount = 0.0;
     int integers = group.getMembers().size();

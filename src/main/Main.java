@@ -5,6 +5,12 @@ import data.Database;
 import controller.ControlUser;
 import controller.ControlGroup;
 
+/**
+ * Classe principal do projeto, esta que executa a primeira tela do programa
+ * e preenche a base de dados.
+ * @author Samuel Ricardo
+ * @since release 1
+ */
 public class Main {
     private Database instance;
     private ControlUser cu;
@@ -32,19 +38,14 @@ public class Main {
         for(int i = 3; i <= 6; i++) {
             cg.addMember(cu.readOne("user" + i), cu.readOne("user0"));
         }
-
-
         //adiciona 4 no grupo do user1
         for(int i = 7; i <= 10; i++) {
             cg.addMember(cu.readOne("user" + i), cu.readOne("user1"));
         }
-
         //adiciona 4 no grupo do user2
         for(int i = 11; i <= 14; i++) {
             cg.addMember(cu.readOne("user" + i), cu.readOne("user2"));
         }
-        
-
 
      
 

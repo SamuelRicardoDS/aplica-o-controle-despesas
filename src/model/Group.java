@@ -2,12 +2,25 @@ package model;
 
 import java.util.ArrayList;
 
+/**
+ * classe para objetos do tipo Group, onde serão contidos, valores e métodos para o mesmo.
+ * @author Samuel Ricardo
+ * @since release 1 
+ */
 public class Group {
   private ArrayList<User> members;
   private String name;
   private User lider;
   private ArrayList<Expense> expenses;
 
+  /**
+   * Construtor da classe Group
+   * 
+   * @param members  Membros do grupo
+   * @param name  Nome do grupo
+   * @param lider  Líder do grupo
+   * @param expenses  Despesas do grupo
+   */
   public Group(ArrayList<User> members, String name, User lider, ArrayList<Expense> expenses) {
     super();
     this.members =  new ArrayList<User>();
@@ -16,6 +29,10 @@ public class Group {
     this.expenses =  new ArrayList<>();
   }
 
+  /**
+   * Método que calcula o calor total das despesas do grupo
+   * @return Double - Valor total das despesas
+   */
   public Double totalValue(ArrayList<Expense> expenses) {
     Double totalValue = 0.0;
     for (int i = 0; i < expenses.size(); i++) {

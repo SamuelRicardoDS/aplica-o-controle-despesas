@@ -6,21 +6,16 @@ import java.util.Date;
  * classe para objetos do tipo PayPal, que é uma subclasse de PaymentMethod, onde serão contidos, valores e métodos para o mesmo.
  * @author Samuel Ricardo
  * @since release 1 */
-
 public class PayPal extends PaymentMethod {
   private String cardFlag;
   private String type;
 
   /**
+   * Construtor da classe PayPal
    * 
-   * @param payDate  Data de pagamento
-   * @param bank  Banco
-   * @param payer  Pagador
    * @param cardFlag    Bandeira do cartão
-   * @param type  Tipo de pagamento
-   * @param amount  Valor
+   * @param type  Tipo de cartão
    */
-
   public PayPal(Date payDate, String bank, String payer, String cardFlag, String type, Double amount) {
     super(payDate, bank, payer, amount);
     this.cardFlag = cardFlag;
@@ -32,7 +27,6 @@ public class PayPal extends PaymentMethod {
    * @param Group group  Grupo de usuários
    * @return Double  Valor que cada usuário deve pagar
    */
-
   @Override
   public Double calcSingleValue(Group group) {
     amount = 0.0;
