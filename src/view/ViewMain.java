@@ -20,6 +20,7 @@ public class ViewMain {
     private JButton addFriend;
     private JLabel lblNewLabel;
     public ControlUser cu = new ControlUser();
+    private JButton btnNewButton;
 
     public static void main(String[] args) {
         ViewMain window = new ViewMain();
@@ -107,6 +108,20 @@ public class ViewMain {
                 public void actionPerformed(ActionEvent ae) {
                     ViewAddExpense window = new ViewAddExpense();
                     window.getAddExpense().setVisible(true);
+                }
+            }
+        );
+        
+        btnNewButton = new JButton("ver despesas");
+        btnNewButton.setBounds(572, 392, 147, 25);
+        frame.getContentPane().add(btnNewButton);
+
+        btnNewButton.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent ae) {
+                    ViewShowExpenses window = new ViewShowExpenses();
+                    window.getShowExpenses().setVisible(true);
                 }
             }
         );
