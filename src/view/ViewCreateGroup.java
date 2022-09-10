@@ -96,6 +96,8 @@ public class ViewCreateGroup {
                     User lider = cu.readOne(cu.getUsername());
                     System.out.println(name + lider);
                     cg.createGroup(name, lider);
+                    //System.out.println(lider.getGroups());
+                   
                 }
             }
         );
