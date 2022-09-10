@@ -111,7 +111,7 @@ public class ViewMain {
                 }
             }
         );
-        
+
         btnNewButton = new JButton("ver despesas");
         btnNewButton.setBounds(572, 392, 147, 25);
         frame.getContentPane().add(btnNewButton);

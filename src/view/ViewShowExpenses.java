@@ -2,13 +2,8 @@ package view;
 
 import controller.ControlExpense;
 import controller.ControlUser;
-import model.Group;
-
-import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.event.*;
+import model.Group;
 
 public class ViewShowExpenses {
     private ControlUser cu;
@@ -25,6 +21,7 @@ public class ViewShowExpenses {
     private ControlExpense ce;
     private JTable expensesTable;
     private JScrollPane scrollPane;
+    private JButton btnPay;
 
     public ViewShowExpenses() {
         cu = new ControlUser();
@@ -58,9 +55,19 @@ public class ViewShowExpenses {
         btnNewButton.setBounds(67, 381, 156, 25);
         frame.getContentPane().add(btnNewButton);
 
-        JButton btnNewButton_1 = new JButton("pagar");
-        btnNewButton_1.setBounds(333, 381, 117, 25);
-        frame.getContentPane().add(btnNewButton_1);
+        btnPay = new JButton("pagar");
+        btnPay.setBounds(333, 381, 117, 25);
+        frame.getContentPane().add(btnPay);
+
+        btnPay.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    ViewAddPaymentMethod v = new ViewAddPaymentMethod();
+                    v.getFrame().setVisible(true);
+                }
+            }
+        );
 
         JScrollPane expenseScroll = new JScrollPane();
         expenseScroll.setBounds(260, 17, 214, 366);
@@ -72,29 +79,41 @@ public class ViewShowExpenses {
         expensesTable = new JTable(expenseData, expenseColumns);
         expenseScroll.setViewportView(expensesTable);
 
-        table.getSelectionModel().addListSelectionListener(
+        table
+            .getSelectionModel()
+            .addListSelectionListener(
                 new ListSelectionListener() {
+
                     public void valueChanged(ListSelectionEvent e) {
                         int index = table.getSelectedRow();
                         Group group = cu.readOne(cu.getUsername()).getGroups().get(index == -1 ? 0 : index);
 
                         String[] expenseColumns = { "Despesa", "Valor" };
-                        Object[][] expenseData = new String[cu.readOne(cu.getUsername()).getGroups().get(index)
-                                .getExpenses().size()][expenseColumns.length];
+                        Object[][] expenseData = new String[cu
+                            .readOne(cu.getUsername())
+                            .getGroups()
+                            .get(index)
+                            .getExpenses()
+                            .size()][expenseColumns.length];
 
-                        for (int i = 0; i < cu.readOne(cu.getUsername()).getGroups().get(index).getExpenses()
-                                .size(); i++) {
-                            String[] expense = { group.getExpenses().get(i).getName(),
-                                    String.valueOf(group.getExpenses().get(i).getValue()) };
+                        for (
+                            int i = 0;
+                            i < cu.readOne(cu.getUsername()).getGroups().get(index).getExpenses().size();
+                            i++
+                        ) {
+                            String[] expense = {
+                                group.getExpenses().get(i).getName(),
+                                String.valueOf(group.getExpenses().get(i).getValue()),
+                            };
                             expenseData[i] = expense;
                         }
 
                         expensesTable = new JTable(expenseData, expenseColumns);
                         expenseScroll.setViewportView(expensesTable);
                         expensesTable.repaint();
-
                     }
-                });
+                }
+            );
 
         background = new JLabel("");
         background.setBounds(0, -15, 800, 480);

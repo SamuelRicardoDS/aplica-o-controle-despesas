@@ -2,12 +2,10 @@ package view;
 
 import controller.ControlGroup;
 import controller.ControlUser;
-import data.Database;
 import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import model.Group;
 import model.User;
 
 /**

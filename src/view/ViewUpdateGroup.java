@@ -64,7 +64,6 @@ public class ViewUpdateGroup {
 
         frame = new JFrame();
         frame.setBounds(100, 100, 800, 480);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.getContentPane().setLayout(null);
 
