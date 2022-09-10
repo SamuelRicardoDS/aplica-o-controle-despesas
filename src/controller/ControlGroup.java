@@ -33,6 +33,7 @@ public class ControlGroup {
             Group group = new Group(null, name, lider, null);
             lider.getGroups().add(group);
             System.out.println("Grupo cadastrado com sucesso");
+            database.getGroups().add(group);
         }
     }
 

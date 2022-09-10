@@ -11,11 +11,11 @@ import controller.ControlUser;
 import data.Database;
 
 /**
- * Classe de testes para a classe ControlUser
+ * Classe de testes relacionados aos usuários da aplicação
  * @author Samuel Ricardo
  * @since release 1
  */
-class ControlUserTest {
+class UserTest {
 
 	Database instance;
     ControlUser controlUser;
@@ -29,15 +29,18 @@ class ControlUserTest {
 
 	@Test
 	void createTest(){
-		User user = new User("nome de usuario", "senha de usuario", null, null, null);
-		assertEquals("nome de usuario", user.getUsername());
+		controlUser.create("nome de usuario", "senha", null, null, null);
+		assertEquals("nome de usuario", controlUser.readOne("nome de usuario").getUsername());
+		assertEquals("senha", controlUser.readOne("nome de usuario").getPassword());
 	}
 
 	@Test
 	void readOneTest() {
-		User user = new User("username", "senha de usuario", null, null, null);
-		User expectUser = controlUser.readOne(user.getUsername());
-		assertEquals(user, expectUser);
+		controlUser.create("nome de usuario", "senha de usuario", null, null, null);
+		User user = controlUser.readOne("nome de usuario");
+		User expectedUser = instance.getUsers().get(0);
+		assertEquals(user, expectedUser);
 	}
+
 
 }
