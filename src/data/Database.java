@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import model.Group;
 import model.User;
 
+
+/**
+ * Classe para armazenar os dados do sistema, como os usuários e grupos.
+ * @author Samuel Ricardo
+ * @author Gustavo Henrique
+ * @since release 1
+ */
 public class Database {
     ArrayList<User> users;
     ArrayList<Group> groups;
@@ -12,6 +19,10 @@ public class Database {
     private Database() {}
 
     //singleton
+    /**
+     * Método para criar uma instância da classe Database
+     * @return instance
+     */
     public static Database getInstance() {
         if (instance == null) {
             instance = new Database();
@@ -33,6 +44,11 @@ public class Database {
         users.add(user);
     }
 
+    /**
+     * Método para retornar um grupo a partir de seu nome
+     * @param name nome do grupo
+     * @return groups
+     */
     public Group getGroup(String name) {
         for (Group group : groups) {
             if (group.getName().equals(name)) {
@@ -46,6 +62,11 @@ public class Database {
         return groups;
     }
 
+    /**
+     * Método para retornar um usuário a partir de seu nome
+     * @param username nome do usuário
+     * @return users
+     */
     public User getUser(String username) {
         for (User user : users) {
             if (user.getUsername().equals(username)) {

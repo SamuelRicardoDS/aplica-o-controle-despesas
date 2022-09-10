@@ -13,6 +13,12 @@ import javax.swing.JTable;
 import javax.swing.event.*;
 import model.Group;
 
+/**
+ * Essa classe é responsável por criar a interface gráfica para mostrar as despesas de um grupo.
+ * 
+ * @author Samuel Ricardo
+ * @since release 1
+ */
 public class ViewShowExpenses {
     private ControlUser cu;
     private JFrame frame;
@@ -23,6 +29,9 @@ public class ViewShowExpenses {
     private JScrollPane scrollPane;
     private JButton btnPay;
 
+    /**
+     * Construtor da classe ViewShowExpenses, onde é criada a interface gráfica.
+     */
     public ViewShowExpenses() {
         cu = new ControlUser();
         ce = new ControlExpense(null);

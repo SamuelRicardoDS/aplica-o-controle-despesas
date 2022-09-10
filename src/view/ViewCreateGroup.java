@@ -10,7 +10,7 @@ import model.User;
 
 /**
  * Classe responsável pela interface de criação de grupos
- * @author SGustavo Henrique
+ * @author Gustavo Henrique
  * @since release 1
  */
 public class ViewCreateGroup {
@@ -26,6 +26,9 @@ public class ViewCreateGroup {
     private ControlGroup cg;
     private JLabel name;
 
+    /**
+     * Construtor da classe ViewCreateGroup, onde é criada a interface gráfica.
+     */
     public ViewCreateGroup() {
         cu = new ControlUser();
         cg = new ControlGroup();

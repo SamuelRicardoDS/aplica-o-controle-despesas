@@ -70,7 +70,10 @@ public class Main {
             cg.addMember(cu.readOne("" + i), cu.readOne("2"));
         }
     }
-
+    /**
+     * Método para executar o programa
+     * @param args
+     */
     public static void main(String[] args) {
         ViewFirstScreen window = new ViewFirstScreen();
         window.getOriginFrame().setVisible(true);

@@ -5,6 +5,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * Essa classe é responsável por criar a interface gráfica para adicionar um método de pagamento.
+ * 
+ * @author Gustavo Henrique
+ * @since release 1
+ */
 public class ViewAddPaymentMethod {
     private JFrame frame;
     private JButton btnPix;
@@ -12,6 +18,9 @@ public class ViewAddPaymentMethod {
     private JButton btnPaypal;
     private JLabel background;
 
+    /**
+     * Construtor da classe ViewAddPaymentMethod, onde é criada a interface gráfica.
+     */
     public ViewAddPaymentMethod() {
         frame = new JFrame();
         frame.setBounds(0, 0, 450, 300);

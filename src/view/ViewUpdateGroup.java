@@ -15,7 +15,6 @@ import model.Group;
  * @author Gustavo Henrique
  * @since release 1
  */
-
 public class ViewUpdateGroup {
     private JFrame frame;
     private JLabel background;
@@ -29,13 +28,10 @@ public class ViewUpdateGroup {
     private JButton btnRemoveMembers;
     private JScrollPane tabela;
     private JButton btnBack;
-
     private JTable membros;
     private JScrollPane scrollPane_1;
-
     private JTable friends;
     private JScrollPane scrollPane_2;
-
     private void UpdateMembersTable() {
         int selectedRow = table.getSelectedRow();
         Group selectedGroup = cu.readOne(cu.getUsername()).getGroups().get(selectedRow == -1 ? 0 : selectedRow);
@@ -57,7 +53,9 @@ public class ViewUpdateGroup {
         scrollPane_1.setViewportView(membros);
         membros.repaint();
     }
-
+    /**
+     * Construtor da classe ViewUpdateGroup, onde é criada a interface gráfica.
+     */
     public ViewUpdateGroup() {
         cu = new ControlUser();
         cg = new ControlGroup();
@@ -82,8 +80,6 @@ public class ViewUpdateGroup {
         table = new JTable(data, columns);
         tabela.setViewportView(table);
         table.setBorder(new LineBorder(new Color(0, 0, 0)));
-
-        // int selectedRow = table.getSelectedRow();
 
         table
             .getSelectionModel()

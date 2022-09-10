@@ -69,8 +69,20 @@ public class ControlUser {
     public void addFriend(String friend) {
         User loggedUser = this.readOne(ControlUser.username);
         loggedUser.getFriends().add(this.readOne(friend));
+        readOne(friend).getFriends().add(loggedUser);
     }
     //public String definePassword
+
+  /*   public Double calculateTotalValue() {
+        Double totalValue = 0.0;
+        for (User user : this.database.getUsers()) {
+            for(int i=0; i<user.getGroups().size(); i++) {
+                totalValue += user.getGroups().get(i).calcSingleValue();
+            }
+        }
+        return totalValue;
+    } */
+
     
     public String getUsername() {
 		return username;
