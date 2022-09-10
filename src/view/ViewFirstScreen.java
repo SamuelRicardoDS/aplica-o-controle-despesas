@@ -18,6 +18,9 @@ public class ViewFirstScreen {
     private JButton btnLogin;
     private JLabel background;
 
+    /**
+     * Construtor da classe ViewFirstScreen, onde é criada a interface gráfica.
+     */
     public ViewFirstScreen() {
         frame = new JFrame();
         frame.setBounds(150, 150, 600, 550);

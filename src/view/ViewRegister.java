@@ -19,9 +19,7 @@ import model.User;
  * @author Gustavo Henrique
  * @since release 1
  */
-
 public class ViewRegister {
-    /* public Executavel executavel = new Executavel(); */
     private JFrame frame;
     private JTextField txtUsername;
     private JLabel lblPassword;
@@ -34,9 +32,11 @@ public class ViewRegister {
     private JLabel lblUsername;
     private JLabel background;
     public ControlUser cu = new ControlUser();
-
     private Database database;
 
+    /**
+     * Construtor da classe ViewRegister, onde é criada a interface gráfica.
+     */
     public ViewRegister() {
         this.database = Database.getInstance();
         cu = new ControlUser();

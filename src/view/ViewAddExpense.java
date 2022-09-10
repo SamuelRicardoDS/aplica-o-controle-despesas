@@ -7,6 +7,13 @@ import java.util.Date;
 import javax.swing.*;
 import model.Group;
 
+/**
+ * Classe responsável por criar a interface gráfica de adicionar despesa.
+ * @author Samuel Ricardo
+ * @author Gustavo Henrique
+ * @since release 1
+ * @version 1.0
+ */
 public class ViewAddExpense {
     private ControlUser cu;
     private JFrame frame;
@@ -21,6 +28,9 @@ public class ViewAddExpense {
     private JLabel lblDate;
     private ControlExpense ce;
 
+    /**
+     * Construtor da classe ViewAddExpense, onde é criada a interface gráfica.
+     */
     public ViewAddExpense() {
         cu = new ControlUser();
         ce = new ControlExpense(null);

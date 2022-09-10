@@ -14,7 +14,7 @@ import controller.ControlUser;
  * Essa classe é responsável por criar a interface gráfica para adicionar um amigo.
  * 
  * @author Gustavo Henrique
- *
+ * @since release 1
  */
 public class ViewAddFriend {
 
@@ -25,6 +25,9 @@ public class ViewAddFriend {
 	
 	ControlUser cu = new ControlUser();
 
+	/**
+	 * Construtor da classe ViewAddFriend, onde é criada a interface gráfica.
+	 */
 	public ViewAddFriend() {
 		
 		frame = new JFrame();
