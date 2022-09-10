@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.User;
-import controller.ControlGroup;
 import controller.ControlUser;
 import data.Database;
 

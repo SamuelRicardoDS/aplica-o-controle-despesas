@@ -61,7 +61,7 @@ public class ViewAddFriend {
 				String username = nameFriend.getText();
 				
 				if(cu.verifyFriend(username) == true) {
-					cu.addFriend(username);
+					cu.addFriend(username, cu.readOne(cu.getUsername()));
 					System.out.println(cu.readOne(username).getFriends());
 				}
 				else

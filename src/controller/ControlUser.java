@@ -65,11 +65,13 @@ public class ControlUser {
     	}
     	return isValidFriend;
     }
+    public String getUsername() {
+        return username;
+    }
     
-    public void addFriend(String friend) {
-        User loggedUser = this.readOne(ControlUser.username);
-        loggedUser.getFriends().add(this.readOne(friend));
-        readOne(friend).getFriends().add(loggedUser);
+    public void addFriend(String friend, User user) {
+        user.getFriends().add(this.readOne(friend));
+        readOne(friend).getFriends().add(user);
     }
     //public String definePassword
 
@@ -84,9 +86,6 @@ public class ControlUser {
     } */
 
     
-    public String getUsername() {
-		return username;
-	}
 
 	public ArrayList<User> readAll() {
         return this.database.getUsers();
