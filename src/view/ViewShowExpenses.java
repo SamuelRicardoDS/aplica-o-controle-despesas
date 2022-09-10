@@ -1,7 +1,6 @@
 package view;
 
-import controller.ControlExpense;
-import controller.ControlUser;
+import controller.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -11,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.event.*;
-import model.Group;
+import model.*;
 
 public class ViewShowExpenses {
     private ControlUser cu;
@@ -22,6 +21,117 @@ public class ViewShowExpenses {
     private JTable expensesTable;
     private JScrollPane scrollPane;
     private JButton btnPay;
+    private JScrollPane expenseScroll;
+
+    class ViewAddPaymentMethod {
+        private JFrame frame;
+        private JButton btnPix;
+        private JButton btnBoleto;
+        private JButton btnPaypal;
+        private JLabel background;
+
+        private ControlUser cu;
+        private ControlPayment cp;
+
+        public ViewAddPaymentMethod() {
+            cu = new ControlUser();
+            cp = new ControlPayment(cu.readOne(cu.getUsername()));
+
+            frame = new JFrame();
+            frame.setBounds(0, 0, 450, 300);
+            frame.getContentPane().setLayout(null);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+
+            JLabel lblNewLabel = new JLabel("Forma de Pagamento");
+            lblNewLabel.setBounds(140, 45, 155, 15);
+
+            frame.getContentPane().add(lblNewLabel);
+
+            btnPix = new JButton("Pix");
+            btnPix.setBounds(22, 149, 117, 25);
+            frame.getContentPane().add(btnPix);
+
+            btnPix.addActionListener(
+                new ActionListener() {
+
+                    public void actionPerformed(ActionEvent e) {
+                        cp.createPayment("pix", cu.readOne(cu.getUsername()));
+                        divideExpense();
+                    }
+                }
+            );
+
+            btnBoleto = new JButton("Boleto");
+            btnBoleto.setBounds(162, 149, 117, 25);
+            frame.getContentPane().add(btnBoleto);
+
+            btnBoleto.addActionListener(
+                new ActionListener() {
+
+                    public void actionPerformed(ActionEvent e) {
+                        cp.createPayment("boleto", cu.readOne(cu.getUsername()));
+                        frame.dispose();
+                    }
+                }
+            );
+
+            btnPaypal = new JButton("PayPal");
+            btnPaypal.setBounds(300, 149, 117, 25);
+            frame.getContentPane().add(btnPaypal);
+
+            btnPaypal.addActionListener(
+                new ActionListener() {
+
+                    public void actionPerformed(ActionEvent e) {
+                        cp.createPayment("paypal", cu.readOne(cu.getUsername()));
+                        frame.dispose();
+                    }
+                }
+            );
+
+            background = new JLabel(new ImageIcon("/images/gustavo.jpg"));
+            background.setBounds(0, 0, 450, 300);
+            frame.getContentPane().add(background);
+        }
+
+        public JFrame getFrame() {
+            return frame;
+        }
+    }
+
+    public void divideExpense() {
+        int selectedRow = expensesTable.getSelectedRow();
+        Expense selectedExpense = cu.readOne(cu.getUsername()).getGroups().get(0).getExpenses().get(selectedRow);
+        double doube = cu.readOne(cu.getUsername()).getGroups().get(0).getExpenses().get(selectedRow).getValue();
+        int index = table.getSelectedRow();
+
+        double value =
+            selectedExpense.getValue() / 1 + cu.readOne(cu.getUsername()).getGroups().get(index).getMembers().size();
+
+        double individualExpense = doube - value;
+
+        Group group = cu.readOne(cu.getUsername()).getGroups().get(index == -1 ? 0 : index);
+        String[] expenseColumns = { "Despesa", "Valor", "Pago" };
+        Object[][] expenseData = new String[cu
+            .readOne(cu.getUsername())
+            .getGroups()
+            .get(index)
+            .getExpenses()
+            .size()][expenseColumns.length];
+
+        for (int i = 0; i < cu.readOne(cu.getUsername()).getGroups().get(index).getExpenses().size(); i++) {
+            String[] expense = {
+                group.getExpenses().get(i).getName(),
+                String.valueOf(group.getExpenses().get(i).getValue()),
+                individualExpense + "",
+            };
+            expenseData[i] = expense;
+        }
+
+        expensesTable = new JTable(expenseData, expenseColumns);
+        expensesTable.repaint();
+    }
 
     public ViewShowExpenses() {
         cu = new ControlUser();
