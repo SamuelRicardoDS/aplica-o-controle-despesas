@@ -54,10 +54,6 @@ public class ViewShowExpenses {
         lblQuantoVocDeve.setBounds(550, 12, 189, 27);
         frame.getContentPane().add(lblQuantoVocDeve);
 
-        JButton btnNewButton = new JButton("Selecionar Grupo");
-        btnNewButton.setBounds(67, 381, 156, 25);
-        frame.getContentPane().add(btnNewButton);
-
         JButton btnNewButton_1 = new JButton("pagar");
         btnNewButton_1.setBounds(333, 381, 117, 25);
         frame.getContentPane().add(btnNewButton_1);

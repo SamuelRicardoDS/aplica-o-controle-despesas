@@ -76,6 +76,7 @@ public class ControlGroup {
         int lastIdx = lider.getGroups().size() - 1;
         Group lastGroup = lider.getGroups().get(lastIdx);
         lastGroup.getMembers().add(selectedFriend);
+        selectedFriend.getGroups().add(lastGroup);
     }
 
     /**
