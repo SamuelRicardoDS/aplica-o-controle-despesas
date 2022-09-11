@@ -7,6 +7,11 @@ import model.Group;
 import model.PaymentMethod;
 import model.User;
 
+/**
+ * classe de controle para usuario
+ * @author Samuel Ricardo
+ * @since release 1
+ */
 public class ControlUser {
 
     private Database database;
@@ -16,26 +21,28 @@ public class ControlUser {
         this.database = Database.getInstance();
     }
 
-    public void create(String username, String password, ArrayList<Group> groups, ArrayList<User> friends,
+    public User create(String username, String password, ArrayList<Group> groups, ArrayList<User> friends,
             PaymentMethod paymentMethod) {
         if (username == null || password == null) {
             System.out.println("Preencha todos os campos");
+            throw new IllegalArgumentException("Preencha todos os campos");
         } else {
             User user = new User(username, password, groups, friends, paymentMethod);
             database.addUser(user);
             System.out.println("Usuário cadastrado com sucesso");
+            return user;
         }
-        System.out.println(database.getUsers());
     }
 
     public User readOne(String username) {
         return this.database.getUser(username);
     }
 
-    public void updateGroup(User inputUser) {
+    public void update(User currentUser, User inputUser) {
         for (int i = 0; i < database.getUsers().size(); i++) {
-            if (database.getUsers().get(i).getUsername().equals(inputUser.getUsername())) {
+            if (database.getUsers().get(i).getUsername().equals(currentUser.getUsername())) {
                 database.getUsers().set(i, inputUser);
+                ControlUser.username = inputUser.getUsername();
             }
         }
     }

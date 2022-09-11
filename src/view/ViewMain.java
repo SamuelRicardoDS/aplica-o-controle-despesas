@@ -9,6 +9,7 @@ import javax.swing.*;
 /**
  * Classe responsável pela interface gráfica da tela principal da aplicação
  * @author Gustavo Henrique
+ * @author Samuel Ricardo
  * @since release 1
  */
 
@@ -20,7 +21,8 @@ public class ViewMain {
     private JButton addFriend;
     private JLabel lblNewLabel;
     public ControlUser cu = new ControlUser();
-    private JButton btnNewButton;
+    private JButton btnShowExpenses;
+    private JButton btnInfoUser;
 
     public static void main(String[] args) {
         ViewMain window = new ViewMain();
@@ -112,11 +114,11 @@ public class ViewMain {
             }
         );
 
-        btnNewButton = new JButton("ver despesas");
-        btnNewButton.setBounds(572, 392, 147, 25);
-        frame.getContentPane().add(btnNewButton);
+        btnShowExpenses = new JButton("ver despesas");
+        btnShowExpenses.setBounds(572, 392, 147, 25);
+        frame.getContentPane().add(btnShowExpenses);
 
-        btnNewButton.addActionListener(
+        btnShowExpenses.addActionListener(
             new ActionListener() {
 
                 public void actionPerformed(ActionEvent ae) {
@@ -125,6 +127,20 @@ public class ViewMain {
                 }
             }
         );
+
+        btnInfoUser = new JButton("informações de usuário");
+        btnInfoUser.setBounds(539, 417, 217, 30);
+        frame.getContentPane().add(btnInfoUser);
+
+        btnInfoUser.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent ae) {
+                    ViewInfoUser window = new ViewInfoUser();
+                    window.getInfoUser().setVisible(true);
+                }
+            }
+        );
+
 
         label = new JLabel("");
         label.setIcon(new ImageIcon(ViewMain.class.getResource("/images/fc.jpeg")));

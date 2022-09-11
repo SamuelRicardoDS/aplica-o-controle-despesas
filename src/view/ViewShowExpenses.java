@@ -28,7 +28,6 @@ public class ViewShowExpenses {
     private JTable expensesTable;
     private JScrollPane scrollPane;
     private JButton btnPay;
-    private JScrollPane expenseScroll;
     private JLabel howMuchUOwe;
 
     class ViewAddPaymentMethod {

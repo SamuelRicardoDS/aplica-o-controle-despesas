@@ -41,5 +41,10 @@ class UserTest {
 		assertEquals(user, expectedUser);
 	}
 
+	@Test
+	void updateTest() {
+		controlUser.create("nome de usuario", "senha de usuario", null, null, null);
+	}
+
 
 }
