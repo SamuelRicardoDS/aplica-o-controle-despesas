@@ -96,4 +96,15 @@ public class ControlGroup {
     public void changeGroupName(Group group, String name) {
         group.setName(name);
     }
+
+    public Double calcSingleValue(Group group) {
+        Double amount = 0.0;
+        int integers = group.getMembers().size();
+        for (int i = 0; i < integers; i++) {
+            amount += group.getExpenses().get(i).getValue();
+            
+        }
+        Double singleValue = amount / integers;
+        return singleValue;
+    }
 }

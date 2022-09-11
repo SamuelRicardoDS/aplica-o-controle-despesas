@@ -90,5 +90,15 @@ public class ControlUser {
 	public ArrayList<User> readAll() {
         return this.database.getUsers();
     }
+
+    public Double howMuchUOwe(User user) {
+        Double owe = 0.0;
+        for(Group group : user.getGroups()) {
+            Double amount = group.totalValue(group.getExpenses());
+            int integers = group.getMembers().size();
+            owe += amount / (1 + integers);
+        }
+        return owe;
+    }
     
 }

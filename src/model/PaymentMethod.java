@@ -37,6 +37,7 @@ public abstract class PaymentMethod {
         int integers = group.getMembers().size();
         for (int i = 0; i < integers; i++) {
             amount += group.getExpenses().get(i).getValue();
+            
         }
         Double singleValue = amount / integers;
         return singleValue;

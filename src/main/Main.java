@@ -70,6 +70,8 @@ public class Main {
         for (int i = 11; i <= 14; i++) {
             cg.addMember(cu.readOne("" + i), cu.readOne("2"));
         }
+
+        //adiciona despesas no grupo do 0
     } 
 
     /**

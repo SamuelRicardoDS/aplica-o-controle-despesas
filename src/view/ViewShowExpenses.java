@@ -24,10 +24,12 @@ public class ViewShowExpenses {
     private JLabel background;
     private JTable table;
     private ControlExpense ce;
+    private ControlGroup cg;
     private JTable expensesTable;
     private JScrollPane scrollPane;
     private JButton btnPay;
     private JScrollPane expenseScroll;
+    private JLabel howMuchUOwe;
 
     class ViewAddPaymentMethod {
         private JFrame frame;
@@ -38,10 +40,12 @@ public class ViewShowExpenses {
 
         private ControlUser cu;
         private ControlPayment cp;
+        private ControlGroup cg;
 
         public ViewAddPaymentMethod() {
             cu = new ControlUser();
             cp = new ControlPayment(cu.readOne(cu.getUsername()));
+            cg = new ControlGroup();
 
             frame = new JFrame();
             frame.setBounds(0, 0, 450, 300);
@@ -166,13 +170,9 @@ public class ViewShowExpenses {
         table = new JTable(data, columns);
         scrollPane.setViewportView(table);
 
-        JLabel lblQuantoVocDeve = new JLabel("Quanto você deve:");
-        lblQuantoVocDeve.setBounds(550, 12, 189, 27);
-        frame.getContentPane().add(lblQuantoVocDeve);
-
-        JButton btnNewButton = new JButton("Selecionar Grupo");
-        btnNewButton.setBounds(67, 381, 156, 25);
-        frame.getContentPane().add(btnNewButton);
+        howMuchUOwe = new JLabel("Quanto você deve:" + cu.howMuchUOwe(cu.readOne(cu.getUsername())));
+        howMuchUOwe.setBounds(550, 12, 189, 27);
+        frame.getContentPane().add(howMuchUOwe);
 
         btnPay = new JButton("pagar");
         btnPay.setBounds(333, 381, 117, 25);
