@@ -19,7 +19,7 @@ public class ViewMain {
     private JButton btnBack;
     private JButton btnCreateGroup;
     private JButton addFriend;
-    private JLabel lblNewLabel;
+    private JLabel lblWelcome;
     public ControlUser cu = new ControlUser();
     private JButton btnShowExpenses;
     private JButton btnInfoUser;
@@ -81,10 +81,10 @@ public class ViewMain {
         );
 
         String usuario = cu.getUsername();
-        lblNewLabel = new JLabel("Bem Vindo " + usuario);
-        lblNewLabel.setBounds(1072, 12, 196, 25);
-        lblNewLabel.setFont(new Font("SansSerif", Font.PLAIN, 20));
-        frame.getContentPane().add(lblNewLabel);
+        lblWelcome = new JLabel("Bem Vindo " + usuario);
+        lblWelcome.setBounds(1072, 12, 196, 25);
+        lblWelcome.setFont(new Font("SansSerif", Font.PLAIN, 20));
+        frame.getContentPane().add(lblWelcome);
 
         JButton btnEditarGrupo = new JButton("Editar Grupo");
         btnEditarGrupo.setBounds(550, 310, 180, 30);

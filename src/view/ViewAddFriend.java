@@ -19,9 +19,10 @@ import controller.ControlUser;
 public class ViewAddFriend {
 
 	private JFrame frame;
-	private JLabel background;
-	private JTextField nameFriend;
+	private JLabel lblbackground;
+	private JTextField txtNameFriend;
 	private JButton btnAddFriend;
+	private JLabel lblNameFriend;
 	
 	ControlUser cu = new ControlUser();
 
@@ -39,26 +40,26 @@ public class ViewAddFriend {
 		btnAddFriend.setBounds(287, 278, 227, 25);
 		frame.getContentPane().add(btnAddFriend);
 		
-		JLabel lblNomeAmigo = new JLabel("Nome ");
-		lblNomeAmigo.setBounds(297, 242, 124, 15);
-		frame.getContentPane().add(lblNomeAmigo);
+		lblNameFriend = new JLabel("Nome ");
+		lblNameFriend.setBounds(297, 242, 124, 15);
+		frame.getContentPane().add(lblNameFriend);
 		
-		nameFriend = new JTextField();
-		nameFriend.setBounds(287, 237, 227, 25);
-		frame.getContentPane().add(nameFriend);
-		nameFriend.setColumns(10);
+		txtNameFriend = new JTextField();
+		txtNameFriend.setBounds(287, 237, 227, 25);
+		frame.getContentPane().add(txtNameFriend);
+		txtNameFriend.setColumns(10);
 		
-		background = new JLabel("");
-		background.setIcon(new ImageIcon(ViewAddFriend.class.getResource("/images/mamonas.jpg")));
-		background.setBounds(0, 0, 800, 480);
-		frame.getContentPane().add(background);
+		lblbackground = new JLabel("");
+		lblbackground.setIcon(new ImageIcon(ViewAddFriend.class.getResource("/images/mamonas.jpg")));
+		lblbackground.setBounds(0, 0, 800, 480);
+		frame.getContentPane().add(lblbackground);
 
 		/**
 		 * botão que chama o método addFriend da classe ControlUser
 		 */
 		btnAddFriend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				String username = nameFriend.getText();
+				String username = txtNameFriend.getText();
 				
 				if(cu.verifyFriend(username) == true) {
 					cu.addFriend(username, cu.readOne(cu.getUsername()));

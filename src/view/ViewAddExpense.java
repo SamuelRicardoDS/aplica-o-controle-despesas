@@ -17,7 +17,7 @@ import model.Group;
 public class ViewAddExpense {
     private ControlUser cu;
     private JFrame frame;
-    private JLabel background;
+    private JLabel lblbackground;
     private JTable table;
     private JButton btnCreateExpense;
     private JTextField txtName;
@@ -106,10 +106,10 @@ public class ViewAddExpense {
         lblName.setBounds(546, 80, 70, 15);
         frame.getContentPane().add(lblName);
 
-        background = new JLabel("");
-        background.setBounds(0, -15, 800, 480);
-        background.setIcon(new ImageIcon(ViewAddExpense.class.getResource("/images/exalta.jpg")));
-        frame.getContentPane().add(background);
+        lblbackground = new JLabel("");
+        lblbackground.setBounds(0, -15, 800, 480);
+        lblbackground.setIcon(new ImageIcon(ViewAddExpense.class.getResource("/images/exalta.jpg")));
+        frame.getContentPane().add(lblbackground);
     }
 
     public JFrame getAddExpense() {

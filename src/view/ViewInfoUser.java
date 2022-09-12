@@ -29,6 +29,7 @@ public class ViewInfoUser {
     private JButton btnUpdate;
     private JLabel lblNewPassword;
     private JButton btnDeleteUser;
+    private JLabel lblCurrentUser;
 
     /**
      * constructor da classe ViewInfoUser
@@ -40,9 +41,9 @@ public class ViewInfoUser {
         frame.setBounds(0, 0, 800, 480);
         frame.getContentPane().setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("Nome de usuário atual");
-        lblNewLabel.setBounds(64, 55, 194, 35);
-        frame.getContentPane().add(lblNewLabel);
+        lblCurrentUser = new JLabel("Nome de usuário atual");
+        lblCurrentUser.setBounds(64, 55, 194, 35);
+        frame.getContentPane().add(lblCurrentUser);
 
         lblUsername = new JLabel(cu.getUsername());
         lblUsername.setBounds(64, 75, 70, 15);

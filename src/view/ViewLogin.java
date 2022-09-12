@@ -25,7 +25,7 @@ public class ViewLogin {
 	private JFrame frame;
 	private JTextField txtLogin;
 	private JTextField txtPassword;
-	private JLabel lblNewLabel;
+	private JLabel lblUser;
 	private JLabel lblNewLabel_1;
 	private JButton btnEntrar;
 	private JButton btnBack;
@@ -40,9 +40,9 @@ public class ViewLogin {
 		frame.getContentPane().setLayout(null);
 		frame.setLocationRelativeTo(null);
 
-		lblNewLabel = new JLabel("USUARIO");
-		lblNewLabel.setBounds(209, 205, 70, 15);
-		frame.getContentPane().add(lblNewLabel);
+		lblUser = new JLabel("USUARIO");
+		lblUser.setBounds(209, 205, 70, 15);
+		frame.getContentPane().add(lblUser);
 
 		lblNewLabel_1 = new JLabel("SENHA");
 		lblNewLabel_1.setBounds(209, 240, 70, 15);
