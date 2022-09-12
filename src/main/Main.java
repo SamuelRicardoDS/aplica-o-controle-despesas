@@ -73,7 +73,14 @@ public class Main {
         for (int i = 11; i <= 14; i++) {
             cg.addMember(cu.readOne("" + i), cu.readOne("2"));
         }
+/* 
+        //adiciona despesas no grupo do 0
+        for (int i = 0; i <= 2; i++) {
+            Date date = new Date();
+            Expense expense = ce.createExpense(cu.readOne("0").getGroups().get(0), date, 1000.0, "despesa qualquer");
+            cu.readOne("0").getGroups().get(0).addExpense(expense);
 
+        } */
     } 
 
     /**
