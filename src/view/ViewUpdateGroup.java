@@ -32,6 +32,8 @@ public class ViewUpdateGroup {
     private JScrollPane scrollPane_1;
     private JTable friends;
     private JScrollPane scrollPane_2;
+    private JButton btnDeleteGroup;
+
     private void UpdateMembersTable() {
         int selectedRow = table.getSelectedRow();
         Group selectedGroup = cu.readOne(cu.getUsername()).getGroups().get(selectedRow == -1 ? 0 : selectedRow);
@@ -66,7 +68,7 @@ public class ViewUpdateGroup {
         frame.getContentPane().setLayout(null);
 
         tabela = new JScrollPane();
-        tabela.setBounds(30, 34, 208, 356);
+        tabela.setBounds(30, 0, 208, 356);
         frame.getContentPane().add(tabela);
 
         String[] columns = { "Lista de Grupos" };
@@ -208,6 +210,21 @@ public class ViewUpdateGroup {
 
         friends = new JTable(data_3, column_3);
         scrollPane_2.setViewportView(friends);
+        
+        btnDeleteGroup = new JButton("Deletar este grupo");
+        btnDeleteGroup.setBounds(30, 368, 208, 25);
+        frame.getContentPane().add(btnDeleteGroup);
+
+        btnDeleteGroup.addActionListener(
+            new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    Group group = cu.readOne(cu.getUsername()).getGroups().get(table.getSelectedRow());
+                    cg.deleteGroup(cu.readOne(cu.getUsername()), group);
+                    frame.repaint();
+                    
+                }
+            }
+        );
 
         background = new JLabel("");
         background.setBounds(0, 0, 800, 480);

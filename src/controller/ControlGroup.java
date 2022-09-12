@@ -64,7 +64,8 @@ public class ControlGroup {
      * Método para deletar um grupo
      * @param group grupo a ser deletado
      */
-    public void deleteGroup(Group group) {
+    public void deleteGroup(User user, Group group) {
+        user.getGroups().remove(group);
         database.getGroups().remove(group);
     }
 

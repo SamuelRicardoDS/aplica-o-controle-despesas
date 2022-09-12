@@ -22,6 +22,7 @@ public class Database {
     /**
      * Método para criar uma instância da classe Database
      * @return instance
+     * singleton
      */
     public static Database getInstance() {
         if (instance == null) {
