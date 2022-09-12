@@ -27,20 +27,6 @@ public class ControlPayment {
         this.user = user;
     }
 
-    public void addPaymentMethod(String paymentMethod, User user) {
-        cu = new ControlUser();
-        if (paymentMethod.equals("pix")) {
-            this.pix = new Pix(user, 0.0);
-            this.paymentMethod = this.pix;
-        } else if (paymentMethod.equals("payPal")) {
-            this.PayPal = new PayPal(user, 0.0);
-            this.paymentMethod = this.PayPal;
-        } else if (paymentMethod.equals("boleto")) {
-            this.boleto = new Boleto(user, 0.0);
-            this.paymentMethod = this.boleto;
-        }
-    }
-
     public void setPaymentMethodPix() {
         this.paymentMethod = pix;
     }
@@ -56,6 +42,8 @@ public class ControlPayment {
     public PaymentMethod readPayment(PaymentMethod paymentMethod, User user) {
         return user.getPaymentMethod();
     }
+
+    public void payExpense() {}
 
     public void updatePayment(PaymentMethod paymentMethod, User user) {
         if (paymentMethod == null || user == null) {
