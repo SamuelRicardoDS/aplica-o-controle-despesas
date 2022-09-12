@@ -23,9 +23,7 @@
 - ## Eu como usuario ,gostaria de uma função que divide os gastos em porcentagem ou partes iguais.
 
 
-# 1. Modelagem da aplicação em UML:
 
-[UML-DESPESA ENTRE AMIGOS]( https://encurtador.com.br/jnMQ4 )
 
 
 
