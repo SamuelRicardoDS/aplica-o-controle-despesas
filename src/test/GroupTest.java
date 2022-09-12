@@ -79,7 +79,7 @@ class GroupTest {
         controlGroup.createGroup("nome de grupo", lider);
 
         Group grupo = instance.getGroups().get(0);
-        controlGroup.deleteGroup(grupo);
+        controlGroup.deleteGroup(lider, grupo);
         assertEquals(0, instance.getGroups().size());
     }
 

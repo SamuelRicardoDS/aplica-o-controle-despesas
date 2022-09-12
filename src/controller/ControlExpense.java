@@ -18,9 +18,10 @@ public class ControlExpense {
         this.group = group;
     }
 
-    public void createExpense(Group group, Date data, Double value, String name) {
+    public Expense createExpense(Group group, Date data, Double value, String name) {
         Expense expense = new Expense(data, value, name);
         group.addExpense(expense);
+        return expense;
     }
 
     public ArrayList<Expense> readExpense(Group group) {

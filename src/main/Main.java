@@ -3,9 +3,11 @@ package main;
 import java.util.ArrayList;
 import java.util.Date;
 
+import controller.ControlExpense;
 import controller.ControlGroup;
 import controller.ControlUser;
 import data.Database;
+import model.Expense;
 import model.Group;
 import model.PaymentMethod;
 import model.User;
@@ -22,6 +24,7 @@ public class Main {
     private Database instance;
     private ControlUser cu;
     private ControlGroup cg;
+    private ControlExpense ce;
 
     private Main() {
         this.instance = Database.getInstance();
@@ -71,7 +74,6 @@ public class Main {
             cg.addMember(cu.readOne("" + i), cu.readOne("2"));
         }
 
-        //adiciona despesas no grupo do 0
     } 
 
     /**

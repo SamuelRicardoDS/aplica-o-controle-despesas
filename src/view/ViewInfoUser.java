@@ -2,8 +2,6 @@ package view;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +11,12 @@ import model.User;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+/**
+ * Essa classe é responsável por criar a interface gráfica para mostrar as informações do usuário.
+ * 
+ * @author Samuel Ricardo
+ * @since release 1
+ */
 public class ViewInfoUser {
     private JFrame frame;
     private JTextField txtNewUsername;
@@ -26,6 +30,9 @@ public class ViewInfoUser {
     private JLabel lblNewPassword;
     private JButton btnDeleteUser;
 
+    /**
+     * constructor da classe ViewInfoUser
+     */
     public ViewInfoUser() {
         cu = new ControlUser();
 
@@ -73,7 +80,7 @@ public class ViewInfoUser {
         btnUpdate = new JButton("atualizar");
         btnUpdate.setBounds(422, 171, 117, 25);
         frame.getContentPane().add(btnUpdate);
-
+        
         btnUpdate.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 User currentUser = cu.readOne(cu.getUsername());
