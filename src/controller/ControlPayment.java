@@ -27,7 +27,7 @@ public class ControlPayment {
         this.user = user;
     }
 
-    public void createPayment(String paymentMethod, User user) {
+    public void addPaymentMethod(String paymentMethod, User user) {
         cu = new ControlUser();
         if (paymentMethod.equals("pix")) {
             this.pix = new Pix(user, 0.0);

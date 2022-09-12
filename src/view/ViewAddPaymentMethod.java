@@ -1,5 +1,8 @@
 package view;
 
+import controller.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -7,7 +10,7 @@ import javax.swing.JLabel;
 
 /**
  * Essa classe é responsável por criar a interface gráfica para adicionar um método de pagamento.
- * 
+ *
  * @author Gustavo Henrique
  * @since release 1
  */
@@ -17,14 +20,21 @@ public class ViewAddPaymentMethod {
     private JButton btnBoleto;
     private JButton btnPaypal;
     private JLabel background;
+    private ControlUser cu;
+    private ControlPayment cp;
 
     /**
      * Construtor da classe ViewAddPaymentMethod, onde é criada a interface gráfica.
      */
     public ViewAddPaymentMethod() {
+        cu = new ControlUser();
+        cp = new ControlPayment(cu.readOne(cu.getUsername()));
+
         frame = new JFrame();
         frame.setBounds(0, 0, 450, 300);
         frame.getContentPane().setLayout(null);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
 
         JLabel lblNewLabel = new JLabel("Forma de Pagamento");
         lblNewLabel.setBounds(140, 45, 155, 15);
@@ -35,20 +45,47 @@ public class ViewAddPaymentMethod {
         btnPix.setBounds(22, 149, 117, 25);
         frame.getContentPane().add(btnPix);
 
+        btnPix.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    cp.addPaymentMethod("pix", cu.readOne(cu.getUsername()));
+                    frame.dispose();
+                }
+            }
+        );
+
         btnBoleto = new JButton("Boleto");
         btnBoleto.setBounds(162, 149, 117, 25);
         frame.getContentPane().add(btnBoleto);
+
+        btnBoleto.addActionListener(
+            new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    cp.addPaymentMethod("boleto", cu.readOne(cu.getUsername()));
+                    frame.dispose();
+                }
+            }
+        );
 
         btnPaypal = new JButton("PayPal");
         btnPaypal.setBounds(300, 149, 117, 25);
         frame.getContentPane().add(btnPaypal);
 
-        background = new JLabel("");
-        background.setBounds(173, 111, 70, 15);
-        background.setIcon(new ImageIcon(ViewAddPaymentMethod.class.getResource("/images/gustavo.jpg")));
-        frame.getContentPane().add(background);
+        btnPaypal.addActionListener(
+            new ActionListener() {
 
-        frame.setLocationRelativeTo(null);
+                public void actionPerformed(ActionEvent e) {
+                    cp.addPaymentMethod("paypal", cu.readOne(cu.getUsername()));
+                    frame.dispose();
+                }
+            }
+        );
+
+        background = new JLabel(new ImageIcon(ViewShowExpenses.class.getResource("/images/gustavo.jpg")));
+        background.setBounds(-151, -47, 800, 400);
+        frame.getContentPane().add(background);
     }
 
     public JFrame getFrame() {
