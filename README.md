@@ -4,10 +4,10 @@
 
 
 # Projetistas
-|               Alunos:              |   Matricula:  |
-|------------------------------------|---------------|
-|Gustavo Henrique Rodrigues de Sousa | 211030783     |
-|Samuel Ricardo Dias da Silva        | 211031495     |
+|               Alunos:              |   Matricula:  | funções     |
+|------------------------------------|---------------|-------------|
+|Gustavo Henrique Rodrigues de Sousa | 211030783     | Views       |
+|Samuel Ricardo Dias da Silva        | 211031495     | Controllers |
 
 
 # UserHistory
@@ -23,7 +23,8 @@
 - ## Eu como usuario ,gostaria de uma função que divide os gastos em porcentagem ou partes iguais.
 
 
-
+# Sobre o projeto
+> A aplicação foi desenvolvida pelos academicos de engenharia de engenharia de software: Samuel Ricardo e Gustavo Henrique. Estes desempenharam funções de Back-End e Front-End respectivamente.
 
 
 
